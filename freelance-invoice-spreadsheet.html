@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freelance Invoice Tracker &amp; Aging Spreadsheet (What to Track)</title>
+  <meta name="description" content="Build or buy a freelance invoice tracker: aging buckets, cash view, and client fields that actually matter. Soft path to Ops — the $12 money &amp; client workbook.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="freelance invoice spreadsheet, invoice aging tracker, freelance invoice tracker">
+  <link rel="canonical" href="https://nydaym.github.io/nydaymuse-funnel/freelance-invoice-spreadsheet.html">
+  <meta property="og:title" content="Freelance Invoice Tracker &amp; Aging Spreadsheet">
+  <meta property="og:description" content="Columns, aging buckets, and cash clarity for solo freelancers — plus Ops workbook.">
+  <meta property="og:type" content="article">
+  <style>
+    :root {
+      --navy: #0F172A;
+      --red: #E11D48;
+      --red-hover: #BE123C;
+      --slate: #64748B;
+      --light: #F8FAFC;
+      --border: #E2E8F0;
+      --white: #FFFFFF;
+      --muted: #94A3B8;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--navy);
+      background: var(--white);
+      line-height: 1.7;
+    }
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 0 1.25rem; }
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1rem 0;
+    }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-weight: 700; font-size: 1.125rem; color: var(--white); }
+    .logo span { color: var(--red); }
+    nav a { color: var(--muted); font-size: 0.875rem; margin-left: 1rem; }
+    nav a:hover { color: var(--white); text-decoration: none; }
+    article { padding: 2.5rem 0 3rem; }
+    .breadcrumb { font-size: 0.8125rem; color: var(--slate); margin-bottom: 1.25rem; }
+    .breadcrumb a { color: var(--slate); }
+    h1 {
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+    .meta { color: var(--slate); font-size: 0.875rem; margin-bottom: 2rem; }
+    h2 {
+      font-size: 1.25rem;
+      margin: 2.25rem 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    h3 { font-size: 1.0625rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; color: #334155; }
+    ul, ol { margin: 0 0 1.25rem 1.25rem; color: #334155; }
+    li { margin-bottom: 0.4rem; }
+    .callout {
+      background: var(--light);
+      border-left: 4px solid var(--red);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+    .callout p { margin-bottom: 0.5rem; }
+    .callout p:last-child { margin-bottom: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.875rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.625rem 0.75rem;
+      text-align: left;
+    }
+    th { background: var(--light); font-weight: 600; }
+    .btn {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+    }
+    .btn:hover { background: var(--red-hover); text-decoration: none; color: var(--white); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0; justify-content: center; }
+    .soft-cta {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1.75rem;
+      border-radius: 0.75rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .soft-cta p { color: var(--muted); margin-bottom: 1rem; }
+    .soft-cta h2 { color: var(--white); margin-top: 0; }
+    .also { font-size: 0.875rem; color: var(--slate); margin-top: 1rem; }
+    .also a { margin-right: 0.75rem; }
+    footer {
+      background: var(--navy);
+      color: var(--muted);
+      padding: 2rem 0;
+      font-size: 0.8125rem;
+    }
+    footer a { color: var(--muted); margin-right: 1rem; }
+    footer a:hover { color: var(--white); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html">Nyday<span>muse</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="overdue-invoice-emails.html">Emails</a>
+        <a href="https://nydaymuse.gumroad.com/l/ggnfxs">Ops</a>
+      </nav>
+    </div>
+  </header>
+
+  <article>
+    <div class="wrap">
+      <p class="breadcrumb"><a href="index.html">Home</a> / Invoice spreadsheet</p>
+      <h1>Freelance invoice tracker &amp; aging spreadsheet</h1>
+      <p class="meta">Columns that matter · aging buckets · cash clarity · updated 2026</p>
+
+      <p>A freelance invoice spreadsheet is not a tax filing. It is a living list of what you billed, what is open, and what is late — so you can answer “what hits my account this week?” without opening seventeen email threads.</p>
+      <p>You can build one from scratch in any sheet app. Or you can use a ready workbook like <a href="https://nydaymuse.gumroad.com/l/ggnfxs">Ops ($12)</a> that also holds client context. Either way, the structure below is what stops aging from becoming a surprise.</p>
+
+      <h2>Minimum columns (do not skip these)</h2>
+      <table>
+        <thead>
+          <tr><th>Column</th><th>Why it exists</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Invoice ID</td><td>Unique reference for email and bank notes.</td></tr>
+          <tr><td>Client</td><td>Who owes you — filter and sort by relationship.</td></tr>
+          <tr><td>Issue date</td><td>When you sent it; baseline for aging.</td></tr>
+          <tr><td>Due date</td><td>Contractual deadline — aging starts here.</td></tr>
+          <tr><td>Amount / currency</td><td>Exact number; avoid mixing currencies in one total.</td></tr>
+          <tr><td>Status</td><td>Draft / Sent / Partial / Paid / Written off.</td></tr>
+          <tr><td>Paid date</td><td>Closes the loop; feeds cash timing.</td></tr>
+          <tr><td>Days overdue</td><td>Formula: today − due date (if unpaid).</td></tr>
+        </tbody>
+      </table>
+      <p>Optional but useful: project name, payment method, PO number, late-fee flag, and a “last chased” date so you know when you last sent a reminder.</p>
+
+      <h2>Aging buckets freelancers actually use</h2>
+      <p>Accounting packages use 30/60/90. Solo freelancers often need tighter buckets because cash runs out faster than corporate AP cycles:</p>
+      <ul>
+        <li><strong>Current</strong> — not yet due</li>
+        <li><strong>1–7 days</strong> — first reminder window</li>
+        <li><strong>8–14 days</strong> — second nudge</li>
+        <li><strong>15–30 days</strong> — final notice / pause work</li>
+        <li><strong>30+</strong> — escalate or write-off decision</li>
+      </ul>
+      <p>Sum open amounts by bucket on a dashboard row. That single view is cash clarity: not “I think they will pay,” but “$X is 15+ days late.”</p>
+
+      <div class="callout">
+        <p><strong>Habit:</strong> Update status the same day money lands. A tracker that is three days stale is how late invoices hide.</p>
+      </div>
+
+      <h2>Cash view vs invoice list</h2>
+      <p>An invoice list answers “what is unpaid?” A cash view answers “what is likely to arrive, and when?” You get there by combining:</p>
+      <ol>
+        <li>Open invoices sorted by due date</li>
+        <li>Expected pay week (or “unknown”)</li>
+        <li>Known client behavior (always 10 days late vs usually on time)</li>
+      </ol>
+      <p>Client behavior belongs next to the money — not in a separate notebook you never open. That is why Ops pairs a money sheet with a client sheet instead of leaving notes buried in chat.</p>
+
+      <h2>DIY checklist (one evening)</h2>
+      <ol>
+        <li>Create one “Invoices” tab with the columns above.</li>
+        <li>Add a “Status” dropdown so filters stay clean.</li>
+        <li>Add <code>Days overdue</code> as a formula, not a manual number.</li>
+        <li>Add a summary block: total open, total 15+, total paid this month.</li>
+        <li>Create a “Clients” tab: rate, terms (net-15/30), preferred payment link, notes.</li>
+        <li>Every Friday: filter unpaid, send reminders, update “last chased.”</li>
+      </ol>
+      <p>For reminder wording, see <a href="overdue-invoice-emails.html">late payment email templates for freelancers</a> or free <a href="https://nydaymuse.gumroad.com/l/ebexb">Nudge</a>. After payment, <a href="https://nydaymuse.gumroad.com/l/tubrnw">Slip</a> helps you leave a clean receipt trail.</p>
+
+      <h2>When a ready workbook is worth $12</h2>
+      <p>Build your own if you enjoy sheet design and will maintain it. Buy a workbook if you have already lost a weekend to formatting and still do not trust the totals. Ops is a one-time download — freelance money &amp; client workbook — aimed at solo operators who want aging and client context without SaaS lock-in.</p>
+
+      <div class="soft-cta">
+        <h2>Ops — freelance money &amp; client workbook</h2>
+        <p>$12 on Gumroad. Invoice aging, cash-oriented layout, client sheet. Also listed on LaunchFree and Spotlitely.</p>
+        <div class="btn-row">
+          <a class="btn" href="https://nydaymuse.gumroad.com/l/ggnfxs">Buy Ops — $12</a>
+        </div>
+        <p class="also" style="color:var(--muted);">
+          Also:
+          <a href="https://launchfree.io/listings/ops-freelance-money-and-client-workbook.html">LaunchFree</a>
+          <a href="https://www.spotlitely.com/l/ops-freelance-money-client-workbook">Spotlitely</a>
+        </p>
+      </div>
+
+      <h2>Related</h2>
+      <ul>
+        <li><a href="overdue-invoice-emails.html">Late payment email templates for freelancers</a></li>
+        <li><a href="index.html">Nydaymuse — Nudge, Slip, Ops</a></li>
+        <li><a href="https://nydaymuse.gumroad.com/l/ebexb">Free Nudge templates</a></li>
+        <li><a href="https://nydaymuse.gumroad.com/l/tubrnw">Free Slip</a></li>
+      </ul>
+    </div>
+  </article>
+
+  <footer>
+    <div class="wrap">
+      <a href="index.html">Home</a>
+      <a href="overdue-invoice-emails.html">Overdue emails</a>
+      <a href="https://nydaymuse.gumroad.com/l/ggnfxs">Ops</a>
+      <a href="https://nydaymuse.gumroad.com/l/ebexb">Nudge</a>
+      <a href="https://nydaymuse.gumroad.com/l/tubrnw">Slip</a>
+      <p style="margin-top:1rem;">&copy; 2026 Nydaymuse. Original guide — not scraped content.</p>
+    </div>
+  </footer>
+</body>
+</html>

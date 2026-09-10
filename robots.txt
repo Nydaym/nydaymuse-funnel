@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nydaym.github.io/nydaymuse-funnel/sitemap.xml
