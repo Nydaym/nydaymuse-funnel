@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-09-10 — SaaSBison reciprocal badge
+
+Added the official free-plan “Featured on SaaSBison” badge and dofollow link alongside the twelve.tools footer badge on all funnel pages. Badge source: `https://saasbison.com/badge.png`; required for the free SaaSBison listing.
+
+### Pages touched
+
+- `index.html`
+- `overdue-invoice-emails.html`
+- `freelance-invoice-spreadsheet.html`
+
 ## 2026-09-10 — twelve.tools reciprocal footer badge
 
 Added a small navy/red footer badge linking to https://twelve.tools (“Listed on twelve.tools”) so the free twelve.tools directory submit can qualify (reciprocal backlink required). Promo kit documents the requirement but no official SVG badge — text badge used.
