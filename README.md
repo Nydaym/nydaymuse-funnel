@@ -13,6 +13,7 @@ No build step. Works as `file://` and on any static host (GitHub Pages, Netlify,
 | `freelance-invoice-spreadsheet.html` | SEO: invoice tracker / aging spreadsheet → Ops |
 | `robots.txt` | Allow crawl + sitemap pointer |
 | `sitemap.xml` | URLs for GitHub Pages base |
+| `CHANGELOG.md` | Product-upgrade copy notes |
 | `README.md` | This file |
 
 ## Product links
