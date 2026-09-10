@@ -113,6 +113,22 @@
     }
     footer a { color: var(--muted); margin-right: 1rem; }
     footer a:hover { color: var(--white); }
+    .tt-badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid #334155;
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+    }
+    .tt-badge:hover {
+      border-color: var(--red);
+      color: var(--white);
+      text-decoration: none;
+    }
+    .tt-badge span { color: var(--red); font-weight: 600; }
   </style>
 </head>
 <body>
@@ -223,6 +239,7 @@
       <a href="https://nydaymuse.gumroad.com/l/ebexb">Nudge</a>
       <a href="https://nydaymuse.gumroad.com/l/tubrnw">Slip</a>
       <p style="margin-top:1rem;">&copy; 2026 Nydaymuse. Original guide — not scraped content.</p>
+      <a class="tt-badge" href="https://twelve.tools" target="_blank" rel="noopener">Listed on <span>twelve.tools</span></a>
     </div>
   </footer>
 </body>

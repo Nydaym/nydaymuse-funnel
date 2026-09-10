@@ -193,6 +193,22 @@
     footer a:hover { color: var(--white); }
     footer .links { margin-bottom: 1rem; }
     footer .links a { margin-right: 1rem; }
+    .tt-badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid #334155;
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+    }
+    .tt-badge:hover {
+      border-color: var(--red);
+      color: var(--white);
+      text-decoration: none;
+    }
+    .tt-badge span { color: var(--red); font-weight: 600; }
     .guides {
       display: grid;
       gap: 1rem;
@@ -347,6 +363,7 @@
         <a href="https://nydaymuse.gumroad.com/l/tubrnw">Slip</a>
       </div>
       <p>&copy; 2026 Nydaymuse. Static funnel — no KYC, no account required to browse.</p>
+      <a class="tt-badge" href="https://twelve.tools" target="_blank" rel="noopener">Listed on <span>twelve.tools</span></a>
     </div>
   </footer>
 </body>
