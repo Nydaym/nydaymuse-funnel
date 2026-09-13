@@ -14,6 +14,7 @@ No build step. Works as `file://` and on any static host (GitHub Pages, Netlify,
 | `freelance-rate-calculator.html` | SEO: rate calculator → Quote (+ Close/Ops) |
 | `overdue-invoice-emails.html` | SEO: late payment email templates freelance |
 | `freelance-invoice-spreadsheet.html` | SEO: invoice tracker / aging spreadsheet → Ops |
+| `og-image.png` | 1200×630 social preview for `index.html` |
 | `robots.txt` | Allow crawl + sitemap pointer |
 | `sitemap.xml` | URLs for GitHub Pages base |
 | `CHANGELOG.md` | Product-upgrade copy notes |
