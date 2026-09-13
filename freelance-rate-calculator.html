@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freelance Rate Calculator — Offline Quote Tool (Free)</title>
+  <meta name="description" content="Freelance rate calculator for project quotes: hourly, hours, rush, contingency, and Core / Recommended / Comprehensive tiers. Free offline HTML Quote tool — plus Close and Ops upsells.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="freelance rate calculator, freelance quote calculator, hourly rate calculator freelance, project pricing calculator">
+  <link rel="canonical" href="https://nydaym.github.io/nydaymuse-funnel/freelance-rate-calculator.html">
+  <meta property="og:title" content="Freelance Rate Calculator — Offline Quote Tool">
+  <meta property="og:description" content="Build three-tier quotes offline. Free HTML calculator — print or save as PDF.">
+  <meta property="og:type" content="article">
+  <style>
+    :root {
+      --navy: #0F172A;
+      --red: #E11D48;
+      --red-hover: #BE123C;
+      --slate: #64748B;
+      --light: #F8FAFC;
+      --border: #E2E8F0;
+      --white: #FFFFFF;
+      --muted: #94A3B8;
+      --code-bg: #F1F5F9;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--navy);
+      background: var(--white);
+      line-height: 1.7;
+    }
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 0 1.25rem; }
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1rem 0;
+    }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-weight: 700; font-size: 1.125rem; color: var(--white); }
+    .logo span { color: var(--red); }
+    nav a { color: var(--muted); font-size: 0.875rem; margin-left: 1rem; }
+    nav a:hover { color: var(--white); text-decoration: none; }
+    article { padding: 2.5rem 0 3rem; }
+    .breadcrumb { font-size: 0.8125rem; color: var(--slate); margin-bottom: 1.25rem; }
+    .breadcrumb a { color: var(--slate); }
+    h1 {
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+    .meta { color: var(--slate); font-size: 0.875rem; margin-bottom: 2rem; }
+    h2 {
+      font-size: 1.25rem;
+      margin: 2.25rem 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    h3 { font-size: 1.0625rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; color: #334155; }
+    ul, ol { margin: 0 0 1.25rem 1.25rem; color: #334155; }
+    li { margin-bottom: 0.4rem; }
+    .callout {
+      background: var(--light);
+      border-left: 4px solid var(--red);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+    .callout p { margin-bottom: 0.5rem; }
+    .callout p:last-child { margin-bottom: 0; }
+    .template {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 1.25rem;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.9375rem;
+      white-space: pre-wrap;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      line-height: 1.55;
+      color: var(--navy);
+    }
+    .btn {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+    }
+    .btn:hover { background: var(--red-hover); text-decoration: none; color: var(--white); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0; justify-content: center; }
+    .soft-cta {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1.75rem;
+      border-radius: 0.75rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .soft-cta p { color: var(--muted); margin-bottom: 1rem; }
+    .soft-cta h2 { color: var(--white); margin-top: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.9375rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.625rem 0.75rem;
+      text-align: left;
+    }
+    th { background: var(--light); font-weight: 600; }
+    footer {
+      background: var(--navy);
+      color: var(--muted);
+      padding: 2rem 0;
+      font-size: 0.8125rem;
+    }
+    footer a { color: var(--muted); margin-right: 1rem; }
+    footer a:hover { color: var(--white); }
+    .tt-badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid #334155;
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+    }
+    .tt-badge:hover {
+      border-color: var(--red);
+      color: var(--white);
+      text-decoration: none;
+    }
+    .tt-badge span { color: var(--red); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html">Nyday<span>muse</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="https://nydaymuse.gumroad.com/l/qdccy?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=quote">Quote</a>
+        <a href="https://nydaymuse.gumroad.com/l/ggnfxs">Ops</a>
+      </nav>
+    </div>
+  </header>
+
+  <article>
+    <div class="wrap">
+      <p class="breadcrumb"><a href="index.html">Home</a> / Freelance rate calculator</p>
+      <h1>Freelance rate calculator — build a three-tier quote offline</h1>
+      <p class="meta">Hourly · hours · rush · contingency · Core / Recommended / Comprehensive · updated 2026</p>
+
+      <p>Spreadsheet tabs multiply. You guess hours, forget rush fees, and send a single number that invites endless “can you do less?” replies. A freelance rate calculator should spit out a clear total and optional tiers — without uploading your numbers to someone else’s SaaS.</p>
+      <p><a href="https://nydaymuse.gumroad.com/l/qdccy?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=quote">Quote</a> is a free single-file HTML calculator: open locally, works offline, print or save as PDF. Data stays in your browser.</p>
+
+      <div class="soft-cta">
+        <h2>Quote — free offline rate calculator</h2>
+        <p>Hourly × hours + rush % + contingency % + materials → base, rush, contingency, total. Three package tiers with editable multipliers. Print-ready.</p>
+        <div class="btn-row">
+          <a class="btn" href="https://nydaymuse.gumroad.com/l/qdccy?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=quote">Get Quote free</a>
+        </div>
+      </div>
+
+      <h2>Inputs that matter</h2>
+      <table>
+        <thead>
+          <tr><th>Input</th><th>Why it exists</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Hourly rate</td><td>Your floor — not a number you invent under pressure</td></tr>
+          <tr><td>Estimated hours</td><td>Delivery time, not “optimistic best case”</td></tr>
+          <tr><td>Rush %</td><td>Compressed timelines cost focus and rework</td></tr>
+          <tr><td>Contingency %</td><td>Unknowns, revision creep, waiting on clients</td></tr>
+          <tr><td>Materials / pass-through</td><td>Tools, stock, contractors you will invoice</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <p><strong>Rule of thumb:</strong> If you cannot explain the contingency line in one sentence, raise hours instead of hiding risk in a vague discount later.</p>
+      </div>
+
+      <h2>Simple formula (before tiers)</h2>
+      <div class="template">base = hourly × hours
+rush = base × (rush% / 100)
+contingency = base × (contingency% / 100)
+total = base + rush + contingency + materials</div>
+      <p>That total is your honest single-option quote. Tiers come next when the client wants choice without a free custom redesign for every budget.</p>
+
+      <h2>Core / Recommended / Comprehensive</h2>
+      <p>Three packages let buyers self-select. Keep the differences real — scope and outcomes, not just “more hours” with the same deliverable.</p>
+      <ul>
+        <li><strong>Core</strong> — minimum viable outcome; tight scope; fewer revisions.</li>
+        <li><strong>Recommended</strong> — the option you want most clients to pick; best balance.</li>
+        <li><strong>Comprehensive</strong> — extras, research, extra rounds, or faster turnaround.</li>
+      </ul>
+      <p>In Quote, multipliers are editable so your Recommended can sit at e.g. 1.0× and Comprehensive at 1.35× of the calculated base — or whatever matches your packaging.</p>
+
+      <h2>How to use numbers in a proposal</h2>
+      <ol>
+        <li>Run the calculator with conservative hours.</li>
+        <li>Lock a floor you will not go below.</li>
+        <li>Offer three tiers with clear “included / not included.”</li>
+        <li>Paste totals into the proposal investment section.</li>
+        <li>If they ask for cheaper, shrink scope — do not silently cut the floor.</li>
+      </ol>
+      <p>For AI help turning discovery notes into that proposal copy, see <a href="freelance-proposal-ai-prompts.html">freelance proposal ChatGPT prompts</a> or <a href="https://nydaymuse.gumroad.com/l/ptljg?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=close">Close</a> ($12).</p>
+
+      <h2>When free Quote is not enough</h2>
+      <p>A calculator prices one project. It does not track invoices, aging, or client terms after you win. That is why freelancers pair Quote with <a href="https://nydaymuse.gumroad.com/l/ggnfxs">Ops</a> ($12) — the money &amp; client workbook — once cash clarity matters week to week.</p>
+
+      <div class="soft-cta">
+        <h2>Upsell when you are ready</h2>
+        <p>Close: 8 AI proposal &amp; pricing prompts ($12). Ops: freelance money &amp; client workbook ($12). Quote stays free.</p>
+        <div class="btn-row">
+          <a class="btn" href="https://nydaymuse.gumroad.com/l/qdccy?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=quote">Quote free</a>
+          <a class="btn" href="https://nydaymuse.gumroad.com/l/ptljg?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=close">Close — $12</a>
+          <a class="btn" href="https://nydaymuse.gumroad.com/l/ggnfxs">Ops — $12</a>
+        </div>
+      </div>
+
+      <h2>Related</h2>
+      <ul>
+        <li><a href="freelance-proposal-ai-prompts.html">Freelance proposal template + ChatGPT prompts</a></li>
+        <li><a href="client-onboarding-notion.html">Client onboarding in Notion</a></li>
+        <li><a href="freelance-invoice-spreadsheet.html">Invoice tracker &amp; aging spreadsheet</a></li>
+        <li><a href="index.html">Nydaymuse home</a></li>
+      </ul>
+    </div>
+  </article>
+
+  <footer>
+    <div class="wrap">
+      <a href="index.html">Home</a>
+      <a href="freelance-proposal-ai-prompts.html">Proposal prompts</a>
+      <a href="https://nydaymuse.gumroad.com/l/qdccy?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=quote">Quote</a>
+      <a href="https://nydaymuse.gumroad.com/l/ptljg?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=close">Close</a>
+      <a href="https://nydaymuse.gumroad.com/l/ggnfxs">Ops</a>
+      <p style="margin-top:1rem;">&copy; 2026 Nydaymuse. Original guide — not scraped content.</p>
+      <a class="tt-badge" href="https://twelve.tools" target="_blank" rel="noopener">Listed on <span>twelve.tools</span></a>
+      <a class="sb-badge" href="https://saasbison.com" target="_blank" rel="dofollow"><img src="https://saasbison.com/badge.png" alt="Featured on SaaSBison" width="200" height="54" /></a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -8,7 +8,10 @@ No build step. Works as `file://` and on any static host (GitHub Pages, Netlify,
 
 | File | Purpose |
 |------|---------|
-| `index.html` | English landing — problem → free Nudge + Slip → Ops $12 |
+| `index.html` | English landing — Quote/Nudge/Slip free → Close/Kickoff/Ops $12 |
+| `freelance-proposal-ai-prompts.html` | SEO: proposal template + ChatGPT prompts → Close |
+| `client-onboarding-notion.html` | SEO: Notion client onboarding → Kickoff |
+| `freelance-rate-calculator.html` | SEO: rate calculator → Quote (+ Close/Ops) |
 | `overdue-invoice-emails.html` | SEO: late payment email templates freelance |
 | `freelance-invoice-spreadsheet.html` | SEO: invoice tracker / aging spreadsheet → Ops |
 | `robots.txt` | Allow crawl + sitemap pointer |
@@ -18,6 +21,9 @@ No build step. Works as `file://` and on any static host (GitHub Pages, Netlify,
 
 ## Product links
 
+- Quote (free): https://nydaymuse.gumroad.com/l/qdccy
+- Close $12: https://nydaymuse.gumroad.com/l/ptljg
+- Kickoff $12: https://nydaymuse.gumroad.com/l/fuflsz
 - Ops $12: https://nydaymuse.gumroad.com/l/ggnfxs
 - Nudge (free): https://nydaymuse.gumroad.com/l/ebexb
 - Slip (free): https://nydaymuse.gumroad.com/l/tubrnw

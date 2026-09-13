@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client Onboarding in Notion — Freelance Kickoff Checklist</title>
+  <meta name="description" content="Client onboarding Notion workflow for freelancers: welcome email, kickoff checklist, assets request, and comms expectations. Soft path to Kickoff — $12 Notion pack.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="client onboarding notion, freelance kickoff checklist, notion client onboarding, freelance onboarding template">
+  <link rel="canonical" href="https://nydaym.github.io/nydaymuse-funnel/client-onboarding-notion.html">
+  <meta property="og:title" content="Client Onboarding in Notion — Freelance Kickoff Checklist">
+  <meta property="og:description" content="Same welcome, checklist, assets, and comms every time — without reinventing onboarding.">
+  <meta property="og:type" content="article">
+  <style>
+    :root {
+      --navy: #0F172A;
+      --red: #E11D48;
+      --red-hover: #BE123C;
+      --slate: #64748B;
+      --light: #F8FAFC;
+      --border: #E2E8F0;
+      --white: #FFFFFF;
+      --muted: #94A3B8;
+      --code-bg: #F1F5F9;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--navy);
+      background: var(--white);
+      line-height: 1.7;
+    }
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 0 1.25rem; }
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1rem 0;
+    }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-weight: 700; font-size: 1.125rem; color: var(--white); }
+    .logo span { color: var(--red); }
+    nav a { color: var(--muted); font-size: 0.875rem; margin-left: 1rem; }
+    nav a:hover { color: var(--white); text-decoration: none; }
+    article { padding: 2.5rem 0 3rem; }
+    .breadcrumb { font-size: 0.8125rem; color: var(--slate); margin-bottom: 1.25rem; }
+    .breadcrumb a { color: var(--slate); }
+    h1 {
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+    .meta { color: var(--slate); font-size: 0.875rem; margin-bottom: 2rem; }
+    h2 {
+      font-size: 1.25rem;
+      margin: 2.25rem 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    h3 { font-size: 1.0625rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; color: #334155; }
+    ul, ol { margin: 0 0 1.25rem 1.25rem; color: #334155; }
+    li { margin-bottom: 0.4rem; }
+    .callout {
+      background: var(--light);
+      border-left: 4px solid var(--red);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+    .callout p { margin-bottom: 0.5rem; }
+    .callout p:last-child { margin-bottom: 0; }
+    .template {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 1.25rem;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.9375rem;
+      white-space: pre-wrap;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      line-height: 1.55;
+      color: var(--navy);
+    }
+    .btn {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+    }
+    .btn:hover { background: var(--red-hover); text-decoration: none; color: var(--white); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0; }
+    .soft-cta {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1.75rem;
+      border-radius: 0.75rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .soft-cta p { color: var(--muted); margin-bottom: 1rem; }
+    .soft-cta h2 { color: var(--white); margin-top: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.9375rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.625rem 0.75rem;
+      text-align: left;
+    }
+    th { background: var(--light); font-weight: 600; }
+    footer {
+      background: var(--navy);
+      color: var(--muted);
+      padding: 2rem 0;
+      font-size: 0.8125rem;
+    }
+    footer a { color: var(--muted); margin-right: 1rem; }
+    footer a:hover { color: var(--white); }
+    .tt-badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid #334155;
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+    }
+    .tt-badge:hover {
+      border-color: var(--red);
+      color: var(--white);
+      text-decoration: none;
+    }
+    .tt-badge span { color: var(--red); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html">Nyday<span>muse</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="https://nydaymuse.gumroad.com/l/fuflsz?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=kickoff">Kickoff</a>
+        <a href="https://nydaymuse.gumroad.com/l/ggnfxs">Ops</a>
+      </nav>
+    </div>
+  </header>
+
+  <article>
+    <div class="wrap">
+      <p class="breadcrumb"><a href="index.html">Home</a> / Client onboarding Notion</p>
+      <h1>Client onboarding in Notion — freelance kickoff checklist</h1>
+      <p class="meta">Welcome · checklist · assets · comms · updated 2026</p>
+
+      <p>You closed the deal. Then you spend half a day rewriting the same welcome email, hunting for logo files in Slack, and discovering on day three that nobody owns brand guidelines.</p>
+      <p>Client onboarding in Notion works when it is boring and repeatable: one welcome, one checklist, one assets request, one comms agreement. If you want that pack ready to import (Markdown + CSV SAMPLE databases), grab <a href="https://nydaymuse.gumroad.com/l/fuflsz?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=kickoff">Kickoff</a> ($12). Free Notion is enough — no paid plan required for this workflow.</p>
+
+      <h2>Why freelancers skip onboarding (and pay later)</h2>
+      <ul>
+        <li>Welcome email feels “optional” when everyone is excited to start.</li>
+        <li>Assets arrive late — or as low-res screenshots in chat.</li>
+        <li>Feedback channels multiply (email + Slack + WhatsApp + comments).</li>
+        <li>Decision owners stay vague until a late-stage revision war.</li>
+      </ul>
+      <p>A lightweight Notion hub does not replace your contract. It makes the first week predictable so delivery can start on time.</p>
+
+      <h2>Minimum Notion structure</h2>
+      <table>
+        <thead>
+          <tr><th>Page / DB</th><th>Job</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Clients</td><td>Company, primary contact, terms, payment link, notes</td></tr>
+          <tr><td>Projects</td><td>Linked client, status, start/end, deposit status</td></tr>
+          <tr><td>Intake</td><td>Assets, access, brand, stakeholders — checklist rows</td></tr>
+          <tr><td>Kickoff page</td><td>Welcome swipe, checklist, assets request, comms expectations</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <p><strong>Import tip:</strong> Notion’s free plan can import Markdown and CSV. Duplicate your template once per engagement, delete SAMPLE rows, then fill real names. You do not need a public “duplicate template” link.</p>
+      </div>
+
+      <h2>Welcome email (swipe)</h2>
+      <div class="template">Subject: Welcome — [Project] kickoff
+
+Hi [Name],
+
+Excited to start [Project]. Here is how we begin:
+
+1) Kickoff checklist (below / Notion link)
+2) Assets &amp; access list — please send by [DATE]
+3) Comms: we use [EMAIL / SLACK], responses within [N] business days
+
+Kickoff call: [DATE / TIME / LINK]
+Deposit invoice: [LINK] (if not already paid)
+
+Reply with any blockers. Looking forward to a clean start.
+
+[Your name]</div>
+
+      <h2>Freelance kickoff checklist</h2>
+      <ol>
+        <li>Contract signed + deposit received (or terms confirmed in writing).</li>
+        <li>Primary contact and decision owner named.</li>
+        <li>Goals / success criteria in one short paragraph.</li>
+        <li>Assets list sent; due date set.</li>
+        <li>Access: tools, accounts, folders, brand kit.</li>
+        <li>Comms channel + meeting cadence agreed.</li>
+        <li>First deliverable date on the calendar.</li>
+        <li>Invoice schedule and payment method confirmed.</li>
+      </ol>
+
+      <h2>Assets request (keep it specific)</h2>
+      <p>Vague “send everything” emails fail. Ask for formats and owners:</p>
+      <ul>
+        <li>Logo: SVG / PNG, light and dark if available</li>
+        <li>Brand guide or color/font notes</li>
+        <li>Existing copy, screenshots, or competitor links</li>
+        <li>Analytics / CMS / hosting access (role-based, not shared passwords in chat)</li>
+        <li>Stakeholder list with who must approve</li>
+      </ul>
+
+      <h2>Comms expectations (short is better)</h2>
+      <p>Put this in Notion and paste a summary in the welcome email:</p>
+      <ul>
+        <li><strong>Primary channel:</strong> one place for decisions (not five).</li>
+        <li><strong>Response window:</strong> e.g. 1 business day for blockers.</li>
+        <li><strong>Feedback rounds:</strong> how many are in scope.</li>
+        <li><strong>Urgent path:</strong> what counts as urgent and who to ping.</li>
+      </ul>
+
+      <div class="soft-cta">
+        <h2>Kickoff — client onboarding Notion pack</h2>
+        <p>$12 · welcome email, kickoff checklist, assets request, comms expectations, plus SAMPLE Clients / Projects / Intake CSVs. Import Markdown &amp; CSV into free Notion.</p>
+        <div class="btn-row" style="justify-content:center;">
+          <a class="btn" href="https://nydaymuse.gumroad.com/l/fuflsz?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=kickoff">Get Kickoff — $12</a>
+        </div>
+      </div>
+
+      <h2>Related</h2>
+      <ul>
+        <li><a href="freelance-proposal-ai-prompts.html">Freelance proposal template + ChatGPT prompts (Close)</a></li>
+        <li><a href="freelance-invoice-spreadsheet.html">Freelance invoice tracker &amp; aging spreadsheet</a></li>
+        <li><a href="index.html">Nydaymuse home — Quote, Close, Kickoff, Ops</a></li>
+        <li><a href="https://nydaymuse.gumroad.com/l/ggnfxs">Ops — money &amp; client workbook</a></li>
+      </ul>
+    </div>
+  </article>
+
+  <footer>
+    <div class="wrap">
+      <a href="index.html">Home</a>
+      <a href="freelance-proposal-ai-prompts.html">Proposal prompts</a>
+      <a href="https://nydaymuse.gumroad.com/l/fuflsz?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=kickoff">Kickoff</a>
+      <a href="https://nydaymuse.gumroad.com/l/ggnfxs">Ops</a>
+      <p style="margin-top:1rem;">&copy; 2026 Nydaymuse. Original guide — not scraped content.</p>
+      <a class="tt-badge" href="https://twelve.tools" target="_blank" rel="noopener">Listed on <span>twelve.tools</span></a>
+      <a class="sb-badge" href="https://saasbison.com" target="_blank" rel="dofollow"><img src="https://saasbison.com/badge.png" alt="Featured on SaaSBison" width="200" height="54" /></a>
+    </div>
+  </footer>
+</body>
+</html>

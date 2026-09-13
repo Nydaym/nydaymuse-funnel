@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-09-13 — Wave 3 SEO: Close / Kickoff / Quote
+
+Added three English SEO landing pages and surfaced Quote (free), Close ($12), and Kickoff ($12) on the home funnel beside existing Ops / Nudge / Slip.
+
+### New pages
+
+- `freelance-proposal-ai-prompts.html` → Close CTA (`ptljg`, utm_campaign=close); keywords: freelance proposal template, chatgpt proposal prompts, freelancer pricing
+- `client-onboarding-notion.html` → Kickoff CTA (`fuflsz`, utm_campaign=kickoff)
+- `freelance-rate-calculator.html` → Quote free CTA (`qdccy`, utm_campaign=quote) + Close / Ops upsells
+
+### Also updated
+
+- `index.html` — nav, free cards (Quote + Nudge + Slip), paid cards (Close + Kickoff + Ops), guides, CTA, footer; LaunchFree / SaaSBison / twelve.tools badges kept
+- `sitemap.xml` — lists new pages (`lastmod` 2026-09-13)
+
+Deploy: no git remotes in this folder at write time — browser push may be required.
+
+
 ## 2026-09-10 — SaaSBison reciprocal badge
 
 Added the official free-plan “Featured on SaaSBison” badge and dofollow link alongside the twelve.tools footer badge on all funnel pages. Badge source: `https://saasbison.com/badge.png`; required for the free SaaSBison listing.
