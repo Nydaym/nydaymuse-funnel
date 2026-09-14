@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Podcast Episode Desk — Guests, Show Notes & Publish Checklist (Free Pod)</title>
+  <meta name="description" content="Free offline podcast desk: episode tracker, guest outreach emails, show-notes template, publish checklist, guest one-pager. Pod HTML tool for hosts.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="podcast episode planner, guest outreach email, show notes template, podcast publish checklist, offline podcast tool">
+  <link rel="canonical" href="https://nydaym.github.io/nydaymuse-funnel/podcast-episode-desk.html">
+  <meta property="og:title" content="Podcast episode desk — guests, show notes, and a publish checklist offline">
+  <meta property="og:description" content="Free offline podcast desk: episode tracker, guest outreach emails, show-notes template, publish checklist, guest one-pager. Pod HTML tool for hosts.">
+  <meta property="og:type" content="article">
+  <style>
+    :root {
+      --navy: #0F172A;
+      --red: #E11D48;
+      --red-hover: #BE123C;
+      --slate: #64748B;
+      --light: #F8FAFC;
+      --border: #E2E8F0;
+      --white: #FFFFFF;
+      --muted: #94A3B8;
+      --code-bg: #F1F5F9;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--navy);
+      background: var(--white);
+      line-height: 1.7;
+    }
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 0 1.25rem; }
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1rem 0;
+    }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-weight: 700; font-size: 1.125rem; color: var(--white); }
+    .logo span { color: var(--red); }
+    nav a { color: var(--muted); font-size: 0.875rem; margin-left: 1rem; }
+    nav a:hover { color: var(--white); text-decoration: none; }
+    article { padding: 2.5rem 0 3rem; }
+    .breadcrumb { font-size: 0.8125rem; color: var(--slate); margin-bottom: 1.25rem; }
+    .breadcrumb a { color: var(--slate); }
+    h1 {
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+    .meta { color: var(--slate); font-size: 0.875rem; margin-bottom: 2rem; }
+    h2 {
+      font-size: 1.25rem;
+      margin: 2.25rem 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    h3 { font-size: 1.0625rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; color: #334155; }
+    ul, ol { margin: 0 0 1.25rem 1.25rem; color: #334155; }
+    li { margin-bottom: 0.4rem; }
+    .callout {
+      background: var(--light);
+      border-left: 4px solid var(--red);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+    .callout p { margin-bottom: 0.5rem; }
+    .callout p:last-child { margin-bottom: 0; }
+    .btn {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+    }
+    .btn:hover { background: var(--red-hover); text-decoration: none; color: var(--white); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0; justify-content: center; }
+    .soft-cta {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1.75rem;
+      border-radius: 0.75rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .soft-cta p { color: var(--muted); margin-bottom: 1rem; }
+    .soft-cta h2 { color: var(--white); margin-top: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.9375rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.625rem 0.75rem;
+      text-align: left;
+    }
+    th { background: var(--light); font-weight: 600; }
+    footer {
+      background: var(--navy);
+      color: var(--muted);
+      padding: 2rem 0;
+      font-size: 0.8125rem;
+    }
+    footer a { color: var(--muted); margin-right: 1rem; }
+    footer a:hover { color: var(--white); }
+    .tt-badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid #334155;
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+    }
+    .tt-badge:hover {
+      border-color: var(--red);
+      color: var(--white);
+      text-decoration: none;
+    }
+    .tt-badge span { color: var(--red); font-weight: 600; }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html">Nyday<span>muse</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="https://nydaymuse.gumroad.com/l/poddesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave5">Get free desk</a>
+      </nav>
+    </div>
+  </header>
+
+  <article>
+    <div class="wrap">
+      <p class="breadcrumb"><a href="index.html">Home</a> / Podcast episode desk</p>
+      <h1>Podcast episode desk — guests, show notes, and a publish checklist offline</h1>
+      <p class="meta">Episodes · outreach · shownotes · checklist · free Pod · updated 2026</p>
+
+
+      <p>Podcast production dies in the gaps between “guest said yes” and “episode is live.” Outreach threads scatter. Show notes get rewritten three times. Publish day arrives without chapters or clip asks. Hosts need an episode desk — not another production SaaS with a seat tax.</p>
+      <p><a href="https://nydaymuse.gumroad.com/l/poddesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave5">Pod</a> is a free, offline Podcast Episode Desk: episodes table, guest outreach swipe, show-notes template, publish checklist, and a printable guest one-pager. Open <code>pod-desk.html</code> in your browser. Data stays in localStorage.</p>
+
+      <div class="soft-cta">
+        <h2>Pod — free podcast episode desk</h2>
+        <p>Guests + show notes + publish checklist. SAMPLE episodes included. English UI. Navy / red.</p>
+        <div class="btn-row">
+          <a class="btn" href="https://nydaymuse.gumroad.com/l/poddesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave5">Get Pod free</a>
+        </div>
+      </div>
+
+      <h2>Episode workflow that actually ships</h2>
+      <ol>
+        <li><strong>Idea</strong> — title and guest hypothesis before you pitch.</li>
+        <li><strong>Booked</strong> — confirm date; send the guest one-pager so they know format and tech.</li>
+        <li><strong>Recorded → Edited</strong> — move status when audio is in; keep publish date visible.</li>
+        <li><strong>Live</strong> — run the publish checklist: audio, shownotes, chapters, social clips.</li>
+      </ol>
+      <p>Status values (Idea / Booked / Recorded / Edited / Live) keep the calendar honest. If everything stays “Idea,” you do not have a show — you have a backlog.</p>
+
+      <h2>What’s inside the desk</h2>
+      <table>
+        <thead>
+          <tr><th>Module</th><th>What you do</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Episodes table</td><td>Title, Guest, Status, Record date, Publish date, Duration</td></tr>
+          <tr><td>Guest outreach</td><td>Pitch, confirm, thank-you, clip-ask templates with [BRACKETS] + Copy</td></tr>
+          <tr><td>Show notes</td><td>Hook, bio, chapters, links — live preview and copy</td></tr>
+          <tr><td>Publish checklist</td><td>Audio, shownotes, chapters, social clips before you hit publish</td></tr>
+          <tr><td>Guest one-pager</td><td>Printable pre-record brief; Export / Import JSON + Notion CSVs</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <p><strong>Rule of thumb:</strong> Write show-notes chapters the same day you edit. Waiting until publish day is how “coming soon” timestamps stay wrong for months.</p>
+      </div>
+
+      <h2>Guest outreach without awkward silence</h2>
+      <p>A good pitch names why this guest fits this episode, offers a clear time window, and asks one yes/no question. Confirm messages restate date, length, and tech (Zoom, Riverside, local recorder). Thank-you notes should arrive after the record — and the clip-ask should make sharing easy with a suggested caption. Pod’s swipe file is copy-paste scaffolding; you still sound like yourself.</p>
+
+      <h2>Show notes that listeners can scan</h2>
+      <p>Open with a one-sentence hook. Add a short bio. List chapters with timestamps when you have them. Put links in one block so show notes are not a scavenger hunt. The live preview in Pod helps you catch empty sections before you paste into your host dashboard.</p>
+
+      
+      <h2>Batch recording without losing the publish trail</h2>
+      <p>Many hosts record two or three episodes in one afternoon. That only works if Record date and Publish date stay separate. Mark Recorded when the file lands, keep Publish date on the future slot, and do not mark Live until the checklist is done. Duration helps you spot episodes that ran long before you promise a tight weekly cadence to listeners.</p>
+      <p>When a guest cancels, leave the row — change status back to Idea or delete after you note the reason in your own calendar. The desk will not replace your host analytics; it replaces the sticky notes that usually hold guest emails and half-written shownotes.</p>
+
+      <h2>FAQ</h2>
+      <h3>Does Pod host audio or RSS?</h3>
+      <p>No. It organizes episodes and copy. You still upload to Spotify, Apple, or your host of choice.</p>
+      <h3>Is there a guest CRM?</h3>
+      <p>No enterprise CRM. One episodes table plus outreach templates is enough for most solo or duo shows.</p>
+      <h3>Offline?</h3>
+      <p>Yes after download. No account. No support. Buy once on Gumroad for $0+.</p>
+      <h3>Pricing client work around the show?</h3>
+      <p>Use free <a href="https://nydaymuse.gumroad.com/l/qdccy?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave5">Quote</a> for rate tiers, or <a href="https://nydaymuse.gumroad.com/l/hookdesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave5">Hook</a> when sponsorships and freelance leads need a pipeline.</p>
+
+
+      <div class="soft-cta">
+        <h2>Get Pod free</h2>
+        <p>Free offline HTML desk. Buy once on Gumroad. No support. SAMPLE data included — replace with yours.</p>
+        <div class="btn-row">
+          <a class="btn" href="https://nydaymuse.gumroad.com/l/poddesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave5">Get Pod free</a>
+        </div>
+      </div>
+
+
+      <div class="soft-cta">
+        <h2>Next steps</h2>
+        <p>Hook for client acquisition. Quote when you need an offline three-tier rate calculator.</p>
+        <div class="btn-row">
+          <a class="btn" href="https://nydaymuse.gumroad.com/l/hookdesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave5">Hook free</a>
+          <a class="btn" href="https://nydaymuse.gumroad.com/l/qdccy?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave5">Quote free</a>
+        </div>
+      </div>
+
+
+      <h2>Related</h2>
+      <ul>
+        <li><a href="job-search-desk.html">Job search desk (Hunt)</a></li>
+        <li><a href="photographer-shoot-desk.html">Photographer shoot desk (Shot)</a></li>
+        <li><a href="podcast-episode-desk.html">Podcast episode desk (Pod)</a></li>
+        <li><a href="freelance-rate-calculator.html">Freelance rate calculator (Quote)</a></li>
+        <li><a href="index.html">Nydaymuse home</a></li>
+      </ul>
+    </div>
+  </article>
+
+  <footer>
+    <div class="wrap">
+      <a href="index.html">Home</a>
+      <a href="job-search-desk.html">Hunt guide</a>
+      <a href="photographer-shoot-desk.html">Shot guide</a>
+      <a href="podcast-episode-desk.html">Pod guide</a>
+      <a href="https://nydaymuse.gumroad.com/l/hookdesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave5">Hook</a>
+      <p style="margin-top:1rem;">&copy; 2026 Nydaymuse. Original guide — not scraped content. No fake reviews or stats.</p>
+      <a class="tt-badge" href="https://twelve.tools" target="_blank" rel="noopener">Listed on <span>twelve.tools</span></a>
+    </div>
+  </footer>
+</body>
+</html>
