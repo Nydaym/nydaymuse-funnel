@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nydaym.github.io/nydaymuse-funnel/</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>22026-09-15/lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+    <url>
+          <loc>https://nydaym.github.io/nydaymuse-funnel/index.html</loc>
+          <lastmod>2026-09-15</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>1.0</priority>
+    </url>
   <url>
     <loc>https://nydaym.github.io/nydaymuse-funnel/freelance-proposal-ai-prompts.html</loc>
     <lastmod>2026-09-13</lastmod>
