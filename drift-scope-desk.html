@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drift — Free Scope Creep &amp; Change-Order Desk | nydaymuse</title>
+  <meta name="description" content="Drift is a free offline desk for freelancers: project baselines, creep log with hours + $ at risk, change-order email swipes, and a bill-vs-absorb checklist. Data stays in your browser.">
+  <link rel="canonical" href="https://nydaym.github.io/nydaymuse-funnel/drift-scope-desk.html">
+  <meta property="og:title" content="Drift — Free Scope Creep &amp; Change-Order Desk">
+  <meta property="og:description" content="Catch “can you also just…” before it eats the margin. Free offline HTML desk from nydaymuse.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nydaym.github.io/nydaymuse-funnel/drift-scope-desk.html">
+  <style>
+    :root{--navy:#0F172A;--navy-2:#172554;--red:#E11D48;--red-dark:#BE123C;--ink:#1E293B;--muted:#64748B;--line:#E2E8F0;--paper:#F8FAFC;--white:#fff;--mint:#FFF1F2}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:var(--red-dark)}a:focus-visible,.btn:focus-visible{outline:3px solid #FDA4AF;outline-offset:3px}
+    .wrap{width:min(1080px,calc(100% - 40px));margin:auto}.top{background:var(--navy);color:#CBD5E1;border-bottom:1px solid #334155}.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{color:#fff;text-decoration:none;font-weight:800;letter-spacing:-.02em}.brand span{color:#FDA4AF}.navlinks{display:flex;gap:20px;align-items:center;font-size:.92rem}.navlinks a{color:#CBD5E1;text-decoration:none}.navlinks a:hover{color:#fff}
+    .hero{background:var(--navy);color:#fff;padding:76px 0 84px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--red);opacity:.12;right:-130px;top:-170px}.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:64px;align-items:center;position:relative;z-index:1}.eyebrow{color:#FDA4AF;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;margin:0 0 18px}.hero h1{font-size:clamp(2.45rem,6vw,4.2rem);line-height:1.03;letter-spacing:-.065em;margin:0 0 22px;max-width:720px}.hero .lede{font-size:1.18rem;color:#CBD5E1;max-width:650px;margin:0 0 30px}.actions{display:flex;flex-wrap:wrap;gap:13px;align-items:center}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:10px;padding:13px 18px;font-weight:800;text-decoration:none;transition:transform .15s ease,background .15s ease}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--red);color:#fff;box-shadow:0 7px 18px rgba(225,29,72,.24)}.btn-primary:hover{background:var(--red-dark)}.btn-ghost{border:1px solid #64748B;color:#fff}.hero-note{font-size:.86rem;color:#94A3B8;margin:14px 0 0}
+    .mock{background:#fff;color:var(--ink);border:1px solid #CBD5E1;border-radius:18px;padding:18px;box-shadow:0 22px 60px rgba(2,6,23,.28);transform:rotate(1.5deg)}.mock-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding-bottom:15px;border-bottom:1px solid var(--line)}.mock-title{font-weight:800;color:var(--navy)}.pill{background:var(--mint);color:var(--red-dark);border-radius:999px;padding:5px 9px;font-size:.72rem;font-weight:800}.mock-row{display:flex;gap:12px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}.check{width:25px;height:25px;display:grid;place-items:center;border-radius:7px;background:var(--red);color:white;font-weight:900;font-size:.84rem}.mock-row strong{display:block;color:var(--navy);font-size:.92rem}.mock-row small{color:var(--muted)}
+    main{padding:70px 0}.section-kicker{color:var(--red-dark);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px}.section h2{font-size:clamp(1.8rem,4vw,2.65rem);letter-spacing:-.045em;line-height:1.1;color:var(--navy);margin:0 0 13px}.section-intro{max-width:650px;color:var(--muted);margin:0 0 30px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:25px}.card-num{color:var(--red);font-weight:900;font-size:.9rem}.card h3{color:var(--navy);margin:10px 0 7px;font-size:1.12rem}.card p{color:var(--muted);margin:0;font-size:.96rem}.workflow{margin-top:70px;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}.panel{background:var(--navy);color:#fff;border-radius:18px;padding:32px}.panel h2{color:#fff}.panel p{color:#CBD5E1}.steps{display:grid;gap:14px;margin:24px 0 0;padding:0;list-style:none}.steps li{display:flex;gap:12px;align-items:flex-start}.step-dot{flex:0 0 27px;height:27px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-weight:800;font-size:.82rem}.steps strong{display:block}.steps span{display:block;color:#CBD5E1;font-size:.9rem;margin-top:2px}.details{border:1px solid var(--line);border-radius:18px;background:#fff;padding:32px}.details h2{margin-bottom:18px}.details ul{margin:0;padding-left:20px;color:var(--muted)}.details li{margin:9px 0}.upsell{margin-top:70px;border-left:4px solid var(--red);padding:22px 25px;background:var(--mint);border-radius:0 14px 14px 0}.upsell h2{font-size:1.45rem;color:var(--navy);margin:0 0 8px}.upsell p{margin:0;color:var(--ink)}.upsell a{font-weight:800;color:var(--red)}.final{margin-top:70px;text-align:center;background:var(--navy);border-radius:20px;padding:48px 25px;color:#fff}.final h2{color:#fff}.final p{color:#CBD5E1;max-width:560px;margin:0 auto 22px}.fine{font-size:.85rem;color:#94A3B8;margin-top:16px}.foot{padding:28px 0 46px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}.foot a{font-weight:700;text-decoration:none}
+    @media(max-width:780px){.navlinks{display:none}.hero{padding:56px 0 62px}.hero-grid,.workflow{grid-template-columns:1fr;gap:36px}.hero h1{font-size:clamp(2.5rem,13vw,4rem)}.cards{grid-template-columns:1fr}.mock{transform:none}.wrap{width:min(100% - 30px,680px)}main{padding:52px 0}.workflow,.upsell,.final{margin-top:52px}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap nav">
+      <a class="brand" href="https://nydaym.github.io/nydaymuse-funnel/">nydaymuse<span> · Drift</span></a>
+      <nav class="navlinks" aria-label="Page navigation"><a href="#inside">Inside</a><a href="#workflow">How it works</a><a href="#get">Get it free</a></nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Free · offline HTML · scope creep desk</p>
+        <h1>Catch scope creep before it eats the margin.</h1>
+        <p class="lede">Log the “can you also just…” ask, estimate hours + $, and send a change-order email. Drift keeps baselines and creep in one calm place — data stays in your browser.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://nydaymuse.gumroad.com/l/driftdesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=drift">Get Drift free <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost" href="https://nydaymuse.gumroad.com/l/wnlnmh?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=drift">Scope SOW filler ($12)</a>
+        </div>
+        <p class="hero-note">Static download · localStorage only · no account required</p>
+      </div>
+      <div class="mock" aria-label="Preview of the Drift desk">
+        <div class="mock-head"><div class="mock-title">Drift · Creep log</div><div class="pill">$1,240 at risk</div></div>
+        <div class="mock-row"><div class="check">✓</div><div><strong>“Can you also add a blog?”</strong><small>4h · Logged · Homepage rebuild</small></div></div>
+        <div class="mock-row"><div class="check">✓</div><div><strong>Extra brand variants</strong><small>6h · Quoted · Logo pack</small></div></div>
+        <div class="mock-row"><div class="check">✓</div><div><strong>Change-order email ready</strong><small>Four swipes · copy &amp; send</small></div></div>
+      </div>
+    </div>
+  </section>
+  <main class="wrap">
+    <section id="inside" class="section">
+      <p class="section-kicker">A small desk, not another SaaS</p>
+      <h2>Turn soft asks into a clear change order.</h2>
+      <p class="section-intro">Drift is a free, offline HTML tool for freelancers who keep saying “sure” to small requests — then watch the margin disappear. Capture the baseline, log the creep, and reply with a calm CO.</p>
+      <div class="cards">
+        <article class="card"><div class="card-num">01 / BASELINE</div><h3>Know what you sold</h3><p>Project baselines with client, rate, in-scope / out-of-scope text, and status so every ask has a reference.</p></article>
+        <article class="card"><div class="card-num">02 / LOG</div><h3>See hours + $ at risk</h3><p>Creep log with date, ask, estimated hours, dollars at that project’s rate, and open impact totals.</p></article>
+        <article class="card"><div class="card-num">03 / CO</div><h3>Send the change order</h3><p>Four change-order email swipes plus a bill-vs-absorb checklist so you decide before you drift.</p></article>
+      </div>
+    </section>
+    <section id="workflow" class="workflow">
+      <div class="panel">
+        <p class="section-kicker">The simple loop</p>
+        <h2>Catch the ask while it is still small.</h2>
+        <ol class="steps">
+          <li><b class="step-dot">1</b><div><strong>Set the baseline</strong><span>Write what is in and out of scope once.</span></div></li>
+          <li><b class="step-dot">2</b><div><strong>Log every soft ask</strong><span>Hours and dollars show up automatically.</span></div></li>
+          <li><b class="step-dot">3</b><div><strong>Quote or absorb on purpose</strong><span>Copy a CO email — or choose to absorb.</span></div></li>
+        </ol>
+      </div>
+      <div class="details">
+        <p class="section-kicker">Included in the free download</p>
+        <h2>Everything stays on your device.</h2>
+        <ul>
+          <li>Project baselines (in / out of scope)</li>
+          <li>Creep log with open hours + $ at risk</li>
+          <li>Four change-order email swipes</li>
+          <li>Bill-vs-absorb checklist</li>
+          <li>LocalStorage data — no account, no cloud</li>
+        </ul>
+      </div>
+    </section>
+    <aside class="upsell">
+      <h2>Ready for a real baseline?</h2>
+      <p>Drift logs the asks. <a href="https://nydaymuse.gumroad.com/l/wnlnmh?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=drift">Scope ($12)</a> writes the SOW. <a href="https://nydaymuse.gumroad.com/l/ptljg?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=drift">Close ($12)</a> prices the change order.</p>
+    </aside>
+    <section id="get" class="final">
+      <h2>Stop saying “sure” on autopilot.</h2>
+      <p>Download Drift free, open the HTML desk, and keep scope creep from silently eating the job.</p>
+      <a class="btn btn-primary" href="https://nydaymuse.gumroad.com/l/driftdesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=drift">Get Drift free on Gumroad ↗</a>
+      <div class="fine">Free download · no subscription · no support · not legal advice</div>
+    </section>
+  </main>
+  <footer class="foot"><div class="wrap">nydaymuse · Drift is an offline productivity tool. <a href="https://nydaymuse.gumroad.com/l/driftdesk">Download the free pack</a>.</div></footer>
+</body>
+</html>
