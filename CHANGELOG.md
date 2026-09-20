@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-09-20 — Site redesign and shared guide styles
+
+Refreshed all 14 HTML pages with a warm paper, pale sage, navy, and coral visual system, clearer typography, more generous spacing, and responsive layouts.
+
+- Rebuilt the homepage with a product preview, category filters for free tools, an interactive hourly-rate × hours demo, clearer tool cards, workflow guidance, FAQs, and mobile navigation.
+- Moved homepage presentation and behavior into `assets/site.css` and `assets/site.js`; consolidated all 13 guide and product pages into `assets/guides.css`.
+- Improved guide reading width, button hierarchy, callouts, tables, footer badges, and print styles. Drift and Praise retain their product-preview layouts.
+- Added keyboard skip links, main landmarks, labeled navigation, visible focus states, and reduced-motion support. Product-page navigation remains available on mobile.
+- Replaced visible sales terminology with clearer download and next-step copy. Preserved existing product URLs, campaign parameters, canonical links, and reciprocal directory links.
+- Added shared social preview metadata to guide pages.
+- Added `scripts/preview.mjs`: run `node scripts/preview.mjs` and open `http://127.0.0.1:4173/`. No build step or npm dependencies; the pages also work directly from `file://`, with network access required for external services and badges.
+
+Guide verification covered all 13 pages at 320px, 390px, and 1440px, including keyboard skip links, main landmarks, mobile navigation, local requests, and horizontal overflow.
+
 ## 2026-09-13 — Wave 3 SEO: Close / Kickoff / Quote
 
 Added three English SEO landing pages and surfaced Quote (free), Close ($12), and Kickoff ($12) on the home funnel beside existing Ops / Nudge / Slip.

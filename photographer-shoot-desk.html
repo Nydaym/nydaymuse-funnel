@@ -11,141 +11,31 @@
   <meta property="og:title" content="Photographer shoot desk — call sheet, shot list, and gallery tracker offline">
   <meta property="og:description" content="Free offline photographer desk: shoots table, shot list, gallery delivery tracker, client emails, printable call sheet. Shot HTML tool for wedding and portrait work.">
   <meta property="og:type" content="article">
-  <style>
-    :root {
-      --navy: #0F172A;
-      --red: #E11D48;
-      --red-hover: #BE123C;
-      --slate: #64748B;
-      --light: #F8FAFC;
-      --border: #E2E8F0;
-      --white: #FFFFFF;
-      --muted: #94A3B8;
-      --code-bg: #F1F5F9;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--navy);
-      background: var(--white);
-      line-height: 1.7;
-    }
-    a { color: var(--red); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: 680px; margin: 0 auto; padding: 0 1.25rem; }
-    header {
-      background: var(--navy);
-      color: var(--white);
-      padding: 1rem 0;
-    }
-    header .wrap { display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-weight: 700; font-size: 1.125rem; color: var(--white); }
-    .logo span { color: var(--red); }
-    nav a { color: var(--muted); font-size: 0.875rem; margin-left: 1rem; }
-    nav a:hover { color: var(--white); text-decoration: none; }
-    article { padding: 2.5rem 0 3rem; }
-    .breadcrumb { font-size: 0.8125rem; color: var(--slate); margin-bottom: 1.25rem; }
-    .breadcrumb a { color: var(--slate); }
-    h1 {
-      font-size: clamp(1.5rem, 3.5vw, 2rem);
-      line-height: 1.25;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.75rem;
-    }
-    .meta { color: var(--slate); font-size: 0.875rem; margin-bottom: 2rem; }
-    h2 {
-      font-size: 1.25rem;
-      margin: 2.25rem 0 0.75rem;
-      letter-spacing: -0.02em;
-    }
-    h3 { font-size: 1.0625rem; margin: 1.5rem 0 0.5rem; }
-    p { margin-bottom: 1rem; color: #334155; }
-    ul, ol { margin: 0 0 1.25rem 1.25rem; color: #334155; }
-    li { margin-bottom: 0.4rem; }
-    .callout {
-      background: var(--light);
-      border-left: 4px solid var(--red);
-      padding: 1rem 1.25rem;
-      margin: 1.5rem 0;
-      border-radius: 0 0.5rem 0.5rem 0;
-    }
-    .callout p { margin-bottom: 0.5rem; }
-    .callout p:last-child { margin-bottom: 0; }
-    .btn {
-      display: inline-block;
-      background: var(--red);
-      color: var(--white);
-      font-weight: 600;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-    }
-    .btn:hover { background: var(--red-hover); text-decoration: none; color: var(--white); }
-    .btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0; justify-content: center; }
-    .soft-cta {
-      background: var(--navy);
-      color: var(--white);
-      padding: 1.75rem;
-      border-radius: 0.75rem;
-      margin: 2.5rem 0;
-      text-align: center;
-    }
-    .soft-cta p { color: var(--muted); margin-bottom: 1rem; }
-    .soft-cta h2 { color: var(--white); margin-top: 0; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0 1.5rem;
-      font-size: 0.9375rem;
-    }
-    th, td {
-      border: 1px solid var(--border);
-      padding: 0.625rem 0.75rem;
-      text-align: left;
-    }
-    th { background: var(--light); font-weight: 600; }
-    footer {
-      background: var(--navy);
-      color: var(--muted);
-      padding: 2rem 0;
-      font-size: 0.8125rem;
-    }
-    footer a { color: var(--muted); margin-right: 1rem; }
-    footer a:hover { color: var(--white); }
-    .tt-badge {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.35rem 0.75rem;
-      border: 1px solid #334155;
-      border-radius: 0.375rem;
-      font-size: 0.75rem;
-      color: var(--muted);
-      letter-spacing: 0.01em;
-    }
-    .tt-badge:hover {
-      border-color: var(--red);
-      color: var(--white);
-      text-decoration: none;
-    }
-    .tt-badge span { color: var(--red); font-weight: 600; }
-
-  </style>
+  <meta property="og:image" content="https://nydaym.github.io/nydaymuse-funnel/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nydaymuse - practical tools for independent work">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/guides.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
-<body>
+<body class="guide-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header>
     <div class="wrap">
       <a class="logo" href="index.html">Nyday<span>muse</span></a>
-      <nav>
+      <nav aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="https://nydaymuse.gumroad.com/l/shotdesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave5">Get free desk</a>
       </nav>
     </div>
   </header>
 
-  <article>
+  <main id="main-content" tabindex="-1">
+  <article aria-labelledby="page-title">
     <div class="wrap">
       <p class="breadcrumb"><a href="index.html">Home</a> / Photographer shoot desk</p>
-      <h1>Photographer shoot desk — call sheet, shot list, and gallery tracker offline</h1>
+      <h1 id="page-title">Photographer shoot desk — call sheet, shot list, and gallery tracker offline</h1>
       <p class="meta">Shoots · shot list · gallery · emails · call sheet · free Shot · updated 2026</p>
 
 
@@ -170,9 +60,10 @@
       <p>Status values in Shot (Inquiry / Booked / Shot / Edited / Delivered) match how most solo shooters already think — without forcing a sales pipeline metaphor.</p>
 
       <h2>What’s inside the desk</h2>
+      <div class="table-scroll" role="region" aria-label="What’s inside the desk" tabindex="0">
       <table>
         <thead>
-          <tr><th>Module</th><th>What you do</th></tr>
+          <tr><th scope="col">Module</th><th scope="col">What you do</th></tr>
         </thead>
         <tbody>
           <tr><td>Shoots table</td><td>Couple/Client, Type, Date, Status, Location, Balance — filter and edit freely</td></tr>
@@ -182,6 +73,7 @@
           <tr><td>Call sheet</td><td>Printable day-of timeline + gear; Export / Import JSON + Notion CSVs</td></tr>
         </tbody>
       </table>
+      </div>
 
       <div class="callout">
         <p><strong>Rule of thumb:</strong> If the gallery has no expiry logged, set one the day you send the link. Quiet clients often mean forgotten bookmarks — not unhappy buyers.</p>
@@ -193,7 +85,7 @@
       <h2>Client emails without reinventing tone</h2>
       <p>Inquiry replies should set expectations: packages, deposit, and what you need from them. Gallery-ready notes should tell them how long the link lasts and how revisions work. Closing revisions needs a firm, kind line so “one more tweak” does not become unpaid editing forever. The swipe file is a starting point — you still personalize names and dates.</p>
 
-      
+
       <h2>Wedding vs portrait vs brand — same desk, different fields</h2>
       <p>Type the shoot as Wedding, Portrait, Brand, or Event so filters stay useful when your calendar mixes Saturday ceremonies with Tuesday headshots. Balance owed belongs on the shoot row — not only in your banking app — so you see who still owes a second payment before you unlock the full gallery. Location and date keep the call sheet honest when you second-shoot or travel.</p>
       <p>If you outgrow SAMPLE rows, export JSON before a browser clear, or import the Notion CSVs into a database you already use. The desk stays the day-of tool; your archive can live elsewhere.</p>
@@ -211,7 +103,7 @@
 
       <div class="soft-cta">
         <h2>Get Shot free</h2>
-        <p>Free offline HTML desk. Buy once on Gumroad. No support. SAMPLE data included — replace with yours.</p>
+        <p>Free offline HTML desk. Download from Gumroad and replace the included sample data with your own. No support included.</p>
         <div class="btn-row">
           <a class="btn" href="https://nydaymuse.gumroad.com/l/shotdesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave5">Get Shot free</a>
         </div>
@@ -238,16 +130,23 @@
       </ul>
     </div>
   </article>
+  </main>
 
   <footer>
     <div class="wrap">
+      <nav class="footer-links" aria-label="Footer navigation">
       <a href="index.html">Home</a>
       <a href="job-search-desk.html">Hunt guide</a>
       <a href="photographer-shoot-desk.html">Shot guide</a>
       <a href="podcast-episode-desk.html">Pod guide</a>
       <a href="https://nydaymuse.gumroad.com/l/hookdesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave5">Hook</a>
-      <p style="margin-top:1rem;">&copy; 2026 Nydaymuse. Original guide — not scraped content. No fake reviews or stats.</p>
+
+      </nav>
+      <p class="footer-note">&copy; 2026 Nydaymuse. Practical guides for independent work.</p>
+      <div class="footer-badges">
       <a class="tt-badge" href="https://twelve.tools" target="_blank" rel="noopener">Listed on <span>twelve.tools</span></a>
+
+      </div>
     </div>
   </footer>
 </body>

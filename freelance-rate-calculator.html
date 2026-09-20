@@ -4,149 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Freelance Rate Calculator + Printable Proposal Lite — Free Quote Tool</title>
-  <meta name="description" content="Freelance rate calculator plus printable proposal lite: hourly, hours, rush, contingency, tiers, client/scope/signature fields. Free offline HTML Quote zip — plus Close and Ops upsells.">
+  <meta name="description" content="Freelance rate calculator plus printable proposal lite: hourly, hours, rush, contingency, tiers, client/scope/signature fields. Free offline HTML Quote zip — with related proposal and invoice tools.">
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="freelance rate calculator, freelance quote calculator, hourly rate calculator freelance, project pricing calculator">
   <link rel="canonical" href="https://nydaym.github.io/nydaymuse-funnel/freelance-rate-calculator.html">
   <meta property="og:title" content="Freelance Rate Calculator + Printable Proposal Lite — Free Quote">
   <meta property="og:description" content="Build three-tier quotes offline plus a printable proposal lite (client, scope, tiers, timeline, signature). Free HTML — Print/PDF.">
   <meta property="og:type" content="article">
-  <style>
-    :root {
-      --navy: #0F172A;
-      --red: #E11D48;
-      --red-hover: #BE123C;
-      --slate: #64748B;
-      --light: #F8FAFC;
-      --border: #E2E8F0;
-      --white: #FFFFFF;
-      --muted: #94A3B8;
-      --code-bg: #F1F5F9;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--navy);
-      background: var(--white);
-      line-height: 1.7;
-    }
-    a { color: var(--red); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: 680px; margin: 0 auto; padding: 0 1.25rem; }
-    header {
-      background: var(--navy);
-      color: var(--white);
-      padding: 1rem 0;
-    }
-    header .wrap { display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-weight: 700; font-size: 1.125rem; color: var(--white); }
-    .logo span { color: var(--red); }
-    nav a { color: var(--muted); font-size: 0.875rem; margin-left: 1rem; }
-    nav a:hover { color: var(--white); text-decoration: none; }
-    article { padding: 2.5rem 0 3rem; }
-    .breadcrumb { font-size: 0.8125rem; color: var(--slate); margin-bottom: 1.25rem; }
-    .breadcrumb a { color: var(--slate); }
-    h1 {
-      font-size: clamp(1.5rem, 3.5vw, 2rem);
-      line-height: 1.25;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.75rem;
-    }
-    .meta { color: var(--slate); font-size: 0.875rem; margin-bottom: 2rem; }
-    h2 {
-      font-size: 1.25rem;
-      margin: 2.25rem 0 0.75rem;
-      letter-spacing: -0.02em;
-    }
-    h3 { font-size: 1.0625rem; margin: 1.5rem 0 0.5rem; }
-    p { margin-bottom: 1rem; color: #334155; }
-    ul, ol { margin: 0 0 1.25rem 1.25rem; color: #334155; }
-    li { margin-bottom: 0.4rem; }
-    .callout {
-      background: var(--light);
-      border-left: 4px solid var(--red);
-      padding: 1rem 1.25rem;
-      margin: 1.5rem 0;
-      border-radius: 0 0.5rem 0.5rem 0;
-    }
-    .callout p { margin-bottom: 0.5rem; }
-    .callout p:last-child { margin-bottom: 0; }
-    .template {
-      background: var(--code-bg);
-      border: 1px solid var(--border);
-      border-radius: 0.5rem;
-      padding: 1.25rem;
-      margin: 1rem 0 1.5rem;
-      font-size: 0.9375rem;
-      white-space: pre-wrap;
-      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-      line-height: 1.55;
-      color: var(--navy);
-    }
-    .btn {
-      display: inline-block;
-      background: var(--red);
-      color: var(--white);
-      font-weight: 600;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-    }
-    .btn:hover { background: var(--red-hover); text-decoration: none; color: var(--white); }
-    .btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0; justify-content: center; }
-    .soft-cta {
-      background: var(--navy);
-      color: var(--white);
-      padding: 1.75rem;
-      border-radius: 0.75rem;
-      margin: 2.5rem 0;
-      text-align: center;
-    }
-    .soft-cta p { color: var(--muted); margin-bottom: 1rem; }
-    .soft-cta h2 { color: var(--white); margin-top: 0; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0 1.5rem;
-      font-size: 0.9375rem;
-    }
-    th, td {
-      border: 1px solid var(--border);
-      padding: 0.625rem 0.75rem;
-      text-align: left;
-    }
-    th { background: var(--light); font-weight: 600; }
-    footer {
-      background: var(--navy);
-      color: var(--muted);
-      padding: 2rem 0;
-      font-size: 0.8125rem;
-    }
-    footer a { color: var(--muted); margin-right: 1rem; }
-    footer a:hover { color: var(--white); }
-    .tt-badge {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.35rem 0.75rem;
-      border: 1px solid #334155;
-      border-radius: 0.375rem;
-      font-size: 0.75rem;
-      color: var(--muted);
-      letter-spacing: 0.01em;
-    }
-    .tt-badge:hover {
-      border-color: var(--red);
-      color: var(--white);
-      text-decoration: none;
-    }
-    .tt-badge span { color: var(--red); font-weight: 600; }
-  </style>
+  <meta property="og:image" content="https://nydaym.github.io/nydaymuse-funnel/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nydaymuse - practical tools for independent work">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/guides.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
-<body>
+<body class="guide-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header>
     <div class="wrap">
       <a class="logo" href="index.html">Nyday<span>muse</span></a>
-      <nav>
+      <nav aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="https://nydaymuse.gumroad.com/l/qdccy?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=quote_opt">Quote</a>
         <a href="https://nydaymuse.gumroad.com/l/ggnfxs">Ops</a>
@@ -154,10 +32,11 @@
     </div>
   </header>
 
-  <article>
+  <main id="main-content" tabindex="-1">
+  <article aria-labelledby="page-title">
     <div class="wrap">
       <p class="breadcrumb"><a href="index.html">Home</a> / Freelance rate calculator</p>
-      <h1>Freelance rate calculator + printable proposal lite (free Quote)</h1>
+      <h1 id="page-title">Freelance rate calculator + printable proposal lite (free Quote)</h1>
       <p class="meta">Hourly · hours · rush · contingency · tiers · proposal lite (client / scope / signature) · Print/PDF · updated 2026</p>
 
       <p>Spreadsheet tabs multiply. You guess hours, forget rush fees, and send a single number that invites endless “can you do less?” replies. A freelance rate calculator should spit out a clear total and optional tiers — without uploading your numbers to someone else’s SaaS.</p>
@@ -172,9 +51,10 @@
       </div>
 
       <h2>Inputs that matter</h2>
+      <div class="table-scroll" role="region" aria-label="Inputs that matter" tabindex="0">
       <table>
         <thead>
-          <tr><th>Input</th><th>Why it exists</th></tr>
+          <tr><th scope="col">Input</th><th scope="col">Why it exists</th></tr>
         </thead>
         <tbody>
           <tr><td>Hourly rate</td><td>Your floor — not a number you invent under pressure</td></tr>
@@ -184,6 +64,7 @@
           <tr><td>Materials / pass-through</td><td>Tools, stock, contractors you will invoice</td></tr>
         </tbody>
       </table>
+      </div>
 
       <div class="callout">
         <p><strong>Rule of thumb:</strong> If you cannot explain the contingency line in one sentence, raise hours instead of hiding risk in a vague discount later.</p>
@@ -228,7 +109,7 @@ total = base + rush + contingency + materials</div>
       <p>A calculator prices one project. It does not track invoices, aging, or client terms after you win. That is why freelancers pair Quote with <a href="https://nydaymuse.gumroad.com/l/ggnfxs">Ops</a> ($12) — the money &amp; client workbook — once cash clarity matters week to week.</p>
 
       <div class="soft-cta">
-        <h2>Upsell when you are ready</h2>
+        <h2>Keep your next project organized</h2>
         <p>Close: 8 AI proposal &amp; pricing prompts ($12). Ops: freelance money &amp; client workbook ($12). Quote stays free.</p>
         <div class="btn-row">
           <a class="btn" href="https://nydaymuse.gumroad.com/l/qdccy?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=quote_opt">Quote free</a>
@@ -248,17 +129,24 @@ total = base + rush + contingency + materials</div>
       </ul>
     </div>
   </article>
+  </main>
 
   <footer>
     <div class="wrap">
+      <nav class="footer-links" aria-label="Footer navigation">
       <a href="index.html">Home</a>
       <a href="freelance-proposal-ai-prompts.html">Proposal prompts</a>
       <a href="https://nydaymuse.gumroad.com/l/qdccy?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=quote_opt">Quote</a>
       <a href="https://nydaymuse.gumroad.com/l/ptljg?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=close">Close</a>
       <a href="https://nydaymuse.gumroad.com/l/ggnfxs">Ops</a>
-      <p style="margin-top:1rem;">&copy; 2026 Nydaymuse. Original guide — not scraped content.</p>
+
+      </nav>
+      <p class="footer-note">&copy; 2026 Nydaymuse. Practical guides for independent work.</p>
+      <div class="footer-badges">
       <a class="tt-badge" href="https://twelve.tools" target="_blank" rel="noopener">Listed on <span>twelve.tools</span></a>
-      <a class="sb-badge" href="https://saasbison.com" target="_blank" rel="dofollow"><img src="https://saasbison.com/badge.png" alt="Featured on SaaSBison" width="200" height="54" /></a>
+      <a class="sb-badge" href="https://saasbison.com" target="_blank" rel="dofollow noopener"><img src="https://saasbison.com/badge.png" alt="Featured on SaaSBison" width="200" height="54" loading="lazy" decoding="async" /></a>
+
+      </div>
     </div>
   </footer>
 </body>

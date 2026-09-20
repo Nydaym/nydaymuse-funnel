@@ -11,140 +11,31 @@
   <meta property="og:title" content="YouTube Shorts desk — plan videos and hooks offline">
   <meta property="og:description" content="Free offline YouTube &amp; Shorts content desk: plan videos, bank hooks, workshop titles, and run a publish checklist. Clip HTML tool — no SaaS login.">
   <meta property="og:type" content="article">
-  <style>
-    :root {
-      --navy: #0F172A;
-      --red: #E11D48;
-      --red-hover: #BE123C;
-      --slate: #64748B;
-      --light: #F8FAFC;
-      --border: #E2E8F0;
-      --white: #FFFFFF;
-      --muted: #94A3B8;
-      --code-bg: #F1F5F9;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--navy);
-      background: var(--white);
-      line-height: 1.7;
-    }
-    a { color: var(--red); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: 680px; margin: 0 auto; padding: 0 1.25rem; }
-    header {
-      background: var(--navy);
-      color: var(--white);
-      padding: 1rem 0;
-    }
-    header .wrap { display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-weight: 700; font-size: 1.125rem; color: var(--white); }
-    .logo span { color: var(--red); }
-    nav a { color: var(--muted); font-size: 0.875rem; margin-left: 1rem; }
-    nav a:hover { color: var(--white); text-decoration: none; }
-    article { padding: 2.5rem 0 3rem; }
-    .breadcrumb { font-size: 0.8125rem; color: var(--slate); margin-bottom: 1.25rem; }
-    .breadcrumb a { color: var(--slate); }
-    h1 {
-      font-size: clamp(1.5rem, 3.5vw, 2rem);
-      line-height: 1.25;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.75rem;
-    }
-    .meta { color: var(--slate); font-size: 0.875rem; margin-bottom: 2rem; }
-    h2 {
-      font-size: 1.25rem;
-      margin: 2.25rem 0 0.75rem;
-      letter-spacing: -0.02em;
-    }
-    h3 { font-size: 1.0625rem; margin: 1.5rem 0 0.5rem; }
-    p { margin-bottom: 1rem; color: #334155; }
-    ul, ol { margin: 0 0 1.25rem 1.25rem; color: #334155; }
-    li { margin-bottom: 0.4rem; }
-    .callout {
-      background: var(--light);
-      border-left: 4px solid var(--red);
-      padding: 1rem 1.25rem;
-      margin: 1.5rem 0;
-      border-radius: 0 0.5rem 0.5rem 0;
-    }
-    .callout p { margin-bottom: 0.5rem; }
-    .callout p:last-child { margin-bottom: 0; }
-    .btn {
-      display: inline-block;
-      background: var(--red);
-      color: var(--white);
-      font-weight: 600;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-    }
-    .btn:hover { background: var(--red-hover); text-decoration: none; color: var(--white); }
-    .btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0; justify-content: center; }
-    .soft-cta {
-      background: var(--navy);
-      color: var(--white);
-      padding: 1.75rem;
-      border-radius: 0.75rem;
-      margin: 2.5rem 0;
-      text-align: center;
-    }
-    .soft-cta p { color: var(--muted); margin-bottom: 1rem; }
-    .soft-cta h2 { color: var(--white); margin-top: 0; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0 1.5rem;
-      font-size: 0.9375rem;
-    }
-    th, td {
-      border: 1px solid var(--border);
-      padding: 0.625rem 0.75rem;
-      text-align: left;
-    }
-    th { background: var(--light); font-weight: 600; }
-    footer {
-      background: var(--navy);
-      color: var(--muted);
-      padding: 2rem 0;
-      font-size: 0.8125rem;
-    }
-    footer a { color: var(--muted); margin-right: 1rem; }
-    footer a:hover { color: var(--white); }
-    .tt-badge {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.35rem 0.75rem;
-      border: 1px solid #334155;
-      border-radius: 0.375rem;
-      font-size: 0.75rem;
-      color: var(--muted);
-      letter-spacing: 0.01em;
-    }
-    .tt-badge:hover {
-      border-color: var(--red);
-      color: var(--white);
-      text-decoration: none;
-    }
-    .tt-badge span { color: var(--red); font-weight: 600; }
-  </style>
+  <meta property="og:image" content="https://nydaym.github.io/nydaymuse-funnel/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nydaymuse - practical tools for independent work">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/guides.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
-<body>
+<body class="guide-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header>
     <div class="wrap">
       <a class="logo" href="index.html">Nyday<span>muse</span></a>
-      <nav>
+      <nav aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="https://nydaymuse.gumroad.com/l/clipdesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave6">Get free desk</a>
       </nav>
     </div>
   </header>
 
-  <article>
+  <main id="main-content" tabindex="-1">
+  <article aria-labelledby="page-title">
     <div class="wrap">
       <p class="breadcrumb"><a href="index.html">Home</a> / YouTube Shorts desk</p>
-      <h1>YouTube Shorts desk — plan videos, hooks, and publish offline</h1>
+      <h1 id="page-title">YouTube Shorts desk — plan videos, hooks, and publish offline</h1>
       <p class="meta">Video planner · hooks bank · titles workshop · publish checklist · free Clip · updated 2026</p>
 
       <p>Idea notes live in three apps. Hooks die in your camera roll. Titles get rewritten at upload time when you are already tired. A calm YouTube and Shorts workflow needs one place for the video queue, first lines, packaging drafts, and a publish checklist — without another SaaS login watching your channel.</p>
@@ -168,18 +59,20 @@
       <p>Clip keeps that rhythm in one offline file so planning does not depend on Wi‑Fi, a Notion sync, or a browser tab you forgot to pin.</p>
 
       <h2>What’s inside Clip</h2>
+      <div class="table-scroll" role="region" aria-label="What’s inside Clip" tabindex="0">
       <table>
         <thead>
-          <tr><th>Module</th><th>What you do</th></tr>
+          <tr><th scope="col">Module</th><th scope="col">What you do</th></tr>
         </thead>
         <tbody>
-          <tr><td>Videos</td><td>CRUD + filters + simple stats for Idea / Scripted / Filmed / Edited / Published</td></tr>
+          <tr><td>Videos</td><td>Add, edit, and filter videos, with simple stats for Idea / Scripted / Filmed / Edited / Published</td></tr>
           <tr><td>Hooks bank</td><td>Eight reusable first-line patterns you can copy into scripts or Shorts</td></tr>
           <tr><td>Titles workshop</td><td>Five title drafts + three thumbnail concepts per video idea</td></tr>
           <tr><td>Publish checklist</td><td>Pre-upload and post-upload steps so “almost done” becomes shipped</td></tr>
           <tr><td>Export</td><td>JSON backup + Notion CSVs in the zip; Reset SAMPLE when you start clean</td></tr>
         </tbody>
       </table>
+      </div>
 
       <div class="callout">
         <p><strong>Rule of thumb:</strong> If a video row has no next action date, it is not in your pipeline — it is a wish. Add a date or archive it.</p>
@@ -207,7 +100,7 @@
 
       <div class="soft-cta">
         <h2>Get Clip free</h2>
-        <p>Free offline HTML desk. Buy once on Gumroad. No support. SAMPLE data included — replace with yours.</p>
+        <p>Free offline HTML desk. Download from Gumroad and replace the included sample data with your own. No support included.</p>
         <div class="btn-row">
           <a class="btn" href="https://nydaymuse.gumroad.com/l/clipdesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave6">Get Clip free</a>
         </div>
@@ -215,7 +108,7 @@
 
       <div class="soft-cta">
         <h2>Next steps</h2>
-        <p>Secondary CTAs — Aim for YouTube AI prompts, Grid for a simple content grid.</p>
+        <p>Explore Aim for YouTube AI prompts, or Grid for a simple content calendar.</p>
         <div class="btn-row">
           <a class="btn" href="https://nydaymuse.gumroad.com/l/aimprompts?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave6">Aim — $12</a>
           <a class="btn" href="https://nydaymuse.gumroad.com/l/dmyqaf?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave6">Grid free</a>
@@ -232,16 +125,23 @@
       </ul>
     </div>
   </article>
+  </main>
 
   <footer>
     <div class="wrap">
+      <nav class="footer-links" aria-label="Footer navigation">
       <a href="index.html">Home</a>
       <a href="youtube-shorts-desk.html">Clip guide</a>
       <a href="youtube-ai-prompts.html">Aim guide</a>
       <a href="podcast-episode-desk.html">Pod guide</a>
       <a href="https://nydaymuse.gumroad.com/l/clipdesk?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=wave6">Clip</a>
-      <p style="margin-top:1rem;">&copy; 2026 Nydaymuse. Original guide — not scraped content. No fake reviews or stats.</p>
+
+      </nav>
+      <p class="footer-note">&copy; 2026 Nydaymuse. Practical guides for independent work.</p>
+      <div class="footer-badges">
       <a class="tt-badge" href="https://twelve.tools" target="_blank" rel="noopener">Listed on <span>twelve.tools</span></a>
+
+      </div>
     </div>
   </footer>
 </body>
