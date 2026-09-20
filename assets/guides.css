@@ -70,6 +70,18 @@ strong { color: var(--navy); }
 .callout { padding: 1.35rem 1.5rem; margin: 1.8rem 0; background: var(--sage); border: 1px solid #dce2d7; border-left: 3px solid #86997d; border-radius: 0 12px 12px 0; }
 .callout p { margin-bottom: .7rem; }
 .callout p:last-child { margin-bottom: 0; }
+.answer-summary { margin: 1.8rem 0; padding: 1.4rem 1.5rem; border: 1px solid #dce2d7; border-radius: 12px; background: var(--sage); }
+.answer-summary h2 { margin: 0 0 .75rem; font-size: 1.3rem; line-height: 1.4; }
+.answer-summary p:last-child { margin-bottom: 0; }
+.guide-faq { margin: 2.5rem 0; }
+.guide-faq details { border-bottom: 1px solid var(--border); padding: 1rem 0; }
+.guide-faq summary { cursor: pointer; color: var(--navy); font-weight: 650; }
+.guide-faq details p { margin: .85rem 0 0; }
+.page-credit { color: var(--muted); font-size: .8rem; }
+.page-credit a { color: inherit; }
+.page-contents { margin: 1.8rem 0; padding: 1rem 1.25rem; border: 1px solid var(--border); border-radius: 10px; }
+.page-contents ul { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; margin: .5rem 0 0; padding-left: 1.2rem; }
+.page-contents a { font-size: .85rem; }
 .callout.warn { background: #faede7; border-color: #ebd6cc; border-left-color: var(--coral); }
 code { font-size: .87em; overflow-wrap: anywhere; }
 .template { white-space: pre-wrap; overflow-wrap: anywhere; background: #efefe8; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin: 1.25rem 0 1.8rem; font: .875rem/1.8 ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--navy); }

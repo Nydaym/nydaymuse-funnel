@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-09-20 — Search and GEO content improvements
+
+- Added direct answers, publisher attribution, precise visible update dates, section anchors, and visible FAQs across the 13 guides and product pages. Added worked pricing and partial-payment examples and a proposal review checklist to the core freelance guides.
+- Added `about.html` to explain the brand, own-product links, download formats, examples, and the boundary between offline tools and third-party services.
+- Corrected Slip from receipt to invoice, clarified Nest's local-storage claims, removed overlapping example aging buckets, and added relevant internal links for Drift and Praise.
+- Added static Organization, WebSite, page, product identity, breadcrumb, and article structured data where applicable. FAQ markup is derived from visible questions and answers; no reviews, offer prices, stock status, or publication dates are invented.
+- Added `scripts/sync-search.mjs` with a read-only `--check` mode. Unified social metadata and rebuilt the sitemap from the 15 unique canonical pages, removing the duplicate `/index.html` listing.
+- Documented origin-root robots.txt requirements for GitHub project Pages, sitemap submission, metadata maintenance, and post-deployment measurement. Added default GitHub Pages exclusions for Gumroad upload artifacts and maintenance files.
+
+Validation: all 15 pages checked in Chrome at 320, 390, and 1440 px and with JavaScript disabled. All 50 FAQ questions and answers match the rendered text. No duplicate IDs, horizontal overflow, broken local links/fragments, or JavaScript exceptions were found. Homepage filters, calculator, invalid-input handling, and mobile navigation passed. A temporary-copy check confirmed metadata drift detection, read-only checks, regeneration, and idempotence. External network requests were blocked during browser QA.
+
+The changes are local; deployment and search-engine indexing are separate steps.
+
 ## 2026-09-20 — Custom Gumroad profile
 
 Built and published the custom landing page at `https://nydaymuse.gumroad.com` using `gumroad pages preview` followed by `gumroad pages push profile`.

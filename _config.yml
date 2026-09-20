@@ -1,0 +1,7 @@
+# GitHub Pages' default Jekyll build should publish the public site only.
+# Keep Gumroad upload sources/previews and maintenance scripts out of this host.
+exclude:
+  - gumroad
+  - scripts
+  - README.md
+  - CHANGELOG.md
