@@ -93,5 +93,7 @@
   <url>
     <loc>https://nydaym.github.io/nydaymuse-funnel/change-order-desk.html</loc>
     <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
