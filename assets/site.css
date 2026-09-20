@@ -115,6 +115,7 @@ h2 { font-size: clamp(28px, 3vw, 39px); letter-spacing: -1.7px; line-height: 1.1
 .art-nudge { background: #f7e9df; }
 .art-slip { background: #e7ecf1; }
 .art-praise { background: #f0eafa; }
+.art-drift { background: #e6eef5; }
 .mini-sheet { background: #fff; padding: 15px 17px; width: 155px; border: 1px solid #d3dacf; border-radius: 5px; box-shadow: 4px 5px 0 #00000005; transform: rotate(-5deg); }
 .mini-sheet .mini-label { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; font-size: 8px; color: var(--muted); }
 .mini-label .icon { width: 13px; height: 13px; }
@@ -146,6 +147,9 @@ h2 { font-size: clamp(28px, 3vw, 39px); letter-spacing: -1.7px; line-height: 1.1
 .card-link .icon { width: 15px; height: 15px; transition: transform .15s; }
 .card-link:hover { color: var(--red); }
 .card-link:hover .icon { transform: translateX(3px); }
+.bundle-soft-cta { margin-top: 22px; text-align: center; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.bundle-soft-cta a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #adb6a5; }
+.bundle-soft-cta a:hover { color: var(--red); }
 .tools-footnote { display: flex; align-items: center; justify-content: center; gap: 7px; color: var(--muted); font-size: 11px; margin-top: 23px; text-align: center; }
 .tools-footnote .icon { width: 14px; height: 14px; }
 .workflow-section { background: var(--ink); color: #fff; padding: 60px 0; }
@@ -163,7 +167,7 @@ h2 { font-size: clamp(28px, 3vw, 39px); letter-spacing: -1.7px; line-height: 1.1
 .workflow-list p { color: #b8c2d0; font-size: 12px; margin-top: 5px; }
 .workflow-list a { color: #fff; text-underline-offset: 3px; text-decoration: underline; text-decoration-color: #667080; }
 .workflow-list a:hover { color: #e9b39e; }
-.packs-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+.packs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
 .pack-card { display: flex; flex-direction: column; position: relative; border: 1px solid var(--line); border-radius: 10px; background: #fff; padding: 29px; }
 .pack-card.featured { background: var(--sage); border-color: #c8d4c2; }
 .pack-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 23px; }
