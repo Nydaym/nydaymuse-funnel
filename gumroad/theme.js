@@ -11,6 +11,11 @@
   } catch (_) { /* Gumroad's isolated frame can disable browser storage. */ }
   const setTheme = theme => {
     root.dataset.theme = theme;
+    // Gumroad derives its outer page canvas from the iframe document background.
+    const background = window.getComputedStyle(root).backgroundColor;
+    document.documentElement.style.backgroundColor = background;
+    document.documentElement.style.colorScheme = theme;
+    document.body.style.backgroundColor = background;
     if (toggle) {
       toggle.setAttribute('aria-pressed', String(theme === 'dark'));
       toggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);

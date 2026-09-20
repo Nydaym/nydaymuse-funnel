@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-09-20 — Custom Gumroad profile
+
+Built and published the custom landing page at `https://nydaymuse.gumroad.com` using `gumroad pages preview` followed by `gumroad pages push profile`.
+
+- Added a responsive editorial layout with the Nydaymuse flower mark, warm light palette, forest-toned dark palette, system preference support, and a keyboard-accessible theme toggle.
+- Included all 34 products currently eligible for the public storefront, with live catalogue hydration, current localized prices, search, category filters, and progressive display of 12 tools at a time. Additional catalogue pages can load through Gumroad's pagination bridge.
+- Preserved the native Gumroad email follow form and linked all catalogue cards to product pages. No checkout widgets or direct download links are embedded.
+- Added editable sources in `gumroad/` and the dependency-free `scripts/build-gumroad.mjs` to produce the single-file `gumroad/profile.html` upload.
+- Backed up the previous custom profile under the ignored `gumroad/.local/` directory. The root static site remains separate.
+
+Validation: nine catalogue tests passed, followed by 49 browser checks in an opaque-origin iframe covering both themes at 320–1440px, keyboard navigation, filters, search, progressive display, no-JavaScript fallback, and email field validation. Server preview/publish preserved all functional tags and attributes. The live response contains the new markup, 34 public products, and 34 localized prices.
+
 ## 2026-09-20 — Site redesign and shared guide styles
 
 Refreshed all 14 HTML pages with a warm paper, pale sage, navy, and coral visual system, clearer typography, more generous spacing, and responsive layouts.

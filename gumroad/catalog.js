@@ -10,6 +10,8 @@
   var moreButton = document.getElementById('catalog-load-more');
   var filters = Array.from(document.querySelectorAll('[data-filter]'));
   var activeFilter = 'all';
+  var visibleLimit = 12;
+  var matchingCount = 0;
   var busy = false;
   var notice = '';
   var nextOffset = 0;
@@ -22,25 +24,20 @@
     life: { label: 'Everyday', art: 'art-blue' },
     more: { label: 'More tools', art: 'art-lilac' }
   };
-  var known = {
-    qdccy: ['Quote', 'freelance', 'Calculator + proposal'],
-    ptljg: ['Close', 'freelance', 'AI prompt pack'],
-    fuflsz: ['Kickoff', 'freelance', 'Notion import pack'],
-    ggnfxs: ['Ops', 'freelance', 'Money + client workbook'],
-    ebexb: ['Nudge', 'freelance', 'Payment reminder templates'],
-    tubrnw: ['Slip', 'freelance', 'Printable receipt'],
-    praisedesk: ['Praise', 'freelance', 'Testimonial request desk'],
-    driftdesk: ['Drift', 'freelance', 'Scope + change order desk'],
-    wnlnmh: ['Scope', 'freelance', 'Statement of work filler'],
-    hookdesk: ['Hook', 'freelance', 'Client outreach desk'],
-    aimprompts: ['Aim', 'creator', 'Creator AI prompts'],
-    clipdesk: ['Clip', 'creator', 'YouTube + Shorts desk'],
-    dmyqaf: ['Grid', 'creator', 'Content calendar'],
-    shotdesk: ['Shot', 'creator', 'Photographer shoot desk'],
-    poddesk: ['Pod', 'creator', 'Podcast episode desk'],
-    huntdesk: ['Hunt', 'life', 'Job search desk'],
-    nestdesk: ['Nest', 'life', 'Pregnancy + baby organizer']
-  };
+  var known = readJSON('nydaymuse-catalog-meta') || {};
+  var entityParser = typeof DOMParser === 'function' ? new DOMParser() : null;
+  var commonEntities = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: '\u00a0', ndash: '–', mdash: '—', lsquo: '‘', rsquo: '’', ldquo: '“', rdquo: '”', hellip: '…', bull: '•', middot: '·', copy: '©', reg: '®', trade: '™', times: '×', divide: '÷', euro: '€', pound: '£', yen: '¥', cent: '¢' };
+
+  function decodeText(value) {
+    return String(value).replace(/&(#(?:x[0-9a-f]{1,6}|[0-9]{1,7})|[a-z][a-z0-9]{1,31});/gi, function (entity, name) {
+      // Only a single entity token is parsed; raw product markup never enters an HTML parser.
+      if (entityParser) return entityParser.parseFromString(entity, 'text/html').body.textContent;
+      if (name[0] !== '#') return commonEntities[name.toLowerCase()] || entity;
+      var hex = name[1].toLowerCase() === 'x';
+      var code = parseInt(name.slice(hex ? 2 : 1), hex ? 16 : 10);
+      return code > 0 && code <= 0x10ffff && !(code >= 0xd800 && code <= 0xdfff) ? String.fromCodePoint(code) : '\ufffd';
+    });
+  }
 
   function readJSON(id) {
     var node = document.getElementById(id);
@@ -94,7 +91,8 @@
     var metadata = Object.prototype.hasOwnProperty.call(known, details.permalink) ? known[details.permalink] : null;
     var category = metadata ? metadata[1] : 'more';
     var presentation = categories[category];
-    var shortName = metadata ? metadata[0] : product.name.trim();
+    var productName = decodeText(product.name.trim());
+    var shortName = metadata ? metadata[0] : productName;
     var card = document.createElement('a');
     card.className = 'product-card';
     card.href = details.url;
@@ -103,7 +101,7 @@
     card.dataset.permalink = details.permalink;
     card.dataset.category = category;
 
-    var art = textElement('div', 'product-art ' + presentation.art, '');
+    var art = textElement('div', 'product-art ' + (metadata && metadata[3] ? metadata[3] : presentation.art), '');
     art.setAttribute('aria-hidden', 'true');
     art.appendChild(textElement('span', 'art-kicker', presentation.label));
     art.appendChild(textElement('span', 'art-monogram', metadata ? shortName : Array.from(shortName)[0].toUpperCase()));
@@ -117,8 +115,9 @@
     price.dataset.gumroadField = 'price';
     meta.appendChild(price);
     body.appendChild(meta);
-    body.appendChild(textElement('h3', '', product.name.trim()));
-    body.appendChild(textElement('p', 'product-description', typeof product.description === 'string' && product.description.trim() ? product.description : 'Explore this tool, see what is included, and find your next useful thing.'));
+    body.appendChild(textElement('h3', '', productName));
+    var description = metadata && metadata[4] ? metadata[4] : typeof product.description === 'string' && product.description.trim() ? product.description : 'Explore this tool, see what is included, and find your next useful thing.';
+    body.appendChild(textElement('p', 'product-description', decodeText(description)));
     body.appendChild(textElement('span', 'product-link', metadata ? 'Explore ' + shortName + ' ↗' : 'Explore this tool ↗'));
     card.appendChild(art);
     card.appendChild(body);
@@ -141,11 +140,13 @@
     var query = search ? search.value.trim().toLocaleLowerCase() : '';
     var visible = 0;
     var hasOther = false;
+    matchingCount = 0;
     cards.forEach(function (card) {
       if (card.dataset.category === 'more') hasOther = true;
       var matches = (activeFilter === 'all' || card.dataset.category === activeFilter) && (!query || card.textContent.toLocaleLowerCase().includes(query));
-      card.hidden = !matches;
-      if (matches) visible += 1;
+      if (matches) matchingCount += 1;
+      card.hidden = !matches || matchingCount > visibleLimit;
+      if (!card.hidden) visible += 1;
     });
     filters.forEach(function (button) {
       button.setAttribute('aria-pressed', String(button.dataset.filter === activeFilter));
@@ -153,13 +154,12 @@
     });
     if (empty) empty.hidden = visible !== 0;
     if (count) {
-      var label = visible + (visible === 1 ? ' tool' : ' tools');
-      if (query || activeFilter !== 'all') label += ' found';
+      var label = 'Showing ' + visible + ' of ' + matchingCount + (matchingCount === 1 ? ' tool' : ' tools');
       if (total > cards.size) label += ' · ' + cards.size + ' of ' + total + ' loaded';
       count.textContent = label + (notice ? '. ' + notice : '');
     }
     if (moreButton) {
-      moreButton.hidden = nextOffset >= total;
+      moreButton.hidden = matchingCount <= visibleLimit && nextOffset >= total;
       moreButton.disabled = busy;
       moreButton.setAttribute('aria-busy', String(busy));
       moreButton.textContent = busy ? 'Loading tools…' : notice ? 'Try loading more' : 'Load more tools';
@@ -193,13 +193,24 @@
       var filter = button.dataset.filter;
       if (filter !== 'all' && !Object.prototype.hasOwnProperty.call(categories, filter)) return;
       activeFilter = filter;
+      visibleLimit = 12;
       refresh();
     });
   });
-  if (search) search.addEventListener('input', refresh);
+  if (search) search.addEventListener('input', function () {
+    visibleLimit = 12;
+    refresh();
+  });
 
   if (moreButton) moreButton.addEventListener('click', async function () {
-    if (busy || nextOffset >= total) return;
+    if (busy) return;
+    if (matchingCount > visibleLimit) {
+      visibleLimit += 12;
+      refresh();
+      return;
+    }
+    if (nextOffset >= total) return;
+    visibleLimit = matchingCount + 12;
     busy = true;
     notice = '';
     refresh();
@@ -228,4 +239,6 @@
   });
 
   refresh();
+  var controls = document.getElementById('catalog-controls');
+  if (controls) controls.hidden = false;
 }());

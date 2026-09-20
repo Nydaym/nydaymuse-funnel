@@ -1,13 +1,17 @@
 /* Self-contained profile styles, inlined by scripts/build-gumroad.mjs. */
 html { scroll-behavior: smooth; }
+html, body { background: #f7f7f2; color-scheme: light; }
 body { margin: 0; }
+@media (prefers-color-scheme: dark) {
+  html, body { background: #11191b; color-scheme: dark; }
+}
 #nydaymuse-profile {
   --paper: #f7f7f2; --surface: #fff; --ink: #17243b; --muted: #626b75;
   --line: #dfe3dc; --accent: #bd3e34; --accent-text: #fff;
   --sage: #e7ece2; --peach: #f4e6dc; --blue: #e6ecf2; --lilac: #eee7f3;
   --sand: #eee9da; --card-shadow: #17243b0c; --panel: #17243b; --panel-ink: #f7f7f2;
   color-scheme: light; color: var(--ink); background: var(--paper);
-  min-height: 100vh; font: 16px/1.65 "Segoe UI", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  font: 16px/1.65 "Segoe UI", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 #nydaymuse-profile[data-theme="dark"] {
@@ -160,6 +164,14 @@ body { margin: 0; }
 #nydaymuse-profile .closing h2 { margin-top: 12px; font-size: 33px; }
 #nydaymuse-profile .closing p:last-child { font-size: 13px; margin-top: 13px; color: var(--muted); }
 #nydaymuse-profile .closing .button { flex-shrink: 0; }
+#nydaymuse-profile .follow-box { width: 46%; min-width: 0; }
+#nydaymuse-profile .follow-box label { display: block; margin-bottom: 8px; font-size: 12px; font-weight: 600; }
+#nydaymuse-profile .follow-row { display: flex; align-items: stretch; gap: 8px; }
+#nydaymuse-profile .follow-row input { min-width: 0; flex: 1; width: 100%; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 7px; padding: 12px; font-size: 13px; }
+#nydaymuse-profile .follow-row input::placeholder { color: var(--muted); opacity: 1; }
+#nydaymuse-profile .follow-row .button { padding-inline: 15px; gap: 10px; font-size: 12px; }
+#nydaymuse-profile [data-gumroad-follow-message] { min-height: 1.5em; font-size: 12px; color: var(--ink); margin-top: 8px; }
+#nydaymuse-profile .follow-box .follow-note { font-size: 10px; margin-top: 7px; }
 #nydaymuse-profile .footer { padding: 35px 0 25px; border-top: 1px solid var(--line); }
 #nydaymuse-profile .footer-top { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
 #nydaymuse-profile .footer .brand { font-size: 21px; }
@@ -211,6 +223,7 @@ body { margin: 0; }
   #nydaymuse-profile .closing { padding-bottom: 45px; }
   #nydaymuse-profile .closing-inner { flex-direction: column; align-items: flex-start; gap: 25px; padding: 30px; }
   #nydaymuse-profile .closing h2 { font-size: 30px; }
+  #nydaymuse-profile .follow-box { width: 100%; }
   #nydaymuse-profile .footer-top { align-items: flex-start; flex-direction: column; }
   #nydaymuse-profile .footer-bottom { align-items: flex-start; flex-direction: column; gap: 10px; }
 }
@@ -228,6 +241,7 @@ body { margin: 0; }
   #nydaymuse-profile .desk-label { font-size: 9px; }
   #nydaymuse-profile .header-buttons { gap: 6px; }
   #nydaymuse-profile .icon-button { width: 36px; height: 36px; padding: 8px; }
+  #nydaymuse-profile .follow-row { flex-direction: column; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

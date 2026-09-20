@@ -7,6 +7,7 @@ const test = require('node:test');
 const vm = require('node:vm');
 
 const source = fs.readFileSync(path.join(__dirname, 'catalog.js'), 'utf8');
+const catalogMetadata = JSON.parse(fs.readFileSync(path.join(__dirname, 'catalog-meta.json'), 'utf8'));
 
 class Element {
   constructor(tag = 'div') {
@@ -63,6 +64,8 @@ function setup({ initial, priceData, request } = {}) {
   const search = add('catalog-search', 'input');
   const count = add('catalog-count');
   const empty = add('catalog-empty');
+  const controls = add('catalog-controls');
+  controls.hidden = true;
   const more = add('catalog-load-more', 'button');
   const filters = {};
   ['all', 'freelance', 'creator', 'life', 'more'].forEach(category => {
@@ -71,6 +74,7 @@ function setup({ initial, priceData, request } = {}) {
   });
   if (initial !== undefined) add('gumroad-data', 'script').textContent = typeof initial === 'string' ? initial : JSON.stringify(initial);
   if (priceData !== undefined) add('gumroad-prices', 'script').textContent = JSON.stringify(priceData);
+  add('nydaymuse-catalog-meta', 'script').textContent = JSON.stringify(catalogMetadata);
   const document = {
     getElementById: id => ids.get(id) || null,
     createElement: tag => new Element(tag),
@@ -79,7 +83,7 @@ function setup({ initial, priceData, request } = {}) {
   const window = { setTimeout, clearTimeout };
   if (request) window.gumroadProducts = { request };
   vm.runInNewContext(source, { document, window, URL });
-  return { grid, fallback, fallbackPrice, search, count, empty, more, filters, window, root };
+  return { grid, fallback, fallbackPrice, search, count, empty, more, filters, window, root, controls };
 }
 
 const product = (slug, name, extra = {}) => ({ name, url: 'https://nydaymuse.gumroad.com/l/' + slug, description: 'A useful tool.', ...extra });
@@ -91,19 +95,20 @@ test('missing or malformed live data retains searchable fallback without invente
     assert.equal(page.fallbackPrice.textContent, 'View price');
     assert.equal(page.more.hidden, true);
     assert.equal(page.filters.more.hidden, true);
+    assert.equal(page.controls.hidden, false);
     page.search.value = 'missing';
     await page.search.fire('input');
     assert.equal(page.fallback.hidden, true);
     assert.equal(page.empty.hidden, false);
-    assert.match(page.count.textContent, /0 tools found/);
+    assert.match(page.count.textContent, /Showing 0 of 0 tools/);
   }
 });
 
 test('live data replaces fallback, preserves unknown tools, and uses current price map safely', () => {
   const page = setup({
     initial: { products: [
-      product('qdccy', 'Quote — updated title', { price: '$99 cached', description: '<img src=x onerror=alert(1)>' }),
-      product('newdesk', 'New desk'),
+      product('qdccy', 'Quote — updated title', { price: '$99 cached', description: 'OLD description' }),
+      product('newdesk', 'New desk', { description: '<img src=x onerror=alert(1)>' }),
       product('unsafe', 'Unsafe URL', { url: 'javascript:alert(1)' })
     ], products_total: 3 },
     priceData: { qdccy: { price: '€8.00', price_cents: 800 } }
@@ -111,7 +116,9 @@ test('live data replaces fallback, preserves unknown tools, and uses current pri
   assert.equal(page.grid.children.length, 2);
   assert.notEqual(page.grid.children[0], page.fallback);
   assert.match(page.grid.children[0].textContent, /Quote — updated title/);
-  assert.match(page.grid.children[0].textContent, /<img src=x onerror=alert\(1\)>/);
+  assert.match(page.grid.children[1].textContent, /<img src=x onerror=alert\(1\)>/);
+  assert.doesNotMatch(page.grid.children[0].textContent, /OLD description/);
+  assert.match(page.grid.children[0].textContent, /Price your work from hours/);
   assert.match(page.grid.children[0].textContent, /€8\.00/);
   assert.doesNotMatch(page.grid.children[0].textContent, /99 cached/);
   assert.match(page.grid.children[1].textContent, /View price/);
@@ -154,7 +161,7 @@ test('pagination prevents concurrent requests, retains search/filter, deduplicat
   assert.equal(page.grid.children[0].hidden, true);
   assert.equal(page.grid.children[1].hidden, false);
   assert.match(page.grid.children[1].textContent, /\$0\+/);
-  assert.match(page.count.textContent, /1 tool found/);
+  assert.match(page.count.textContent, /Showing 1 of 1 tool/);
   assert.equal(page.filters.creator.attributes['aria-pressed'], 'true');
   assert.equal(page.more.disabled, false);
   const second = page.more.fire('click');
@@ -193,4 +200,55 @@ test('missing hosted pagination bridge leaves an actionable retry state', async 
   assert.match(page.count.textContent, /could not load/);
   assert.equal(page.more.hidden, false);
   assert.equal(page.more.disabled, false);
+});
+
+test('a large catalog reveals 12 matching tools at a time before requesting another page', async () => {
+  const products = Array.from({ length: 36 }, (_, index) => product('new' + index, 'Collection ' + index));
+  const calls = [];
+  const page = setup({
+    initial: { products, products_total: 40 },
+    request: async options => {
+      calls.push(options.offset);
+      return { success: true, products: Array.from({ length: 4 }, (_, index) => product('next' + index, 'Next ' + index)), productsTotal: 40 };
+    }
+  });
+  const shown = () => page.grid.children.filter(card => !card.hidden).length;
+  assert.equal(shown(), 12);
+  assert.equal(page.count.textContent, 'Showing 12 of 36 tools · 36 of 40 loaded');
+  await page.more.fire('click');
+  assert.equal(shown(), 24);
+  assert.deepEqual(calls, []);
+  await page.more.fire('click');
+  assert.equal(shown(), 36);
+  assert.deepEqual(calls, []);
+  await page.more.fire('click');
+  assert.equal(shown(), 40);
+  assert.deepEqual(calls, [36]);
+  assert.equal(page.more.hidden, true);
+  assert.equal(page.count.textContent, 'Showing 40 of 40 tools');
+  await page.filters.more.fire('click');
+  assert.equal(shown(), 12);
+  assert.equal(page.more.hidden, false);
+  await page.more.fire('click');
+  assert.equal(shown(), 24);
+  page.search.value = 'Collection';
+  await page.search.fire('input');
+  assert.equal(shown(), 12);
+  assert.equal(page.count.textContent, 'Showing 12 of 36 tools');
+});
+
+test('newly identified products use shared categories and varied art palettes', () => {
+  const page = setup({ initial: { products: [product('aginglite', 'Aging Lite'), product('kickofflite', 'Kickoff Lite'), product('rnmefm', 'Week'), product('ruydb', 'Beadify Pro')], products_total: 4 } });
+  assert.deepEqual(page.grid.children.map(card => card.dataset.category), ['freelance', 'freelance', 'life', 'creator']);
+  assert.notEqual(page.grid.children[0].children[0].className, page.grid.children[1].children[0].className);
+  assert.equal(page.filters.more.hidden, true);
+});
+
+test('named and numeric entities decode as text while encoded markup stays inert', () => {
+  const page = setup({ initial: { products: [product('unknown', 'Names &amp; notes &#8212; &#x1F31F;', { description: '&lt;script&gt;alert(1)&lt;/script&gt; &quot;quoted&quot; &#38; useful' })], products_total: 1 } });
+  const card = page.grid.children[0];
+  assert.match(card.textContent, /Names & notes — 🌟/);
+  assert.match(card.textContent, /<script>alert\(1\)<\/script> "quoted" & useful/);
+  assert.equal(card.children[1].children[2].tagName, 'P');
+  assert.equal(card.children[1].children[2].children.length, 0);
 });

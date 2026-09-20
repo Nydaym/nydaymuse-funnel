@@ -51,6 +51,8 @@ Shared assets and support files:
 
 ## Local preview
 
+The separate custom Gumroad profile is in [`gumroad/`](gumroad/README.md). Build its single-file upload with `node scripts/build-gumroad.mjs`; preview and publish it with the Gumroad CLI. This does not replace the static site's `index.html`.
+
 Open any HTML file in a browser, or run the included preview server with Node.js from the repository root:
 
 ```bash

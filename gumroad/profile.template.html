@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nydaymuse — Thoughtful little tools for independent work</title>
+  <meta name="description" content="A little less admin. More room for your best work. Explore Nydaymuse's tools for freelance work, creative projects, and everyday life.">
+  <style>/* INLINE:PROFILE_CSS */</style>
+</head>
+<body>
+<div id="nydaymuse-profile" lang="en">
+  <a class="skip-link" href="#profile-main">Skip to content</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#profile-main" aria-label="Nydaymuse home"><!-- INLINE:FLOWER --><span>nyday<span>muse</span></span></a>
+      <div class="header-right">
+        <nav class="navigation" id="profile-nav" aria-label="Primary navigation"><a href="#tools">The toolkit</a><a href="#about">Our approach</a><a href="#faq">Good questions</a><a href="#follow">Stay in the loop</a></nav>
+        <div class="header-buttons">
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" hidden>
+            <svg class="icon theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.5A8.7 8.7 0 0 1 10.5 3a9 9 0 1 0 10 10.5Z"/></svg>
+            <svg class="icon theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+          </button>
+          <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="profile-nav"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="profile-main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> For the independently minded</p>
+          <h1 id="hero-title">A little less admin.<br>A little more<br><em>possibility.</em></h1>
+          <p>Thoughtful tools for the business behind your work—and the life around it. Price the project, find your rhythm, and make room for what you love.</p>
+          <div class="button-row"><a class="button" href="#tools">Find your next tool <span aria-hidden="true">→</span></a><a class="text-link" href="https://nydaymuse.gumroad.com/l/qdccy" target="_blank" rel="noopener noreferrer">Start with Quote <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-note"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg> Small downloads. Practical by design.</div>
+        </div>
+        <div class="desk" aria-label="A look at the Nydaymuse toolkit">
+          <div class="desk-top"><span>A LITTLE ORDER. A LOT OF ROOM.</span><!-- INLINE:FLOWER --></div>
+          <article class="desk-card"><div class="desk-label"><span>01 / PRICE IT</span><b>Quote</b></div><strong>Good work. Fair price.</strong><p class="desk-detail">Your time + your costs + a little breathing room.</p></article>
+          <article class="desk-card"><div class="desk-label"><span>02 / START WELL</span><b>Kickoff</b></div><strong>Everyone on the same page.</strong><div class="desk-checks"><span>✓ The welcome</span><span>✓ The plan</span><span>✓ The next step</span></div></article>
+          <article class="desk-card"><div class="desk-label"><span>03 / SEE IT CLEARLY</span><span>Ops</span></div><strong>Less “where did that go?”</strong><p class="desk-detail">Invoices, client details, and a clearer picture.</p></article>
+          <p class="desk-bottom">Good company for your working day.</p>
+        </div>
+      </div>
+    </section>
+    <div class="wrap intro-strip"><p>FOR PEOPLE WHO DO THINGS THEIR OWN WAY.</p><div class="audiences"><span>Freelancers</span><span>Creators</span><span>Small studios</span><span>Everyday planners</span></div></div>
+
+    <section class="section" id="tools" aria-labelledby="tools-heading">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">THE NYDAYMUSE TOOLKIT</p><h2 id="tools-heading">Meet your new workmates.</h2></div><p>Pick the little thing that makes your next step easier. Every tool has a job. Find the one for yours.</p></div>
+        <div class="catalog-controls" id="catalog-controls" hidden>
+          <div class="filters" role="group" aria-label="Filter tools by purpose">
+            <button class="filter" type="button" data-filter="all" aria-pressed="true" aria-controls="catalog-grid">All tools</button>
+            <button class="filter" type="button" data-filter="freelance" aria-pressed="false" aria-controls="catalog-grid">Freelance</button>
+            <button class="filter" type="button" data-filter="creator" aria-pressed="false" aria-controls="catalog-grid">Creators</button>
+            <button class="filter" type="button" data-filter="life" aria-pressed="false" aria-controls="catalog-grid">Everyday</button>
+            <button class="filter" type="button" data-filter="more" aria-pressed="false" aria-controls="catalog-grid" hidden>More tools</button>
+          </div>
+          <label class="search-box"><span class="sr-only">Search tools</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input id="catalog-search" type="search" placeholder="Find your next useful thing…" autocomplete="off"></label>
+        </div>
+        <p class="catalog-count" id="catalog-count" role="status" aria-live="polite"><!-- INLINE:CATALOG_COUNT --></p>
+        <div class="catalog-grid" id="catalog-grid"><!-- INLINE:CATALOG --></div>
+        <p class="catalog-empty" id="catalog-empty" hidden>No tools match just yet. Try a different search or choose “All tools.”</p>
+        <div class="catalog-bottom"><button class="button button-secondary" id="catalog-load-more" type="button" aria-controls="catalog-grid" hidden>Show more tools</button><p class="catalog-note">Open any tool to see what is included and its current price.</p></div>
+      </div>
+    </section>
+
+    <section class="section philosophy" id="about" aria-labelledby="about-heading">
+      <div class="wrap philosophy-grid">
+        <div class="philosophy-copy"><p class="eyebrow">A SMALL STUDIO. A SIMPLE IDEA.</p><h2 id="about-heading">Useful things.<br><em>Room to do your thing.</em></h2><p>Nydaymuse makes practical tools for the parts of independent work that tend to pile up. A clear quote. A calmer kickoff. A plan you can actually follow. Small pieces of structure, made to fit your day.</p></div>
+        <ol class="principles"><li><span aria-hidden="true">01</span><div><h3>One tool. A clear purpose.</h3><p>Start with the task in front of you. Add another tool when you need it.</p></div></li><li><span aria-hidden="true">02</span><div><h3>A head start, in a familiar format.</h3><p>Templates, spreadsheets, prompts, and offline desks. Open the product page to find the format that fits.</p></div></li><li><span aria-hidden="true">03</span><div><h3>Make it your own.</h3><p>Bring your clients, your numbers, and your way of working. The tools provide the starting point.</p></div></li></ol>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-heading">
+      <div class="wrap faq-layout">
+        <div class="faq-intro"><p class="eyebrow">GOOD QUESTIONS</p><h2 id="faq-heading">A little clarity<br>before you begin.</h2><p>Simple tools should come with simple answers.</p></div>
+        <div class="faq-list">
+          <details><summary>Where should I start?</summary><p>For freelance pricing, try <a href="https://nydaymuse.gumroad.com/l/qdccy" target="_blank" rel="noopener noreferrer">Quote</a>. For client outreach, start with <a href="https://nydaymuse.gumroad.com/l/hookdesk" target="_blank" rel="noopener noreferrer">Hook</a>. For late invoices, explore <a href="https://nydaymuse.gumroad.com/l/ebexb" target="_blank" rel="noopener noreferrer">Nudge</a>. The filters above can help you find tools for creative projects and everyday life, too.</p></details>
+          <details><summary>What do I get when I choose a tool?</summary><p>Each product page lists the files, format, and what is included. The collection includes offline HTML tools, PDF resources, spreadsheets, Notion import packs, and AI prompts. Downloads are delivered through Gumroad.</p></details>
+          <details><summary>Can I use the tools offline?</summary><p>The offline HTML tools run locally in your browser once downloaded. PDFs and downloaded workbooks can also be used locally with suitable software. Notion and AI prompt packs use their respective services, so check the product page for requirements.</p></details>
+          <details><summary>Do the templates include real client data?</summary><p>Examples are there to help you get started. Replace sample entries with your own information before using a template for real work.</p></details>
+          <details><summary>Where can I find practical guides?</summary><p>The <a href="https://nydaym.github.io/nydaymuse-funnel/#guides" target="_blank" rel="noopener noreferrer">Nydaymuse guide library</a> covers pricing, proposals, onboarding, invoice follow-ups, and more. You can read the guides without downloading a tool.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="follow" aria-labelledby="follow-heading">
+      <div class="wrap closing-inner">
+        <div><p class="eyebrow">A LITTLE NOTE FROM THE STUDIO</p><h2 id="follow-heading">Stay in the useful-things loop.</h2><p>New tools and thoughtful updates, when there is something to share.</p></div>
+        <div class="follow-box"><form data-gumroad-follow><label for="follow-email">Your email address</label><div class="follow-row"><input id="follow-email" type="email" name="email" required autocomplete="email" placeholder="you@yourstudio.com"><button class="button" type="submit">Keep me posted <span aria-hidden="true">→</span></button></div><p data-gumroad-follow-message role="status" aria-live="polite"></p></form><p class="follow-note">Follow Nydaymuse on Gumroad. Unsubscribe anytime.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap"><div class="footer-top"><a class="brand" href="#profile-main" aria-label="Back to the top"><!-- INLINE:FLOWER --><span>nyday<span>muse</span></span></a><nav class="footer-nav" aria-label="Footer navigation"><a href="#tools">The toolkit</a><a href="#about">Our approach</a><a href="#follow">Follow along</a><a href="https://nydaym.github.io/nydaymuse-funnel/#guides" target="_blank" rel="noopener noreferrer">Free guides ↗</a></nav></div><div class="footer-bottom"><p>© 2026 Nydaymuse. Thoughtful little tools for independent work.</p><p>Made for a little more breathing room.</p></div></div></footer>
+</div>
+<script id="nydaymuse-catalog-meta" type="application/json">/* INLINE:CATALOG_META */</script>
+<script>/* INLINE:THEME_JS */</script>
+<script>/* INLINE:CATALOG_JS */</script>
+</body>
+</html>

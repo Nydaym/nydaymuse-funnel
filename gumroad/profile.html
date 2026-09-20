@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nydaymuse — Thoughtful little tools for independent work</title>
+  <meta name="description" content="A little less admin. More room for your best work. Explore Nydaymuse's tools for freelance work, creative projects, and everyday life.">
+  <style>/* Self-contained profile styles, inlined by scripts/build-gumroad.mjs. */
+html { scroll-behavior: smooth; }
+html, body { background: #f7f7f2; color-scheme: light; }
+body { margin: 0; }
+@media (prefers-color-scheme: dark) {
+  html, body { background: #11191b; color-scheme: dark; }
+}
+#nydaymuse-profile {
+  --paper: #f7f7f2; --surface: #fff; --ink: #17243b; --muted: #626b75;
+  --line: #dfe3dc; --accent: #bd3e34; --accent-text: #fff;
+  --sage: #e7ece2; --peach: #f4e6dc; --blue: #e6ecf2; --lilac: #eee7f3;
+  --sand: #eee9da; --card-shadow: #17243b0c; --panel: #17243b; --panel-ink: #f7f7f2;
+  color-scheme: light; color: var(--ink); background: var(--paper);
+  font: 16px/1.65 "Segoe UI", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+#nydaymuse-profile[data-theme="dark"] {
+  --paper: #11191b; --surface: #1b2527; --ink: #edf0e7; --muted: #b1bcb7;
+  --line: #354340; --accent: #efa48e; --accent-text: #182120;
+  --sage: #29382d; --peach: #423029; --blue: #293744; --lilac: #382f45;
+  --sand: #3b382b; --card-shadow: #0003; --panel: #e1e7d8; --panel-ink: #17243b;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  #nydaymuse-profile:not([data-theme]) {
+    --paper: #11191b; --surface: #1b2527; --ink: #edf0e7; --muted: #b1bcb7;
+    --line: #354340; --accent: #efa48e; --accent-text: #182120;
+    --sage: #29382d; --peach: #423029; --blue: #293744; --lilac: #382f45;
+    --sand: #3b382b; --card-shadow: #0003; --panel: #e1e7d8; --panel-ink: #17243b;
+    color-scheme: dark;
+  }
+}
+#nydaymuse-profile *, #nydaymuse-profile *::before, #nydaymuse-profile *::after { box-sizing: border-box; }
+#nydaymuse-profile [hidden] { display: none !important; }
+#nydaymuse-profile h1, #nydaymuse-profile h2, #nydaymuse-profile h3, #nydaymuse-profile p { margin: 0; }
+#nydaymuse-profile a { color: inherit; text-decoration: none; }
+#nydaymuse-profile button, #nydaymuse-profile input { font: inherit; }
+#nydaymuse-profile button { cursor: pointer; color: inherit; }
+#nydaymuse-profile button:disabled { cursor: wait; }
+#nydaymuse-profile a, #nydaymuse-profile button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+#nydaymuse-profile :focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+#nydaymuse-profile main:focus { outline: none; }
+#nydaymuse-profile ::selection { color: var(--ink); background: var(--peach); }
+#nydaymuse-profile .wrap { width: min(1184px, calc(100% - 96px)); margin-inline: auto; }
+#nydaymuse-profile .skip-link { position: fixed; top: 12px; left: 12px; z-index: 100; transform: translateY(-200%); background: var(--ink); color: var(--paper); padding: 12px 20px; border-radius: 8px; }
+#nydaymuse-profile .skip-link:focus { transform: translateY(0); }
+#nydaymuse-profile .icon { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+#nydaymuse-profile .flower { width: 31px; height: 31px; color: var(--accent); flex-shrink: 0; }
+#nydaymuse-profile .header { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 1px solid var(--line); }
+#nydaymuse-profile .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 88px; }
+#nydaymuse-profile .brand { display: inline-flex; align-items: center; gap: 11px; font-size: 24px; letter-spacing: -1.1px; font-weight: 750; white-space: nowrap; }
+#nydaymuse-profile .brand span span { font-weight: 400; }
+#nydaymuse-profile .header-right { display: flex; align-items: center; gap: 28px; }
+#nydaymuse-profile .navigation { display: flex; align-items: center; gap: 28px; }
+#nydaymuse-profile .navigation a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; font-weight: 550; }
+#nydaymuse-profile .navigation a:hover { color: var(--accent); }
+#nydaymuse-profile .icon-button { display: grid; place-items: center; width: 42px; height: 42px; padding: 9px; border: 1px solid var(--line); border-radius: 50%; background: transparent; }
+#nydaymuse-profile .icon-button:hover { background: var(--sage); }
+#nydaymuse-profile .menu-toggle { display: none; }
+#nydaymuse-profile .theme-sun { display: none; }
+#nydaymuse-profile[data-theme="dark"] .theme-sun { display: block; }
+#nydaymuse-profile[data-theme="dark"] .theme-moon { display: none; }
+#nydaymuse-profile .hero { padding: 78px 0 66px; }
+#nydaymuse-profile .hero-grid { display: grid; grid-template-columns: 1.07fr 1fr; align-items: center; gap: 65px; }
+#nydaymuse-profile .eyebrow { font-size: 11px; letter-spacing: 1.9px; font-weight: 650; text-transform: uppercase; color: var(--muted); }
+#nydaymuse-profile .hero .eyebrow { display: flex; align-items: center; gap: 10px; }
+#nydaymuse-profile .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+#nydaymuse-profile h1 { margin-top: 21px; font-size: clamp(44px, 5vw, 68px); font-weight: 650; line-height: 1.09; letter-spacing: -3.7px; }
+#nydaymuse-profile h1 em { color: var(--accent); font: italic 1em/1.09 Georgia, serif; letter-spacing: -3.5px; }
+#nydaymuse-profile .hero-copy > p:not(.eyebrow) { color: var(--muted); font-size: 16px; line-height: 1.8; max-width: 410px; margin-top: 25px; }
+#nydaymuse-profile .button-row { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; margin-top: 29px; }
+#nydaymuse-profile .button { display: inline-flex; align-items: center; justify-content: center; gap: 23px; min-height: 48px; padding: 12px 21px; font-size: 13px; font-weight: 650; border: 1px solid transparent; border-radius: 7px; color: var(--accent-text); background: var(--accent); transition: transform .18s, box-shadow .18s; }
+#nydaymuse-profile .button:hover { transform: translateY(-2px); box-shadow: 0 5px 20px var(--card-shadow); }
+#nydaymuse-profile .button-secondary { background: transparent; color: var(--ink); border-color: var(--line); }
+#nydaymuse-profile .text-link { font-size: 13px; display: inline-flex; align-items: center; gap: 12px; font-weight: 550; }
+#nydaymuse-profile .text-link:hover { color: var(--accent); }
+#nydaymuse-profile .hero-note { display: flex; align-items: center; gap: 7px; margin-top: 22px; color: var(--muted); font-size: 11px; }
+#nydaymuse-profile .hero-note .icon { width: 15px; height: 15px; }
+#nydaymuse-profile .desk { position: relative; display: flex; flex-direction: column; gap: 16px; min-width: 0; padding: 33px; border-radius: 18px; border: 1px solid var(--line); background: var(--sage); }
+#nydaymuse-profile .desk-top { display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 10px; letter-spacing: 1.8px; }
+#nydaymuse-profile .desk-top .flower { width: 26px; height: 26px; }
+#nydaymuse-profile .desk-card { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: 9px; padding: 22px; box-shadow: 0 12px 20px -14px var(--card-shadow); }
+#nydaymuse-profile .desk-card:first-of-type { transform: rotate(-2deg); margin-top: 10px; }
+#nydaymuse-profile .desk-card:nth-of-type(2) { transform: rotate(2deg); margin: -1px -7px 0 12px; }
+#nydaymuse-profile .desk-card:nth-of-type(3) { transform: rotate(-1deg); }
+#nydaymuse-profile .desk-label { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 10px; letter-spacing: .8px; text-transform: uppercase; }
+#nydaymuse-profile .desk-label b { color: var(--accent); font-weight: 550; }
+#nydaymuse-profile .desk-card strong { display: block; margin-top: 10px; font-size: 21px; letter-spacing: -.7px; line-height: 1.3; }
+#nydaymuse-profile .desk-detail { color: var(--muted); font-size: 11px; margin-top: 7px !important; }
+#nydaymuse-profile .desk-checks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+#nydaymuse-profile .desk-checks span { padding: 4px 8px; background: var(--sage); border-radius: 3px; font-size: 9px; }
+#nydaymuse-profile .desk-card:last-of-type { background: var(--panel); color: var(--panel-ink); }
+#nydaymuse-profile .desk-card:last-of-type .desk-label, #nydaymuse-profile .desk-card:last-of-type .desk-detail { color: inherit; opacity: .8; }
+#nydaymuse-profile .desk-bottom { font-family: Georgia, serif; font-style: italic; color: var(--muted); text-align: center; font-size: 13px; margin-top: 4px !important; }
+#nydaymuse-profile .intro-strip { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 26px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+#nydaymuse-profile .intro-strip > p { max-width: 205px; font-size: 10px; letter-spacing: 1.2px; color: var(--muted); }
+#nydaymuse-profile .audiences { display: flex; flex-wrap: wrap; gap: 28px; font-family: Georgia, serif; color: var(--muted); font-size: 18px; }
+#nydaymuse-profile .section { padding: 80px 0; scroll-margin-top: 108px; }
+#nydaymuse-profile .section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 32px; }
+#nydaymuse-profile h2 { font-size: clamp(29px, 3.5vw, 41px); line-height: 1.18; letter-spacing: -1.8px; font-weight: 650; }
+#nydaymuse-profile .section-heading .eyebrow { margin-bottom: 13px; }
+#nydaymuse-profile .section-heading > p { color: var(--muted); max-width: 350px; font-size: 14px; line-height: 1.8; }
+#nydaymuse-profile .catalog-controls { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; margin-bottom: 24px; }
+#nydaymuse-profile .filters { display: flex; flex-wrap: wrap; gap: 7px; }
+#nydaymuse-profile .filter { min-height: 42px; font-size: 12px; border: 1px solid var(--line); border-radius: 6px; padding: 8px 14px; background: transparent; }
+#nydaymuse-profile .filter[aria-pressed="true"] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+#nydaymuse-profile .filter:hover:not([aria-pressed="true"]) { background: var(--sage); }
+#nydaymuse-profile .search-box { display: flex; align-items: center; gap: 9px; border: 1px solid var(--line); background: var(--surface); border-radius: 6px; padding: 8px 12px; }
+#nydaymuse-profile .search-box .icon { width: 17px; height: 17px; color: var(--muted); }
+#nydaymuse-profile .search-box input { min-width: 0; width: 180px; padding: 0; border: 0; background: transparent; color: var(--ink); font-size: 12px; min-height: 24px; }
+#nydaymuse-profile .search-box input::placeholder { color: var(--muted); opacity: 1; }
+#nydaymuse-profile .search-box:focus-within { outline: 2px solid var(--accent); outline-offset: 3px; }
+#nydaymuse-profile .search-box input:focus { outline: none; }
+#nydaymuse-profile .catalog-count { margin-bottom: 20px; color: var(--muted); font-size: 12px; }
+#nydaymuse-profile .catalog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+#nydaymuse-profile .product-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); transition: transform .18s, box-shadow .18s; }
+#nydaymuse-profile .product-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px var(--card-shadow); }
+#nydaymuse-profile .product-art { position: relative; display: flex; align-items: flex-start; justify-content: center; flex-direction: column; gap: 6px; height: 152px; padding: 24px 27px; border-bottom: 1px solid var(--line); overflow: hidden; }
+#nydaymuse-profile .art-sage { background: var(--sage); }
+#nydaymuse-profile .art-peach { background: var(--peach); }
+#nydaymuse-profile .art-blue { background: var(--blue); }
+#nydaymuse-profile .art-lilac { background: var(--lilac); }
+#nydaymuse-profile .art-sand { background: var(--sand); }
+#nydaymuse-profile .product-art::after { content: ""; position: absolute; width: 140px; height: 170px; right: -33px; top: 16px; border: 1px solid currentColor; opacity: .12; border-radius: 8px; transform: rotate(-21deg); box-shadow: -13px -13px 0 -1px transparent, -13px -13px 0 0 currentColor; pointer-events: none; }
+#nydaymuse-profile .art-kicker { font-size: 9px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); }
+#nydaymuse-profile .art-monogram { position: relative; z-index: 1; font: italic 38px/1.15 Georgia, serif; letter-spacing: -1px; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+#nydaymuse-profile .art-detail { position: relative; z-index: 1; font-size: 10px; color: var(--muted); }
+#nydaymuse-profile .product-body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+#nydaymuse-profile .product-meta { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 13px; }
+#nydaymuse-profile .product-kind { font-size: 10px; letter-spacing: .6px; text-transform: uppercase; color: var(--muted); }
+#nydaymuse-profile .product-price { max-width: 55%; color: var(--ink); font-size: 12px; font-weight: 650; text-align: right; overflow-wrap: anywhere; }
+#nydaymuse-profile .product-body h3 { font-size: 22px; letter-spacing: -.6px; line-height: 1.3; font-weight: 650; overflow-wrap: anywhere; }
+#nydaymuse-profile .product-description { color: var(--muted); font-size: 13px; line-height: 1.8; margin-top: 11px !important; margin-bottom: 22px !important; }
+#nydaymuse-profile .product-link { margin-top: auto; display: block; padding-top: 15px; border-top: 1px solid var(--line); font-size: 12px; font-weight: 650; }
+#nydaymuse-profile .product-card:hover .product-link { color: var(--accent); }
+#nydaymuse-profile .catalog-empty { padding: 40px 20px; text-align: center; color: var(--muted); background: var(--sage); border: 1px solid var(--line); border-radius: 8px; }
+#nydaymuse-profile .catalog-bottom { display: flex; flex-direction: column; align-items: center; gap: 18px; margin-top: 27px; }
+#nydaymuse-profile .catalog-note { text-align: center; color: var(--muted); font-size: 12px; }
+#nydaymuse-profile .philosophy { background: var(--sage); border-block: 1px solid var(--line); }
+#nydaymuse-profile .philosophy-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 90px; align-items: center; }
+#nydaymuse-profile .philosophy h2 { margin: 15px 0 21px; }
+#nydaymuse-profile .philosophy h2 em { color: var(--accent); font-family: Georgia, serif; font-weight: 400; }
+#nydaymuse-profile .philosophy-copy > p:last-child { max-width: 410px; font-size: 14px; line-height: 1.85; color: var(--muted); }
+#nydaymuse-profile .principles { list-style: none; padding: 0; margin: 0; }
+#nydaymuse-profile .principles li { display: flex; gap: 23px; padding: 21px 0; border-bottom: 1px solid var(--line); }
+#nydaymuse-profile .principles li:first-child { padding-top: 0; }
+#nydaymuse-profile .principles li:last-child { border-bottom: 0; padding-bottom: 0; }
+#nydaymuse-profile .principles li > span { font: italic 26px/1.2 Georgia, serif; color: var(--accent); }
+#nydaymuse-profile .principles h3 { font-size: 16px; font-weight: 600; }
+#nydaymuse-profile .principles p { color: var(--muted); font-size: 13px; margin-top: 5px; }
+#nydaymuse-profile .faq-layout { display: grid; grid-template-columns: .9fr 1.3fr; gap: 75px; }
+#nydaymuse-profile .faq-intro h2 { margin-top: 14px; }
+#nydaymuse-profile .faq-intro > p:last-child { margin-top: 18px; max-width: 270px; color: var(--muted); font-size: 14px; }
+#nydaymuse-profile .faq-list { border-top: 1px solid var(--line); }
+#nydaymuse-profile .faq-list details { border-bottom: 1px solid var(--line); }
+#nydaymuse-profile .faq-list summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 21px 0; font-size: 14px; font-weight: 600; }
+#nydaymuse-profile .faq-list summary::-webkit-details-marker { display: none; }
+#nydaymuse-profile .faq-list summary::after { content: "+"; font-size: 22px; color: var(--muted); }
+#nydaymuse-profile .faq-list details[open] summary::after { content: "−"; }
+#nydaymuse-profile .faq-list details p { font-size: 13px; color: var(--muted); line-height: 1.85; padding-bottom: 24px; max-width: 520px; }
+#nydaymuse-profile .faq-list a { text-decoration: underline; text-underline-offset: 4px; }
+#nydaymuse-profile .closing { padding-bottom: 65px; }
+#nydaymuse-profile .closing-inner { display: flex; justify-content: space-between; align-items: center; gap: 40px; background: var(--peach); border: 1px solid var(--line); border-radius: 12px; padding: 41px; }
+#nydaymuse-profile .closing h2 { margin-top: 12px; font-size: 33px; }
+#nydaymuse-profile .closing p:last-child { font-size: 13px; margin-top: 13px; color: var(--muted); }
+#nydaymuse-profile .closing .button { flex-shrink: 0; }
+#nydaymuse-profile .follow-box { width: 46%; min-width: 0; }
+#nydaymuse-profile .follow-box label { display: block; margin-bottom: 8px; font-size: 12px; font-weight: 600; }
+#nydaymuse-profile .follow-row { display: flex; align-items: stretch; gap: 8px; }
+#nydaymuse-profile .follow-row input { min-width: 0; flex: 1; width: 100%; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 7px; padding: 12px; font-size: 13px; }
+#nydaymuse-profile .follow-row input::placeholder { color: var(--muted); opacity: 1; }
+#nydaymuse-profile .follow-row .button { padding-inline: 15px; gap: 10px; font-size: 12px; }
+#nydaymuse-profile [data-gumroad-follow-message] { min-height: 1.5em; font-size: 12px; color: var(--ink); margin-top: 8px; }
+#nydaymuse-profile .follow-box .follow-note { font-size: 10px; margin-top: 7px; }
+#nydaymuse-profile .footer { padding: 35px 0 25px; border-top: 1px solid var(--line); }
+#nydaymuse-profile .footer-top { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+#nydaymuse-profile .footer .brand { font-size: 21px; }
+#nydaymuse-profile .footer-nav { display: flex; gap: 25px; flex-wrap: wrap; font-size: 12px; }
+#nydaymuse-profile .footer-nav a:hover { color: var(--accent); }
+#nydaymuse-profile .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 25px; margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+#nydaymuse-profile .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (max-width: 1050px) {
+  #nydaymuse-profile .wrap { width: calc(100% - 64px); }
+  #nydaymuse-profile .hero-grid { gap: 35px; }
+  #nydaymuse-profile h1 { font-size: 53px; letter-spacing: -2.8px; }
+  #nydaymuse-profile h1 em { letter-spacing: -2.8px; }
+  #nydaymuse-profile .desk { padding: 25px; }
+  #nydaymuse-profile .desk-card { padding: 19px; }
+  #nydaymuse-profile .audiences { gap: 18px; font-size: 16px; }
+  #nydaymuse-profile .catalog-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #nydaymuse-profile .philosophy-grid { gap: 50px; }
+}
+@media (max-width: 800px) {
+  #nydaymuse-profile .wrap { width: calc(100% - 40px); }
+  #nydaymuse-profile .header-inner { min-height: 74px; flex-wrap: wrap; gap: 0; padding-block: 12px; }
+  #nydaymuse-profile .brand { font-size: 21px; }
+  #nydaymuse-profile .brand .flower { width: 27px; height: 27px; }
+  #nydaymuse-profile .header-right { display: contents; }
+  #nydaymuse-profile .header-buttons { display: flex; gap: 8px; }
+  #nydaymuse-profile .navigation { order: 3; width: 100%; flex-wrap: wrap; gap: 0 22px; padding-top: 12px; }
+  #nydaymuse-profile.enhanced .navigation:not(.is-open) { display: none; }
+  #nydaymuse-profile.enhanced .menu-toggle { display: grid; }
+  #nydaymuse-profile .hero { padding: 45px 0 38px; }
+  #nydaymuse-profile .hero-grid { grid-template-columns: 1fr; gap: 38px; }
+  #nydaymuse-profile .hero-copy { max-width: 550px; }
+  #nydaymuse-profile h1 { font-size: clamp(41px, 8.5vw, 61px); letter-spacing: -2.5px; }
+  #nydaymuse-profile h1 em { letter-spacing: -2.5px; }
+  #nydaymuse-profile .hero-copy > p:not(.eyebrow) { font-size: 15px; }
+  #nydaymuse-profile .desk { width: 100%; max-width: 530px; margin-inline: auto; padding: 27px; }
+  #nydaymuse-profile .intro-strip { flex-direction: column; align-items: flex-start; gap: 15px; padding-block: 22px; }
+  #nydaymuse-profile .intro-strip > p { max-width: none; }
+  #nydaymuse-profile .audiences { gap: 10px 24px; }
+  #nydaymuse-profile .section { padding: 55px 0; scroll-margin-top: 96px; }
+  #nydaymuse-profile .section-heading { flex-direction: column; align-items: flex-start; gap: 16px; }
+  #nydaymuse-profile h2 { font-size: 32px; letter-spacing: -1.3px; }
+  #nydaymuse-profile .section-heading > p { max-width: 430px; }
+  #nydaymuse-profile .catalog-controls { align-items: stretch; flex-direction: column; }
+  #nydaymuse-profile .search-box input { width: 100%; }
+  #nydaymuse-profile .catalog-grid { gap: 16px; }
+  #nydaymuse-profile .product-art { padding: 23px; height: 140px; }
+  #nydaymuse-profile .product-body { padding: 21px; }
+  #nydaymuse-profile .philosophy-grid, #nydaymuse-profile .faq-layout { grid-template-columns: 1fr; gap: 35px; }
+  #nydaymuse-profile .closing { padding-bottom: 45px; }
+  #nydaymuse-profile .closing-inner { flex-direction: column; align-items: flex-start; gap: 25px; padding: 30px; }
+  #nydaymuse-profile .closing h2 { font-size: 30px; }
+  #nydaymuse-profile .follow-box { width: 100%; }
+  #nydaymuse-profile .footer-top { align-items: flex-start; flex-direction: column; }
+  #nydaymuse-profile .footer-bottom { align-items: flex-start; flex-direction: column; gap: 10px; }
+}
+@media (max-width: 480px) {
+  #nydaymuse-profile .eyebrow { font-size: 9px; letter-spacing: 1.5px; }
+  #nydaymuse-profile h1 { font-size: clamp(36px, 10.5vw, 48px); letter-spacing: -1.8px; }
+  #nydaymuse-profile h1 em { letter-spacing: -1.8px; }
+  #nydaymuse-profile .catalog-grid { grid-template-columns: 1fr; }
+  #nydaymuse-profile .product-art { height: 142px; }
+  #nydaymuse-profile .product-body { padding: 23px; }
+  #nydaymuse-profile .filter { padding: 8px 11px; font-size: 11px; }
+  #nydaymuse-profile .desk { padding: 22px; }
+  #nydaymuse-profile .desk-card { padding: 17px; }
+  #nydaymuse-profile .desk-card strong { font-size: 20px; }
+  #nydaymuse-profile .desk-label { font-size: 9px; }
+  #nydaymuse-profile .header-buttons { gap: 6px; }
+  #nydaymuse-profile .icon-button { width: 36px; height: 36px; padding: 8px; }
+  #nydaymuse-profile .follow-row { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  #nydaymuse-profile *, #nydaymuse-profile *::before, #nydaymuse-profile *::after { transition: none !important; animation: none !important; }
+}
+@media print {
+  #nydaymuse-profile .header { position: static; }
+  #nydaymuse-profile .catalog-controls, #nydaymuse-profile .header-buttons { display: none !important; }
+  #nydaymuse-profile .product-card { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div id="nydaymuse-profile" lang="en">
+  <a class="skip-link" href="#profile-main">Skip to content</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#profile-main" aria-label="Nydaymuse home"><svg class="flower" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor"><ellipse cx="20" cy="10" rx="5" ry="10"/><ellipse cx="20" cy="30" rx="5" ry="10"/><ellipse cx="10" cy="20" rx="10" ry="5"/><ellipse cx="30" cy="20" rx="10" ry="5"/><ellipse cx="20" cy="10" rx="5" ry="10" transform="rotate(45 20 20)"/><ellipse cx="20" cy="30" rx="5" ry="10" transform="rotate(45 20 20)"/><ellipse cx="10" cy="20" rx="10" ry="5" transform="rotate(45 20 20)"/><ellipse cx="30" cy="20" rx="10" ry="5" transform="rotate(45 20 20)"/></g><circle cx="20" cy="20" r="4" style="fill:var(--paper)"/></svg><span>nyday<span>muse</span></span></a>
+      <div class="header-right">
+        <nav class="navigation" id="profile-nav" aria-label="Primary navigation"><a href="#tools">The toolkit</a><a href="#about">Our approach</a><a href="#faq">Good questions</a><a href="#follow">Stay in the loop</a></nav>
+        <div class="header-buttons">
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" hidden>
+            <svg class="icon theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.5A8.7 8.7 0 0 1 10.5 3a9 9 0 1 0 10 10.5Z"/></svg>
+            <svg class="icon theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+          </button>
+          <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="profile-nav"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="profile-main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> For the independently minded</p>
+          <h1 id="hero-title">A little less admin.<br>A little more<br><em>possibility.</em></h1>
+          <p>Thoughtful tools for the business behind your work—and the life around it. Price the project, find your rhythm, and make room for what you love.</p>
+          <div class="button-row"><a class="button" href="#tools">Find your next tool <span aria-hidden="true">→</span></a><a class="text-link" href="https://nydaymuse.gumroad.com/l/qdccy" target="_blank" rel="noopener noreferrer">Start with Quote <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-note"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg> Small downloads. Practical by design.</div>
+        </div>
+        <div class="desk" aria-label="A look at the Nydaymuse toolkit">
+          <div class="desk-top"><span>A LITTLE ORDER. A LOT OF ROOM.</span><svg class="flower" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor"><ellipse cx="20" cy="10" rx="5" ry="10"/><ellipse cx="20" cy="30" rx="5" ry="10"/><ellipse cx="10" cy="20" rx="10" ry="5"/><ellipse cx="30" cy="20" rx="10" ry="5"/><ellipse cx="20" cy="10" rx="5" ry="10" transform="rotate(45 20 20)"/><ellipse cx="20" cy="30" rx="5" ry="10" transform="rotate(45 20 20)"/><ellipse cx="10" cy="20" rx="10" ry="5" transform="rotate(45 20 20)"/><ellipse cx="30" cy="20" rx="10" ry="5" transform="rotate(45 20 20)"/></g><circle cx="20" cy="20" r="4" style="fill:var(--paper)"/></svg></div>
+          <article class="desk-card"><div class="desk-label"><span>01 / PRICE IT</span><b>Quote</b></div><strong>Good work. Fair price.</strong><p class="desk-detail">Your time + your costs + a little breathing room.</p></article>
+          <article class="desk-card"><div class="desk-label"><span>02 / START WELL</span><b>Kickoff</b></div><strong>Everyone on the same page.</strong><div class="desk-checks"><span>✓ The welcome</span><span>✓ The plan</span><span>✓ The next step</span></div></article>
+          <article class="desk-card"><div class="desk-label"><span>03 / SEE IT CLEARLY</span><span>Ops</span></div><strong>Less “where did that go?”</strong><p class="desk-detail">Invoices, client details, and a clearer picture.</p></article>
+          <p class="desk-bottom">Good company for your working day.</p>
+        </div>
+      </div>
+    </section>
+    <div class="wrap intro-strip"><p>FOR PEOPLE WHO DO THINGS THEIR OWN WAY.</p><div class="audiences"><span>Freelancers</span><span>Creators</span><span>Small studios</span><span>Everyday planners</span></div></div>
+
+    <section class="section" id="tools" aria-labelledby="tools-heading">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">THE NYDAYMUSE TOOLKIT</p><h2 id="tools-heading">Meet your new workmates.</h2></div><p>Pick the little thing that makes your next step easier. Every tool has a job. Find the one for yours.</p></div>
+        <div class="catalog-controls" id="catalog-controls" hidden>
+          <div class="filters" role="group" aria-label="Filter tools by purpose">
+            <button class="filter" type="button" data-filter="all" aria-pressed="true" aria-controls="catalog-grid">All tools</button>
+            <button class="filter" type="button" data-filter="freelance" aria-pressed="false" aria-controls="catalog-grid">Freelance</button>
+            <button class="filter" type="button" data-filter="creator" aria-pressed="false" aria-controls="catalog-grid">Creators</button>
+            <button class="filter" type="button" data-filter="life" aria-pressed="false" aria-controls="catalog-grid">Everyday</button>
+            <button class="filter" type="button" data-filter="more" aria-pressed="false" aria-controls="catalog-grid" hidden>More tools</button>
+          </div>
+          <label class="search-box"><span class="sr-only">Search tools</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input id="catalog-search" type="search" placeholder="Find your next useful thing…" autocomplete="off"></label>
+        </div>
+        <p class="catalog-count" id="catalog-count" role="status" aria-live="polite">34 tools to explore</p>
+        <div class="catalog-grid" id="catalog-grid"><a class="product-card" data-permalink="driftdesk" data-category="freelance" href="https://nydaymuse.gumroad.com/l/driftdesk" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-blue" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Drift</span><span class="art-detail">Scope + change order desk</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="driftdesk" data-gumroad-field="price">View price</span></div><h3>Drift — Free Scope Creep &amp; Change-Order Desk (Baselines + CO Emails)</h3><p class="product-description">Track the little extra asks, compare them with your agreed scope, and prepare a clear change-order email.</p><span class="product-link">Explore Drift ↗</span></div>
+</a>
+<a class="product-card" data-permalink="praisedesk" data-category="freelance" href="https://nydaymuse.gumroad.com/l/praisedesk" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-lilac" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Praise</span><span class="art-detail">Testimonial request desk</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="praisedesk" data-gumroad-field="price">View price</span></div><h3>Praise — Free Testimonial &amp; Review Request Desk (Wins + Ask Emails)</h3><p class="product-description">Capture client wins and prepare a thoughtful testimonial request while the project is still fresh.</p><span class="product-link">Explore Praise ↗</span></div>
+</a>
+<a class="product-card" data-permalink="nestdesk" data-category="life" href="https://nydaymuse.gumroad.com/l/nestdesk" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-peach" aria-hidden="true"><span class="art-kicker">Everyday</span><span class="art-monogram">Nest</span><span class="art-detail">Pregnancy + baby organizer</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Everyday</span><span class="product-price" data-gumroad-product="nestdesk" data-gumroad-field="price">View price</span></div><h3>Nest — Free Pregnancy &amp; Baby Notion Tracker (Prenatal + Newborn Logs)</h3><p class="product-description">Keep prenatal and newborn records organized, with an offline night desk for feed, sleep, and diaper logs.</p><span class="product-link">Explore Nest ↗</span></div>
+</a>
+<a class="product-card" data-permalink="aimprompts" data-category="creator" href="https://nydaymuse.gumroad.com/l/aimprompts" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-peach" aria-hidden="true"><span class="art-kicker">Creators</span><span class="art-monogram">Aim</span><span class="art-detail">Creator AI prompts</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Creators</span><span class="product-price" data-gumroad-product="aimprompts" data-gumroad-field="price">View price</span></div><h3>Aim — Creator AI Prompt Pack (Hooks, Titles, Scripts)</h3><p class="product-description">Shape your next video with prompts for hooks, titles, scripts, descriptions, repurposing, and community replies.</p><span class="product-link">Explore Aim ↗</span></div>
+</a>
+<a class="product-card" data-permalink="clipdesk" data-category="creator" href="https://nydaymuse.gumroad.com/l/clipdesk" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-blue" aria-hidden="true"><span class="art-kicker">Creators</span><span class="art-monogram">Clip</span><span class="art-detail">YouTube + Shorts desk</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Creators</span><span class="product-price" data-gumroad-product="clipdesk" data-gumroad-field="price">View price</span></div><h3>Clip — Free YouTube &amp; Shorts Desk (Ideas + Hooks + Publish Checklist)</h3><p class="product-description">Bring video ideas, hooks, and a publishing checklist together so the next upload has a clear path.</p><span class="product-link">Explore Clip ↗</span></div>
+</a>
+<a class="product-card" data-permalink="poddesk" data-category="creator" href="https://nydaymuse.gumroad.com/l/poddesk" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-sage" aria-hidden="true"><span class="art-kicker">Creators</span><span class="art-monogram">Pod</span><span class="art-detail">Podcast episode desk</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Creators</span><span class="product-price" data-gumroad-product="poddesk" data-gumroad-field="price">View price</span></div><h3>Pod — Free Podcast Episode Desk (Guests + Show Notes + Publish Checklist)</h3><p class="product-description">Move each episode forward with guest outreach, show notes, and a checklist for publishing day.</p><span class="product-link">Explore Pod ↗</span></div>
+</a>
+<a class="product-card" data-permalink="shotdesk" data-category="creator" href="https://nydaymuse.gumroad.com/l/shotdesk" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-sand" aria-hidden="true"><span class="art-kicker">Creators</span><span class="art-monogram">Shot</span><span class="art-detail">Photographer shoot desk</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Creators</span><span class="product-price" data-gumroad-product="shotdesk" data-gumroad-field="price">View price</span></div><h3>Shot — Free Photographer Shoot Desk (Call Sheet + Gallery Tracker)</h3><p class="product-description">Plan the shoot, build a call sheet, and track gallery delivery in one focused photography workspace.</p><span class="product-link">Explore Shot ↗</span></div>
+</a>
+<a class="product-card" data-permalink="huntdesk" data-category="life" href="https://nydaymuse.gumroad.com/l/huntdesk" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-blue" aria-hidden="true"><span class="art-kicker">Everyday</span><span class="art-monogram">Hunt</span><span class="art-detail">Job search desk</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Everyday</span><span class="product-price" data-gumroad-product="huntdesk" data-gumroad-field="price">View price</span></div><h3>Hunt — Free Job Search Desk (Applications + Interview Stories)</h3><p class="product-description">Keep applications organized, rehearse interview stories, and prepare the next follow-up in one place.</p><span class="product-link">Explore Hunt ↗</span></div>
+</a>
+<a class="product-card" data-permalink="hookdesk" data-category="freelance" href="https://nydaymuse.gumroad.com/l/hookdesk" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-sage" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Hook</span><span class="art-detail">Client outreach desk</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="hookdesk" data-gumroad-field="price">View price</span></div><h3>Hook — Free Freelance Client Acquisition Desk (Pipeline + Outreach + Quote)</h3><p class="product-description">Keep your next client opportunity in view with a focused pipeline, outreach workspace, and quoting tools.</p><span class="product-link">Explore Hook ↗</span></div>
+</a>
+<a class="product-card" data-permalink="aginglite" data-category="freelance" href="https://nydaymuse.gumroad.com/l/aginglite" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-lilac" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Aging Lite</span><span class="art-detail">Invoice aging tracker</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="aginglite" data-gumroad-field="price">View price</span></div><h3>Aging Lite — Overdue Invoice Aging Buckets (Free Trial of Ops)</h3><p class="product-description">See days overdue and aging buckets for a few invoices in a simple offline companion to Ops.</p><span class="product-link">Explore Aging Lite ↗</span></div>
+</a>
+<a class="product-card" data-permalink="kickofflite" data-category="freelance" href="https://nydaymuse.gumroad.com/l/kickofflite" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-sand" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Kickoff Lite</span><span class="art-detail">Welcome checklist</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="kickofflite" data-gumroad-field="price">View price</span></div><h3>Kickoff Lite — Welcome Email + Kickoff Checklist (Free Trial)</h3><p class="product-description">Start with a fill-in welcome email and a practical checklist for the next client kickoff.</p><span class="product-link">Explore Kickoff Lite ↗</span></div>
+</a>
+<a class="product-card" data-permalink="closelite" data-category="freelance" href="https://nydaymuse.gumroad.com/l/closelite" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-sage" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Close Lite</span><span class="art-detail">Two AI prompts</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="closelite" data-gumroad-field="price">View price</span></div><h3>Close Lite — 2 Free AI Prompts (Pricing Audit + Follow-up Day 1/3/7)</h3><p class="product-description">Try a pricing audit and a follow-up sequence with two copy-ready prompts for ChatGPT or Claude.</p><span class="product-link">Explore Close Lite ↗</span></div>
+</a>
+<a class="product-card" data-permalink="qdccy" data-category="freelance" href="https://nydaymuse.gumroad.com/l/qdccy" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-sage" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Quote</span><span class="art-detail">Calculator + proposal</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="qdccy" data-gumroad-field="price">View price</span></div><h3>Quote — Free Offline Rate Calculator + Proposal Lite (HTML · Print PDF)</h3><p class="product-description">Price your work from hours and project costs, then print a clear one-page proposal.</p><span class="product-link">Explore Quote ↗</span></div>
+</a>
+<a class="product-card" data-permalink="fuflsz" data-category="freelance" href="https://nydaymuse.gumroad.com/l/fuflsz" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-blue" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Kickoff</span><span class="art-detail">Notion import pack</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="fuflsz" data-gumroad-field="price">View price</span></div><h3>Kickoff — Client Onboarding Notion Pack (Welcome, Checklist, Assets, Comms)</h3><p class="product-description">Give every client a thoughtful start with welcome emails, checklists, asset requests, and communication expectations.</p><span class="product-link">Explore Kickoff ↗</span></div>
+</a>
+<a class="product-card" data-permalink="ptljg" data-category="freelance" href="https://nydaymuse.gumroad.com/l/ptljg" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-peach" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Close</span><span class="art-detail">AI prompt pack</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="ptljg" data-gumroad-field="price">View price</span></div><h3>Close — Freelancer AI Proposal &amp; Pricing Prompt Pack (8 ChatGPT/Claude Prompts)</h3><p class="product-description">Turn discovery notes into clearer proposals, pricing, and follow-ups with eight prompts for ChatGPT or Claude.</p><span class="product-link">Explore Close ↗</span></div>
+</a>
+<a class="product-card" data-permalink="dfqimr" data-category="freelance" href="https://nydaymuse.gumroad.com/l/dfqimr" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-peach" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Meeting Notes</span><span class="art-detail">Notion meeting notes</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="dfqimr" data-gumroad-field="price">View price</span></div><h3>Client Meeting Notes + Decision Log — Notion Template (Actions &amp; Owners)</h3><p class="product-description">Turn client calls into clear decisions and assigned actions with Notion-ready meeting notes and logs.</p><span class="product-link">Explore Meeting Notes ↗</span></div>
+</a>
+<a class="product-card" data-permalink="xvbpjp" data-category="freelance" href="https://nydaymuse.gumroad.com/l/xvbpjp" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-blue" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Invoice Chase</span><span class="art-detail">Notion invoice board</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="xvbpjp" data-gumroad-field="price">View price</span></div><h3>Invoice Chase Board — Notion Template (Due, Status, Next Nudge, Promised Pay)</h3><p class="product-description">Give unpaid invoices a next step. Track due dates, status, the next nudge, and promised payment dates.</p><span class="product-link">Explore Invoice Chase ↗</span></div>
+</a>
+<a class="product-card" data-permalink="mirjem" data-category="freelance" href="https://nydaymuse.gumroad.com/l/mirjem" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-lilac" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Client CRM</span><span class="art-detail">Notion client organizer</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="mirjem" data-gumroad-field="price">View price</span></div><h3>Freelance Client CRM — Notion Template Pack (Clients, Status, Next Action)</h3><p class="product-description">Organize clients, pipeline status, next actions, project value, and your last conversation in Notion.</p><span class="product-link">Explore Client CRM ↗</span></div>
+</a>
+<a class="product-card" data-permalink="ggnfxs" data-category="freelance" href="https://nydaymuse.gumroad.com/l/ggnfxs" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-lilac" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Ops</span><span class="art-detail">Money + client workbook</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="ggnfxs" data-gumroad-field="price">View price</span></div><h3>Freelance Invoice Tracker Spreadsheet — Collected vs Overdue Ops Workbook</h3><p class="product-description">Keep invoices, expenses, rates, clients, and time together in a workbook that makes overdue payments easier to see.</p><span class="product-link">Explore Ops ↗</span></div>
+</a>
+<a class="product-card" data-permalink="wnlnmh" data-category="freelance" href="https://nydaymuse.gumroad.com/l/wnlnmh" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-sand" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Scope</span><span class="art-detail">Statement of work filler</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="wnlnmh" data-gumroad-field="price">View price</span></div><h3>Scope — Offline SOW &amp; Proposal Filler (HTML)</h3><p class="product-description">Fill in deliverables, boundaries, timelines, and payment terms, then print a statement of work or proposal.</p><span class="product-link">Explore Scope ↗</span></div>
+</a>
+<a class="product-card" data-permalink="kdypo" data-category="freelance" href="https://nydaymuse.gumroad.com/l/kdypo" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-sand" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Bound</span><span class="art-detail">Statement of work PDF</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="kdypo" data-gumroad-field="price">View price</span></div><h3>Bound — Scope of Work Outline (PDF)</h3><p class="product-description">Set out deliverables, revision rounds, exclusions, and timelines before a new project begins.</p><span class="product-link">Explore Bound ↗</span></div>
+</a>
+<a class="product-card" data-permalink="wofgya" data-category="freelance" href="https://nydaymuse.gumroad.com/l/wofgya" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-sage" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Rates</span><span class="art-detail">Rate card PDF</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="wofgya" data-gumroad-field="price">View price</span></div><h3>Rates — 3-Tier Printable Rate Card (PDF)</h3><p class="product-description">Present three service tiers, individual add-ons, and a retainer option on a printable rate card.</p><span class="product-link">Explore Rates ↗</span></div>
+</a>
+<a class="product-card" data-permalink="yhxcxy" data-category="freelance" href="https://nydaymuse.gumroad.com/l/yhxcxy" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-peach" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Pitch</span><span class="art-detail">Proposal PDF</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="yhxcxy" data-gumroad-field="price">View price</span></div><h3>Pitch — New Client Proposal Template (PDF)</h3><p class="product-description">Turn the discovery call into a fill-in proposal with a clear place for what the project includes and excludes.</p><span class="product-link">Explore Pitch ↗</span></div>
+</a>
+<a class="product-card" data-permalink="rpazqm" data-category="freelance" href="https://nydaymuse.gumroad.com/l/rpazqm" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-blue" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Cue</span><span class="art-detail">AI prompts PDF</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="rpazqm" data-gumroad-field="price">View price</span></div><h3>Cue — 24 Freelance Prompts for Proposals, Invoices, and Follow-ups (PDF)</h3><p class="product-description">Use 24 adaptable prompts to draft proposals, invoice reminders, and the follow-ups that are easy to put off.</p><span class="product-link">Explore Cue ↗</span></div>
+</a>
+<a class="product-card" data-permalink="mcsuf" data-category="freelance" href="https://nydaymuse.gumroad.com/l/mcsuf" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-lilac" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Copy</span><span class="art-detail">Email templates PDF</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="mcsuf" data-gumroad-field="price">View price</span></div><h3>Copy — 10 Freelance Client Emails (PDF)</h3><p class="product-description">Keep ten useful client emails ready, from the kickoff welcome and access request to project wrap-up.</p><span class="product-link">Explore Copy ↗</span></div>
+</a>
+<a class="product-card" data-permalink="rnmefm" data-category="life" href="https://nydaymuse.gumroad.com/l/rnmefm" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-peach" aria-hidden="true"><span class="art-kicker">Everyday</span><span class="art-monogram">Week</span><span class="art-detail">Printable planner</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Everyday</span><span class="product-price" data-gumroad-product="rnmefm" data-gumroad-field="price">View price</span></div><h3>Week — Printable Weekly Planner (PDF)</h3><p class="product-description">See the week on one page, with room for three priorities, daily time blocks, and the notes worth keeping.</p><span class="product-link">Explore Week ↗</span></div>
+</a>
+<a class="product-card" data-permalink="uraaz" data-category="freelance" href="https://nydaymuse.gumroad.com/l/uraaz" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-sand" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Brief</span><span class="art-detail">Kickoff checklist PDF</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="uraaz" data-gumroad-field="price">View price</span></div><h3>Brief — New Client Kickoff Checklist (PDF)</h3><p class="product-description">Check access, scope, dates, and invoice terms before you start, using one printable kickoff checklist.</p><span class="product-link">Explore Brief ↗</span></div>
+</a>
+<a class="product-card" data-permalink="zopnl" data-category="life" href="https://nydaymuse.gumroad.com/l/zopnl" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-blue" aria-hidden="true"><span class="art-kicker">Everyday</span><span class="art-monogram">Subs</span><span class="art-detail">Recurring bill spreadsheet</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Everyday</span><span class="product-price" data-gumroad-product="zopnl" data-gumroad-field="price">View price</span></div><h3>Subs — See the Monthly Burn. Recurring Bills (Excel + Sheets)</h3><p class="product-description">See the monthly cost of recurring bills and subscriptions, including yearly plans and upcoming due dates.</p><span class="product-link">Explore Subs ↗</span></div>
+</a>
+<a class="product-card" data-permalink="dmyqaf" data-category="creator" href="https://nydaymuse.gumroad.com/l/dmyqaf" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-lilac" aria-hidden="true"><span class="art-kicker">Creators</span><span class="art-monogram">Grid</span><span class="art-detail">Content calendar spreadsheet</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Creators</span><span class="product-price" data-gumroad-product="dmyqaf" data-gumroad-field="price">View price</span></div><h3>Grid — See This Week&#39;s Posts. Content Calendar (Excel + Sheets)</h3><p class="product-description">Plan posts by date, platform, and status. See what is coming this week and which drafts need attention.</p><span class="product-link">Explore Grid ↗</span></div>
+</a>
+<a class="product-card" data-permalink="eqqfxb" data-category="life" href="https://nydaymuse.gumroad.com/l/eqqfxb" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-lilac" aria-hidden="true"><span class="art-kicker">Everyday</span><span class="art-monogram">Streak</span><span class="art-detail">Habit tracker spreadsheet</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Everyday</span><span class="product-price" data-gumroad-product="eqqfxb" data-gumroad-field="price">View price</span></div><h3>Streak — See the Chain. Habit Tracker (Excel + Sheets)</h3><p class="product-description">Track up to eight habits and see your current streak, completed days, and monthly progress.</p><span class="product-link">Explore Streak ↗</span></div>
+</a>
+<a class="product-card" data-permalink="pekabe" data-category="life" href="https://nydaymuse.gumroad.com/l/pekabe" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-sand" aria-hidden="true"><span class="art-kicker">Everyday</span><span class="art-monogram">Keep</span><span class="art-detail">Budget spreadsheet</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Everyday</span><span class="product-price" data-gumroad-product="pekabe" data-gumroad-field="price">View price</span></div><h3>Keep — See What&#39;s Left This Month. Budget (Excel + Sheets)</h3><p class="product-description">Log income, bills, and everyday spending to see what is left for the month.</p><span class="product-link">Explore Keep ↗</span></div>
+</a>
+<a class="product-card" data-permalink="cvqzet" data-category="freelance" href="https://nydaymuse.gumroad.com/l/cvqzet" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-sage" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Hint</span><span class="art-detail">Hourly rate spreadsheet</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="cvqzet" data-gumroad-field="price">View price</span></div><h3>Hint — Hourly Floor in One Sheet (Excel + Sheets)</h3><p class="product-description">Find your hourly floor from annual overhead, your take-home target, and realistic billable hours.</p><span class="product-link">Explore Hint ↗</span></div>
+</a>
+<a class="product-card" data-permalink="tubrnw" data-category="freelance" href="https://nydaymuse.gumroad.com/l/tubrnw" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-peach" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Slip</span><span class="art-detail">Spreadsheet + HTML invoice</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="tubrnw" data-gumroad-field="price">View price</span></div><h3>Slip — One-Page Freelance Invoice (Excel + Offline HTML Lite)</h3><p class="product-description">Send a tidy one-page invoice with calculated totals. Use the spreadsheet or print from the offline HTML tool.</p><span class="product-link">Explore Slip ↗</span></div>
+</a>
+<a class="product-card" data-permalink="ebexb" data-category="freelance" href="https://nydaymuse.gumroad.com/l/ebexb" target="_blank" rel="noopener noreferrer">
+  <div class="product-art art-sand" aria-hidden="true"><span class="art-kicker">Freelance</span><span class="art-monogram">Nudge</span><span class="art-detail">Payment reminder templates</span></div>
+  <div class="product-body"><div class="product-meta"><span class="product-kind">Freelance</span><span class="product-price" data-gumroad-product="ebexb" data-gumroad-field="price">View price</span></div><h3>Nudge — Free Late-Payment Email Templates (PDF)</h3><p class="product-description">Find the words for polite, firm late-payment follow-ups, ready to adapt for your next client email.</p><span class="product-link">Explore Nudge ↗</span></div>
+</a></div>
+        <p class="catalog-empty" id="catalog-empty" hidden>No tools match just yet. Try a different search or choose “All tools.”</p>
+        <div class="catalog-bottom"><button class="button button-secondary" id="catalog-load-more" type="button" aria-controls="catalog-grid" hidden>Show more tools</button><p class="catalog-note">Open any tool to see what is included and its current price.</p></div>
+      </div>
+    </section>
+
+    <section class="section philosophy" id="about" aria-labelledby="about-heading">
+      <div class="wrap philosophy-grid">
+        <div class="philosophy-copy"><p class="eyebrow">A SMALL STUDIO. A SIMPLE IDEA.</p><h2 id="about-heading">Useful things.<br><em>Room to do your thing.</em></h2><p>Nydaymuse makes practical tools for the parts of independent work that tend to pile up. A clear quote. A calmer kickoff. A plan you can actually follow. Small pieces of structure, made to fit your day.</p></div>
+        <ol class="principles"><li><span aria-hidden="true">01</span><div><h3>One tool. A clear purpose.</h3><p>Start with the task in front of you. Add another tool when you need it.</p></div></li><li><span aria-hidden="true">02</span><div><h3>A head start, in a familiar format.</h3><p>Templates, spreadsheets, prompts, and offline desks. Open the product page to find the format that fits.</p></div></li><li><span aria-hidden="true">03</span><div><h3>Make it your own.</h3><p>Bring your clients, your numbers, and your way of working. The tools provide the starting point.</p></div></li></ol>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-heading">
+      <div class="wrap faq-layout">
+        <div class="faq-intro"><p class="eyebrow">GOOD QUESTIONS</p><h2 id="faq-heading">A little clarity<br>before you begin.</h2><p>Simple tools should come with simple answers.</p></div>
+        <div class="faq-list">
+          <details><summary>Where should I start?</summary><p>For freelance pricing, try <a href="https://nydaymuse.gumroad.com/l/qdccy" target="_blank" rel="noopener noreferrer">Quote</a>. For client outreach, start with <a href="https://nydaymuse.gumroad.com/l/hookdesk" target="_blank" rel="noopener noreferrer">Hook</a>. For late invoices, explore <a href="https://nydaymuse.gumroad.com/l/ebexb" target="_blank" rel="noopener noreferrer">Nudge</a>. The filters above can help you find tools for creative projects and everyday life, too.</p></details>
+          <details><summary>What do I get when I choose a tool?</summary><p>Each product page lists the files, format, and what is included. The collection includes offline HTML tools, PDF resources, spreadsheets, Notion import packs, and AI prompts. Downloads are delivered through Gumroad.</p></details>
+          <details><summary>Can I use the tools offline?</summary><p>The offline HTML tools run locally in your browser once downloaded. PDFs and downloaded workbooks can also be used locally with suitable software. Notion and AI prompt packs use their respective services, so check the product page for requirements.</p></details>
+          <details><summary>Do the templates include real client data?</summary><p>Examples are there to help you get started. Replace sample entries with your own information before using a template for real work.</p></details>
+          <details><summary>Where can I find practical guides?</summary><p>The <a href="https://nydaym.github.io/nydaymuse-funnel/#guides" target="_blank" rel="noopener noreferrer">Nydaymuse guide library</a> covers pricing, proposals, onboarding, invoice follow-ups, and more. You can read the guides without downloading a tool.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="follow" aria-labelledby="follow-heading">
+      <div class="wrap closing-inner">
+        <div><p class="eyebrow">A LITTLE NOTE FROM THE STUDIO</p><h2 id="follow-heading">Stay in the useful-things loop.</h2><p>New tools and thoughtful updates, when there is something to share.</p></div>
+        <div class="follow-box"><form data-gumroad-follow><label for="follow-email">Your email address</label><div class="follow-row"><input id="follow-email" type="email" name="email" required autocomplete="email" placeholder="you@yourstudio.com"><button class="button" type="submit">Keep me posted <span aria-hidden="true">→</span></button></div><p data-gumroad-follow-message role="status" aria-live="polite"></p></form><p class="follow-note">Follow Nydaymuse on Gumroad. Unsubscribe anytime.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap"><div class="footer-top"><a class="brand" href="#profile-main" aria-label="Back to the top"><svg class="flower" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor"><ellipse cx="20" cy="10" rx="5" ry="10"/><ellipse cx="20" cy="30" rx="5" ry="10"/><ellipse cx="10" cy="20" rx="10" ry="5"/><ellipse cx="30" cy="20" rx="10" ry="5"/><ellipse cx="20" cy="10" rx="5" ry="10" transform="rotate(45 20 20)"/><ellipse cx="20" cy="30" rx="5" ry="10" transform="rotate(45 20 20)"/><ellipse cx="10" cy="20" rx="10" ry="5" transform="rotate(45 20 20)"/><ellipse cx="30" cy="20" rx="10" ry="5" transform="rotate(45 20 20)"/></g><circle cx="20" cy="20" r="4" style="fill:var(--paper)"/></svg><span>nyday<span>muse</span></span></a><nav class="footer-nav" aria-label="Footer navigation"><a href="#tools">The toolkit</a><a href="#about">Our approach</a><a href="#follow">Follow along</a><a href="https://nydaym.github.io/nydaymuse-funnel/#guides" target="_blank" rel="noopener noreferrer">Free guides ↗</a></nav></div><div class="footer-bottom"><p>© 2026 Nydaymuse. Thoughtful little tools for independent work.</p><p>Made for a little more breathing room.</p></div></div></footer>
+</div>
+<script id="nydaymuse-catalog-meta" type="application/json">{"qdccy":["Quote","freelance","Calculator + proposal","art-sage","Price your work from hours and project costs, then print a clear one-page proposal."],"ptljg":["Close","freelance","AI prompt pack","art-peach","Turn discovery notes into clearer proposals, pricing, and follow-ups with eight prompts for ChatGPT or Claude."],"fuflsz":["Kickoff","freelance","Notion import pack","art-blue","Give every client a thoughtful start with welcome emails, checklists, asset requests, and communication expectations."],"ggnfxs":["Ops","freelance","Money + client workbook","art-lilac","Keep invoices, expenses, rates, clients, and time together in a workbook that makes overdue payments easier to see."],"ebexb":["Nudge","freelance","Payment reminder templates","art-sand","Find the words for polite, firm late-payment follow-ups, ready to adapt for your next client email."],"tubrnw":["Slip","freelance","Spreadsheet + HTML invoice","art-peach","Send a tidy one-page invoice with calculated totals. Use the spreadsheet or print from the offline HTML tool."],"praisedesk":["Praise","freelance","Testimonial request desk","art-lilac","Capture client wins and prepare a thoughtful testimonial request while the project is still fresh."],"driftdesk":["Drift","freelance","Scope + change order desk","art-blue","Track the little extra asks, compare them with your agreed scope, and prepare a clear change-order email."],"wnlnmh":["Scope","freelance","Statement of work filler","art-sand","Fill in deliverables, boundaries, timelines, and payment terms, then print a statement of work or proposal."],"hookdesk":["Hook","freelance","Client outreach desk","art-sage","Keep your next client opportunity in view with a focused pipeline, outreach workspace, and quoting tools."],"aimprompts":["Aim","creator","Creator AI prompts","art-peach","Shape your next video with prompts for hooks, titles, scripts, descriptions, repurposing, and community replies."],"clipdesk":["Clip","creator","YouTube + Shorts desk","art-blue","Bring video ideas, hooks, and a publishing checklist together so the next upload has a clear path."],"dmyqaf":["Grid","creator","Content calendar spreadsheet","art-lilac","Plan posts by date, platform, and status. See what is coming this week and which drafts need attention."],"shotdesk":["Shot","creator","Photographer shoot desk","art-sand","Plan the shoot, build a call sheet, and track gallery delivery in one focused photography workspace."],"poddesk":["Pod","creator","Podcast episode desk","art-sage","Move each episode forward with guest outreach, show notes, and a checklist for publishing day."],"huntdesk":["Hunt","life","Job search desk","art-blue","Keep applications organized, rehearse interview stories, and prepare the next follow-up in one place."],"nestdesk":["Nest","life","Pregnancy + baby organizer","art-peach","Keep prenatal and newborn records organized, with an offline night desk for feed, sleep, and diaper logs."],"aginglite":["Aging Lite","freelance","Invoice aging tracker","art-lilac","See days overdue and aging buckets for a few invoices in a simple offline companion to Ops."],"kickofflite":["Kickoff Lite","freelance","Welcome checklist","art-sand","Start with a fill-in welcome email and a practical checklist for the next client kickoff."],"closelite":["Close Lite","freelance","Two AI prompts","art-sage","Try a pricing audit and a follow-up sequence with two copy-ready prompts for ChatGPT or Claude."],"dfqimr":["Meeting Notes","freelance","Notion meeting notes","art-peach","Turn client calls into clear decisions and assigned actions with Notion-ready meeting notes and logs."],"xvbpjp":["Invoice Chase","freelance","Notion invoice board","art-blue","Give unpaid invoices a next step. Track due dates, status, the next nudge, and promised payment dates."],"mirjem":["Client CRM","freelance","Notion client organizer","art-lilac","Organize clients, pipeline status, next actions, project value, and your last conversation in Notion."],"kdypo":["Bound","freelance","Statement of work PDF","art-sand","Set out deliverables, revision rounds, exclusions, and timelines before a new project begins."],"wofgya":["Rates","freelance","Rate card PDF","art-sage","Present three service tiers, individual add-ons, and a retainer option on a printable rate card."],"yhxcxy":["Pitch","freelance","Proposal PDF","art-peach","Turn the discovery call into a fill-in proposal with a clear place for what the project includes and excludes."],"rpazqm":["Cue","freelance","AI prompts PDF","art-blue","Use 24 adaptable prompts to draft proposals, invoice reminders, and the follow-ups that are easy to put off."],"mcsuf":["Copy","freelance","Email templates PDF","art-lilac","Keep ten useful client emails ready, from the kickoff welcome and access request to project wrap-up."],"uraaz":["Brief","freelance","Kickoff checklist PDF","art-sand","Check access, scope, dates, and invoice terms before you start, using one printable kickoff checklist."],"cvqzet":["Hint","freelance","Hourly rate spreadsheet","art-sage","Find your hourly floor from annual overhead, your take-home target, and realistic billable hours."],"rnmefm":["Week","life","Printable planner","art-peach","See the week on one page, with room for three priorities, daily time blocks, and the notes worth keeping."],"zopnl":["Subs","life","Recurring bill spreadsheet","art-blue","See the monthly cost of recurring bills and subscriptions, including yearly plans and upcoming due dates."],"eqqfxb":["Streak","life","Habit tracker spreadsheet","art-lilac","Track up to eight habits and see your current streak, completed days, and monthly progress."],"pekabe":["Keep","life","Budget spreadsheet","art-sand","Log income, bills, and everyday spending to see what is left for the month."],"zmujk":["Beadify","creator","Creative tool","art-sage"],"ruydb":["Beadify Pro","creator","Creative tool","art-peach"]}</script>
+<script>(() => {
+  'use strict';
+  const root = document.getElementById('nydaymuse-profile');
+  if (!root) return;
+  const preference = window.matchMedia('(prefers-color-scheme: dark)');
+  const toggle = document.getElementById('theme-toggle');
+  let explicitTheme = null;
+  try {
+    const saved = window.localStorage.getItem('nydaymuse-theme');
+    if (saved === 'light' || saved === 'dark') explicitTheme = saved;
+  } catch (_) { /* Gumroad's isolated frame can disable browser storage. */ }
+  const setTheme = theme => {
+    root.dataset.theme = theme;
+    // Gumroad derives its outer page canvas from the iframe document background.
+    const background = window.getComputedStyle(root).backgroundColor;
+    document.documentElement.style.backgroundColor = background;
+    document.documentElement.style.colorScheme = theme;
+    document.body.style.backgroundColor = background;
+    if (toggle) {
+      toggle.setAttribute('aria-pressed', String(theme === 'dark'));
+      toggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+      toggle.title = `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`;
+    }
+  };
+  setTheme(explicitTheme || (preference.matches ? 'dark' : 'light'));
+  if (toggle) {
+    toggle.hidden = false;
+    toggle.addEventListener('click', () => {
+      explicitTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      setTheme(explicitTheme);
+      try { window.localStorage.setItem('nydaymuse-theme', explicitTheme); } catch (_) { /* In-memory preference still works. */ }
+    });
+  }
+  preference.addEventListener('change', () => {
+    if (!explicitTheme) setTheme(preference.matches ? 'dark' : 'light');
+  });
+
+  const menu = document.getElementById('profile-nav');
+  const menuToggle = document.getElementById('menu-toggle');
+  if (menu && menuToggle) {
+    const closeMenu = () => {
+      menu.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation');
+    };
+    menuToggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    });
+    menu.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.classList.contains('is-open')) { closeMenu(); menuToggle.focus(); }
+    });
+    document.addEventListener('click', event => { if (!event.target.closest('.header')) closeMenu(); });
+    window.matchMedia('(min-width: 801px)').addEventListener('change', closeMenu);
+  }
+  root.classList.add('enhanced');
+})();
+</script>
+<script>(function () {
+  'use strict';
+
+  var grid = document.getElementById('catalog-grid');
+  if (!grid) return;
+
+  var search = document.getElementById('catalog-search');
+  var count = document.getElementById('catalog-count');
+  var empty = document.getElementById('catalog-empty');
+  var moreButton = document.getElementById('catalog-load-more');
+  var filters = Array.from(document.querySelectorAll('[data-filter]'));
+  var activeFilter = 'all';
+  var visibleLimit = 12;
+  var matchingCount = 0;
+  var busy = false;
+  var notice = '';
+  var nextOffset = 0;
+  var total = 0;
+  var prices = new Map();
+  var cards = new Map();
+  var categories = {
+    freelance: { label: 'Freelance', art: 'art-sage' },
+    creator: { label: 'Creators', art: 'art-peach' },
+    life: { label: 'Everyday', art: 'art-blue' },
+    more: { label: 'More tools', art: 'art-lilac' }
+  };
+  var known = readJSON('nydaymuse-catalog-meta') || {};
+  var entityParser = typeof DOMParser === 'function' ? new DOMParser() : null;
+  var commonEntities = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: '\u00a0', ndash: '–', mdash: '—', lsquo: '‘', rsquo: '’', ldquo: '“', rdquo: '”', hellip: '…', bull: '•', middot: '·', copy: '©', reg: '®', trade: '™', times: '×', divide: '÷', euro: '€', pound: '£', yen: '¥', cent: '¢' };
+
+  function decodeText(value) {
+    return String(value).replace(/&(#(?:x[0-9a-f]{1,6}|[0-9]{1,7})|[a-z][a-z0-9]{1,31});/gi, function (entity, name) {
+      // Only a single entity token is parsed; raw product markup never enters an HTML parser.
+      if (entityParser) return entityParser.parseFromString(entity, 'text/html').body.textContent;
+      if (name[0] !== '#') return commonEntities[name.toLowerCase()] || entity;
+      var hex = name[1].toLowerCase() === 'x';
+      var code = parseInt(name.slice(hex ? 2 : 1), hex ? 16 : 10);
+      return code > 0 && code <= 0x10ffff && !(code >= 0xd800 && code <= 0xdfff) ? String.fromCodePoint(code) : '\ufffd';
+    });
+  }
+
+  function readJSON(id) {
+    var node = document.getElementById(id);
+    if (!node) return null;
+    try { return JSON.parse(node.textContent); } catch (_) { return null; }
+  }
+
+  function textElement(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    node.textContent = text;
+    return node;
+  }
+
+  function validTotal(value) {
+    return Number.isSafeInteger(value) && value >= 0;
+  }
+
+  function mergePrices(incoming) {
+    if (!incoming || typeof incoming !== 'object' || Array.isArray(incoming)) return;
+    Object.keys(incoming).forEach(function (permalink) {
+      var value = incoming[permalink];
+      if (value && typeof value.price === 'string' && value.price.trim()) {
+        prices.set(permalink, value.price);
+      }
+    });
+  }
+
+  function applyPrices() {
+    document.querySelectorAll('[data-gumroad-product][data-gumroad-field="price"]').forEach(function (node) {
+      var value = prices.get(node.dataset.gumroadProduct);
+      if (value) node.textContent = value;
+    });
+  }
+
+  function productDetails(product) {
+    if (!product || typeof product.name !== 'string' || !product.name.trim() || typeof product.url !== 'string') return null;
+    try {
+      var url = new URL(product.url);
+      if (url.protocol !== 'https:' || url.username || url.password) return null;
+      var match = url.pathname.match(/\/l\/([^/]+)\/?$/);
+      if (!match) return null;
+      var permalink = decodeURIComponent(match[1]);
+      if (!permalink || /[\s/\\]/.test(permalink)) return null;
+      return { product: product, url: url.href, permalink: permalink };
+    } catch (_) { return null; }
+  }
+
+  function renderProduct(details) {
+    var product = details.product;
+    var metadata = Object.prototype.hasOwnProperty.call(known, details.permalink) ? known[details.permalink] : null;
+    var category = metadata ? metadata[1] : 'more';
+    var presentation = categories[category];
+    var productName = decodeText(product.name.trim());
+    var shortName = metadata ? metadata[0] : productName;
+    var card = document.createElement('a');
+    card.className = 'product-card';
+    card.href = details.url;
+    card.target = '_blank';
+    card.rel = 'noopener noreferrer';
+    card.dataset.permalink = details.permalink;
+    card.dataset.category = category;
+
+    var art = textElement('div', 'product-art ' + (metadata && metadata[3] ? metadata[3] : presentation.art), '');
+    art.setAttribute('aria-hidden', 'true');
+    art.appendChild(textElement('span', 'art-kicker', presentation.label));
+    art.appendChild(textElement('span', 'art-monogram', metadata ? shortName : Array.from(shortName)[0].toUpperCase()));
+    art.appendChild(textElement('span', 'art-detail', metadata ? metadata[2] : 'From the studio'));
+
+    var body = textElement('div', 'product-body', '');
+    var meta = textElement('div', 'product-meta', '');
+    meta.appendChild(textElement('span', 'product-kind', presentation.label));
+    var price = textElement('span', 'product-price', prices.get(details.permalink) || 'View price');
+    price.dataset.gumroadProduct = details.permalink;
+    price.dataset.gumroadField = 'price';
+    meta.appendChild(price);
+    body.appendChild(meta);
+    body.appendChild(textElement('h3', '', productName));
+    var description = metadata && metadata[4] ? metadata[4] : typeof product.description === 'string' && product.description.trim() ? product.description : 'Explore this tool, see what is included, and find your next useful thing.';
+    body.appendChild(textElement('p', 'product-description', decodeText(description)));
+    body.appendChild(textElement('span', 'product-link', metadata ? 'Explore ' + shortName + ' ↗' : 'Explore this tool ↗'));
+    card.appendChild(art);
+    card.appendChild(body);
+    return card;
+  }
+
+  function addProducts(products) {
+    products.forEach(function (product) {
+      var details = productDetails(product);
+      if (!details) return;
+      var previous = cards.get(details.permalink);
+      var card = renderProduct(details);
+      if (previous) previous.replaceWith(card);
+      else grid.appendChild(card);
+      cards.set(details.permalink, card);
+    });
+  }
+
+  function refresh() {
+    var query = search ? search.value.trim().toLocaleLowerCase() : '';
+    var visible = 0;
+    var hasOther = false;
+    matchingCount = 0;
+    cards.forEach(function (card) {
+      if (card.dataset.category === 'more') hasOther = true;
+      var matches = (activeFilter === 'all' || card.dataset.category === activeFilter) && (!query || card.textContent.toLocaleLowerCase().includes(query));
+      if (matches) matchingCount += 1;
+      card.hidden = !matches || matchingCount > visibleLimit;
+      if (!card.hidden) visible += 1;
+    });
+    filters.forEach(function (button) {
+      button.setAttribute('aria-pressed', String(button.dataset.filter === activeFilter));
+      if (button.dataset.filter === 'more') button.hidden = !hasOther;
+    });
+    if (empty) empty.hidden = visible !== 0;
+    if (count) {
+      var label = 'Showing ' + visible + ' of ' + matchingCount + (matchingCount === 1 ? ' tool' : ' tools');
+      if (total > cards.size) label += ' · ' + cards.size + ' of ' + total + ' loaded';
+      count.textContent = label + (notice ? '. ' + notice : '');
+    }
+    if (moreButton) {
+      moreButton.hidden = matchingCount <= visibleLimit && nextOffset >= total;
+      moreButton.disabled = busy;
+      moreButton.setAttribute('aria-busy', String(busy));
+      moreButton.textContent = busy ? 'Loading tools…' : notice ? 'Try loading more' : 'Load more tools';
+    }
+  }
+
+  if (count) {
+    count.setAttribute('role', 'status');
+    count.setAttribute('aria-live', 'polite');
+    count.setAttribute('aria-atomic', 'true');
+  }
+  mergePrices(readJSON('gumroad-prices'));
+  grid.querySelectorAll('.product-card[data-permalink]').forEach(function (card) {
+    cards.set(card.dataset.permalink, card);
+  });
+  total = cards.size;
+  nextOffset = total;
+
+  var initial = readJSON('gumroad-data');
+  if (initial && Array.isArray(initial.products)) {
+    grid.replaceChildren();
+    cards.clear();
+    addProducts(initial.products);
+    nextOffset = initial.products.length;
+    total = validTotal(initial.products_total) ? Math.max(initial.products_total, nextOffset) : nextOffset;
+  }
+  applyPrices();
+
+  filters.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var filter = button.dataset.filter;
+      if (filter !== 'all' && !Object.prototype.hasOwnProperty.call(categories, filter)) return;
+      activeFilter = filter;
+      visibleLimit = 12;
+      refresh();
+    });
+  });
+  if (search) search.addEventListener('input', function () {
+    visibleLimit = 12;
+    refresh();
+  });
+
+  if (moreButton) moreButton.addEventListener('click', async function () {
+    if (busy) return;
+    if (matchingCount > visibleLimit) {
+      visibleLimit += 12;
+      refresh();
+      return;
+    }
+    if (nextOffset >= total) return;
+    visibleLimit = matchingCount + 12;
+    busy = true;
+    notice = '';
+    refresh();
+    var timeout;
+    try {
+      if (!window.gumroadProducts || typeof window.gumroadProducts.request !== 'function') throw new Error('Products bridge unavailable');
+      var response = await Promise.race([
+        window.gumroadProducts.request({ offset: nextOffset, limit: 100 }),
+        new Promise(function (_, reject) { timeout = window.setTimeout(function () { reject(new Error('Products request timed out')); }, 15000); })
+      ]);
+      if (!response || response.success !== true || !Array.isArray(response.products)) throw new Error('Products request failed');
+      var updatedTotal = validTotal(response.productsTotal) ? response.productsTotal : total;
+      if (!response.products.length && nextOffset < updatedTotal) throw new Error('Products page was empty');
+      mergePrices(response.prices);
+      addProducts(response.products);
+      nextOffset += response.products.length;
+      total = Math.max(updatedTotal, nextOffset);
+      applyPrices();
+    } catch (_) {
+      notice = 'More tools could not load. Please try again.';
+    } finally {
+      window.clearTimeout(timeout);
+      busy = false;
+      refresh();
+    }
+  });
+
+  refresh();
+  var controls = document.getElementById('catalog-controls');
+  if (controls) controls.hidden = false;
+}());
+</script>
+</body>
+</html>
