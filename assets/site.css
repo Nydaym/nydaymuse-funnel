@@ -116,6 +116,7 @@ h2 { font-size: clamp(28px, 3vw, 39px); letter-spacing: -1.7px; line-height: 1.1
 .art-slip { background: #e7ecf1; }
 .art-praise { background: #f0eafa; }
 .art-drift { background: #e6eef5; }
+.art-hook { background: #e9eee6; }
 .mini-sheet { background: #fff; padding: 15px 17px; width: 155px; border: 1px solid #d3dacf; border-radius: 5px; box-shadow: 4px 5px 0 #00000005; transform: rotate(-5deg); }
 .mini-sheet .mini-label { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; font-size: 8px; color: var(--muted); }
 .mini-label .icon { width: 13px; height: 13px; }
@@ -353,3 +354,5 @@ h2 { font-size: clamp(28px, 3vw, 39px); letter-spacing: -1.7px; line-height: 1.1
   .workflow-section { background: #fff; color: #17243b; }
   .workflow-section p, .workflow-section a { color: #17243b; }
 }
+
+.hero-updated { margin-top: 12px; color: var(--muted); font-size: 11px; }
