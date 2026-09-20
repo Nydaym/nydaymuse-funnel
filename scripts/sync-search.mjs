@@ -20,6 +20,7 @@ const productSlugs = {
   'pregnancy-baby-notion-tracker.html': 'nestdesk',
   'youtube-ai-prompts.html': 'aimprompts',
   'youtube-shorts-desk.html': 'clipdesk',
+  'change-order-desk.html': 'changedesk',
 };
 const catalog = JSON.parse(await readFile(resolve(root, 'gumroad/catalog-snapshot.json'), 'utf8')).products;
 function plain(value) {
