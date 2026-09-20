@@ -1,0 +1,240 @@
+/* Self-contained profile styles, inlined by scripts/build-gumroad.mjs. */
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+#nydaymuse-profile {
+  --paper: #f7f7f2; --surface: #fff; --ink: #17243b; --muted: #626b75;
+  --line: #dfe3dc; --accent: #bd3e34; --accent-text: #fff;
+  --sage: #e7ece2; --peach: #f4e6dc; --blue: #e6ecf2; --lilac: #eee7f3;
+  --sand: #eee9da; --card-shadow: #17243b0c; --panel: #17243b; --panel-ink: #f7f7f2;
+  color-scheme: light; color: var(--ink); background: var(--paper);
+  min-height: 100vh; font: 16px/1.65 "Segoe UI", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+#nydaymuse-profile[data-theme="dark"] {
+  --paper: #11191b; --surface: #1b2527; --ink: #edf0e7; --muted: #b1bcb7;
+  --line: #354340; --accent: #efa48e; --accent-text: #182120;
+  --sage: #29382d; --peach: #423029; --blue: #293744; --lilac: #382f45;
+  --sand: #3b382b; --card-shadow: #0003; --panel: #e1e7d8; --panel-ink: #17243b;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  #nydaymuse-profile:not([data-theme]) {
+    --paper: #11191b; --surface: #1b2527; --ink: #edf0e7; --muted: #b1bcb7;
+    --line: #354340; --accent: #efa48e; --accent-text: #182120;
+    --sage: #29382d; --peach: #423029; --blue: #293744; --lilac: #382f45;
+    --sand: #3b382b; --card-shadow: #0003; --panel: #e1e7d8; --panel-ink: #17243b;
+    color-scheme: dark;
+  }
+}
+#nydaymuse-profile *, #nydaymuse-profile *::before, #nydaymuse-profile *::after { box-sizing: border-box; }
+#nydaymuse-profile [hidden] { display: none !important; }
+#nydaymuse-profile h1, #nydaymuse-profile h2, #nydaymuse-profile h3, #nydaymuse-profile p { margin: 0; }
+#nydaymuse-profile a { color: inherit; text-decoration: none; }
+#nydaymuse-profile button, #nydaymuse-profile input { font: inherit; }
+#nydaymuse-profile button { cursor: pointer; color: inherit; }
+#nydaymuse-profile button:disabled { cursor: wait; }
+#nydaymuse-profile a, #nydaymuse-profile button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+#nydaymuse-profile :focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+#nydaymuse-profile main:focus { outline: none; }
+#nydaymuse-profile ::selection { color: var(--ink); background: var(--peach); }
+#nydaymuse-profile .wrap { width: min(1184px, calc(100% - 96px)); margin-inline: auto; }
+#nydaymuse-profile .skip-link { position: fixed; top: 12px; left: 12px; z-index: 100; transform: translateY(-200%); background: var(--ink); color: var(--paper); padding: 12px 20px; border-radius: 8px; }
+#nydaymuse-profile .skip-link:focus { transform: translateY(0); }
+#nydaymuse-profile .icon { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+#nydaymuse-profile .flower { width: 31px; height: 31px; color: var(--accent); flex-shrink: 0; }
+#nydaymuse-profile .header { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 1px solid var(--line); }
+#nydaymuse-profile .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 88px; }
+#nydaymuse-profile .brand { display: inline-flex; align-items: center; gap: 11px; font-size: 24px; letter-spacing: -1.1px; font-weight: 750; white-space: nowrap; }
+#nydaymuse-profile .brand span span { font-weight: 400; }
+#nydaymuse-profile .header-right { display: flex; align-items: center; gap: 28px; }
+#nydaymuse-profile .navigation { display: flex; align-items: center; gap: 28px; }
+#nydaymuse-profile .navigation a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; font-weight: 550; }
+#nydaymuse-profile .navigation a:hover { color: var(--accent); }
+#nydaymuse-profile .icon-button { display: grid; place-items: center; width: 42px; height: 42px; padding: 9px; border: 1px solid var(--line); border-radius: 50%; background: transparent; }
+#nydaymuse-profile .icon-button:hover { background: var(--sage); }
+#nydaymuse-profile .menu-toggle { display: none; }
+#nydaymuse-profile .theme-sun { display: none; }
+#nydaymuse-profile[data-theme="dark"] .theme-sun { display: block; }
+#nydaymuse-profile[data-theme="dark"] .theme-moon { display: none; }
+#nydaymuse-profile .hero { padding: 78px 0 66px; }
+#nydaymuse-profile .hero-grid { display: grid; grid-template-columns: 1.07fr 1fr; align-items: center; gap: 65px; }
+#nydaymuse-profile .eyebrow { font-size: 11px; letter-spacing: 1.9px; font-weight: 650; text-transform: uppercase; color: var(--muted); }
+#nydaymuse-profile .hero .eyebrow { display: flex; align-items: center; gap: 10px; }
+#nydaymuse-profile .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+#nydaymuse-profile h1 { margin-top: 21px; font-size: clamp(44px, 5vw, 68px); font-weight: 650; line-height: 1.09; letter-spacing: -3.7px; }
+#nydaymuse-profile h1 em { color: var(--accent); font: italic 1em/1.09 Georgia, serif; letter-spacing: -3.5px; }
+#nydaymuse-profile .hero-copy > p:not(.eyebrow) { color: var(--muted); font-size: 16px; line-height: 1.8; max-width: 410px; margin-top: 25px; }
+#nydaymuse-profile .button-row { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; margin-top: 29px; }
+#nydaymuse-profile .button { display: inline-flex; align-items: center; justify-content: center; gap: 23px; min-height: 48px; padding: 12px 21px; font-size: 13px; font-weight: 650; border: 1px solid transparent; border-radius: 7px; color: var(--accent-text); background: var(--accent); transition: transform .18s, box-shadow .18s; }
+#nydaymuse-profile .button:hover { transform: translateY(-2px); box-shadow: 0 5px 20px var(--card-shadow); }
+#nydaymuse-profile .button-secondary { background: transparent; color: var(--ink); border-color: var(--line); }
+#nydaymuse-profile .text-link { font-size: 13px; display: inline-flex; align-items: center; gap: 12px; font-weight: 550; }
+#nydaymuse-profile .text-link:hover { color: var(--accent); }
+#nydaymuse-profile .hero-note { display: flex; align-items: center; gap: 7px; margin-top: 22px; color: var(--muted); font-size: 11px; }
+#nydaymuse-profile .hero-note .icon { width: 15px; height: 15px; }
+#nydaymuse-profile .desk { position: relative; display: flex; flex-direction: column; gap: 16px; min-width: 0; padding: 33px; border-radius: 18px; border: 1px solid var(--line); background: var(--sage); }
+#nydaymuse-profile .desk-top { display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 10px; letter-spacing: 1.8px; }
+#nydaymuse-profile .desk-top .flower { width: 26px; height: 26px; }
+#nydaymuse-profile .desk-card { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: 9px; padding: 22px; box-shadow: 0 12px 20px -14px var(--card-shadow); }
+#nydaymuse-profile .desk-card:first-of-type { transform: rotate(-2deg); margin-top: 10px; }
+#nydaymuse-profile .desk-card:nth-of-type(2) { transform: rotate(2deg); margin: -1px -7px 0 12px; }
+#nydaymuse-profile .desk-card:nth-of-type(3) { transform: rotate(-1deg); }
+#nydaymuse-profile .desk-label { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 10px; letter-spacing: .8px; text-transform: uppercase; }
+#nydaymuse-profile .desk-label b { color: var(--accent); font-weight: 550; }
+#nydaymuse-profile .desk-card strong { display: block; margin-top: 10px; font-size: 21px; letter-spacing: -.7px; line-height: 1.3; }
+#nydaymuse-profile .desk-detail { color: var(--muted); font-size: 11px; margin-top: 7px !important; }
+#nydaymuse-profile .desk-checks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+#nydaymuse-profile .desk-checks span { padding: 4px 8px; background: var(--sage); border-radius: 3px; font-size: 9px; }
+#nydaymuse-profile .desk-card:last-of-type { background: var(--panel); color: var(--panel-ink); }
+#nydaymuse-profile .desk-card:last-of-type .desk-label, #nydaymuse-profile .desk-card:last-of-type .desk-detail { color: inherit; opacity: .8; }
+#nydaymuse-profile .desk-bottom { font-family: Georgia, serif; font-style: italic; color: var(--muted); text-align: center; font-size: 13px; margin-top: 4px !important; }
+#nydaymuse-profile .intro-strip { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 26px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+#nydaymuse-profile .intro-strip > p { max-width: 205px; font-size: 10px; letter-spacing: 1.2px; color: var(--muted); }
+#nydaymuse-profile .audiences { display: flex; flex-wrap: wrap; gap: 28px; font-family: Georgia, serif; color: var(--muted); font-size: 18px; }
+#nydaymuse-profile .section { padding: 80px 0; scroll-margin-top: 108px; }
+#nydaymuse-profile .section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 32px; }
+#nydaymuse-profile h2 { font-size: clamp(29px, 3.5vw, 41px); line-height: 1.18; letter-spacing: -1.8px; font-weight: 650; }
+#nydaymuse-profile .section-heading .eyebrow { margin-bottom: 13px; }
+#nydaymuse-profile .section-heading > p { color: var(--muted); max-width: 350px; font-size: 14px; line-height: 1.8; }
+#nydaymuse-profile .catalog-controls { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; margin-bottom: 24px; }
+#nydaymuse-profile .filters { display: flex; flex-wrap: wrap; gap: 7px; }
+#nydaymuse-profile .filter { min-height: 42px; font-size: 12px; border: 1px solid var(--line); border-radius: 6px; padding: 8px 14px; background: transparent; }
+#nydaymuse-profile .filter[aria-pressed="true"] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+#nydaymuse-profile .filter:hover:not([aria-pressed="true"]) { background: var(--sage); }
+#nydaymuse-profile .search-box { display: flex; align-items: center; gap: 9px; border: 1px solid var(--line); background: var(--surface); border-radius: 6px; padding: 8px 12px; }
+#nydaymuse-profile .search-box .icon { width: 17px; height: 17px; color: var(--muted); }
+#nydaymuse-profile .search-box input { min-width: 0; width: 180px; padding: 0; border: 0; background: transparent; color: var(--ink); font-size: 12px; min-height: 24px; }
+#nydaymuse-profile .search-box input::placeholder { color: var(--muted); opacity: 1; }
+#nydaymuse-profile .search-box:focus-within { outline: 2px solid var(--accent); outline-offset: 3px; }
+#nydaymuse-profile .search-box input:focus { outline: none; }
+#nydaymuse-profile .catalog-count { margin-bottom: 20px; color: var(--muted); font-size: 12px; }
+#nydaymuse-profile .catalog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+#nydaymuse-profile .product-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); transition: transform .18s, box-shadow .18s; }
+#nydaymuse-profile .product-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px var(--card-shadow); }
+#nydaymuse-profile .product-art { position: relative; display: flex; align-items: flex-start; justify-content: center; flex-direction: column; gap: 6px; height: 152px; padding: 24px 27px; border-bottom: 1px solid var(--line); overflow: hidden; }
+#nydaymuse-profile .art-sage { background: var(--sage); }
+#nydaymuse-profile .art-peach { background: var(--peach); }
+#nydaymuse-profile .art-blue { background: var(--blue); }
+#nydaymuse-profile .art-lilac { background: var(--lilac); }
+#nydaymuse-profile .art-sand { background: var(--sand); }
+#nydaymuse-profile .product-art::after { content: ""; position: absolute; width: 140px; height: 170px; right: -33px; top: 16px; border: 1px solid currentColor; opacity: .12; border-radius: 8px; transform: rotate(-21deg); box-shadow: -13px -13px 0 -1px transparent, -13px -13px 0 0 currentColor; pointer-events: none; }
+#nydaymuse-profile .art-kicker { font-size: 9px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); }
+#nydaymuse-profile .art-monogram { position: relative; z-index: 1; font: italic 38px/1.15 Georgia, serif; letter-spacing: -1px; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+#nydaymuse-profile .art-detail { position: relative; z-index: 1; font-size: 10px; color: var(--muted); }
+#nydaymuse-profile .product-body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+#nydaymuse-profile .product-meta { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 13px; }
+#nydaymuse-profile .product-kind { font-size: 10px; letter-spacing: .6px; text-transform: uppercase; color: var(--muted); }
+#nydaymuse-profile .product-price { max-width: 55%; color: var(--ink); font-size: 12px; font-weight: 650; text-align: right; overflow-wrap: anywhere; }
+#nydaymuse-profile .product-body h3 { font-size: 22px; letter-spacing: -.6px; line-height: 1.3; font-weight: 650; overflow-wrap: anywhere; }
+#nydaymuse-profile .product-description { color: var(--muted); font-size: 13px; line-height: 1.8; margin-top: 11px !important; margin-bottom: 22px !important; }
+#nydaymuse-profile .product-link { margin-top: auto; display: block; padding-top: 15px; border-top: 1px solid var(--line); font-size: 12px; font-weight: 650; }
+#nydaymuse-profile .product-card:hover .product-link { color: var(--accent); }
+#nydaymuse-profile .catalog-empty { padding: 40px 20px; text-align: center; color: var(--muted); background: var(--sage); border: 1px solid var(--line); border-radius: 8px; }
+#nydaymuse-profile .catalog-bottom { display: flex; flex-direction: column; align-items: center; gap: 18px; margin-top: 27px; }
+#nydaymuse-profile .catalog-note { text-align: center; color: var(--muted); font-size: 12px; }
+#nydaymuse-profile .philosophy { background: var(--sage); border-block: 1px solid var(--line); }
+#nydaymuse-profile .philosophy-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 90px; align-items: center; }
+#nydaymuse-profile .philosophy h2 { margin: 15px 0 21px; }
+#nydaymuse-profile .philosophy h2 em { color: var(--accent); font-family: Georgia, serif; font-weight: 400; }
+#nydaymuse-profile .philosophy-copy > p:last-child { max-width: 410px; font-size: 14px; line-height: 1.85; color: var(--muted); }
+#nydaymuse-profile .principles { list-style: none; padding: 0; margin: 0; }
+#nydaymuse-profile .principles li { display: flex; gap: 23px; padding: 21px 0; border-bottom: 1px solid var(--line); }
+#nydaymuse-profile .principles li:first-child { padding-top: 0; }
+#nydaymuse-profile .principles li:last-child { border-bottom: 0; padding-bottom: 0; }
+#nydaymuse-profile .principles li > span { font: italic 26px/1.2 Georgia, serif; color: var(--accent); }
+#nydaymuse-profile .principles h3 { font-size: 16px; font-weight: 600; }
+#nydaymuse-profile .principles p { color: var(--muted); font-size: 13px; margin-top: 5px; }
+#nydaymuse-profile .faq-layout { display: grid; grid-template-columns: .9fr 1.3fr; gap: 75px; }
+#nydaymuse-profile .faq-intro h2 { margin-top: 14px; }
+#nydaymuse-profile .faq-intro > p:last-child { margin-top: 18px; max-width: 270px; color: var(--muted); font-size: 14px; }
+#nydaymuse-profile .faq-list { border-top: 1px solid var(--line); }
+#nydaymuse-profile .faq-list details { border-bottom: 1px solid var(--line); }
+#nydaymuse-profile .faq-list summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 21px 0; font-size: 14px; font-weight: 600; }
+#nydaymuse-profile .faq-list summary::-webkit-details-marker { display: none; }
+#nydaymuse-profile .faq-list summary::after { content: "+"; font-size: 22px; color: var(--muted); }
+#nydaymuse-profile .faq-list details[open] summary::after { content: "−"; }
+#nydaymuse-profile .faq-list details p { font-size: 13px; color: var(--muted); line-height: 1.85; padding-bottom: 24px; max-width: 520px; }
+#nydaymuse-profile .faq-list a { text-decoration: underline; text-underline-offset: 4px; }
+#nydaymuse-profile .closing { padding-bottom: 65px; }
+#nydaymuse-profile .closing-inner { display: flex; justify-content: space-between; align-items: center; gap: 40px; background: var(--peach); border: 1px solid var(--line); border-radius: 12px; padding: 41px; }
+#nydaymuse-profile .closing h2 { margin-top: 12px; font-size: 33px; }
+#nydaymuse-profile .closing p:last-child { font-size: 13px; margin-top: 13px; color: var(--muted); }
+#nydaymuse-profile .closing .button { flex-shrink: 0; }
+#nydaymuse-profile .footer { padding: 35px 0 25px; border-top: 1px solid var(--line); }
+#nydaymuse-profile .footer-top { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+#nydaymuse-profile .footer .brand { font-size: 21px; }
+#nydaymuse-profile .footer-nav { display: flex; gap: 25px; flex-wrap: wrap; font-size: 12px; }
+#nydaymuse-profile .footer-nav a:hover { color: var(--accent); }
+#nydaymuse-profile .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 25px; margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+#nydaymuse-profile .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (max-width: 1050px) {
+  #nydaymuse-profile .wrap { width: calc(100% - 64px); }
+  #nydaymuse-profile .hero-grid { gap: 35px; }
+  #nydaymuse-profile h1 { font-size: 53px; letter-spacing: -2.8px; }
+  #nydaymuse-profile h1 em { letter-spacing: -2.8px; }
+  #nydaymuse-profile .desk { padding: 25px; }
+  #nydaymuse-profile .desk-card { padding: 19px; }
+  #nydaymuse-profile .audiences { gap: 18px; font-size: 16px; }
+  #nydaymuse-profile .catalog-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #nydaymuse-profile .philosophy-grid { gap: 50px; }
+}
+@media (max-width: 800px) {
+  #nydaymuse-profile .wrap { width: calc(100% - 40px); }
+  #nydaymuse-profile .header-inner { min-height: 74px; flex-wrap: wrap; gap: 0; padding-block: 12px; }
+  #nydaymuse-profile .brand { font-size: 21px; }
+  #nydaymuse-profile .brand .flower { width: 27px; height: 27px; }
+  #nydaymuse-profile .header-right { display: contents; }
+  #nydaymuse-profile .header-buttons { display: flex; gap: 8px; }
+  #nydaymuse-profile .navigation { order: 3; width: 100%; flex-wrap: wrap; gap: 0 22px; padding-top: 12px; }
+  #nydaymuse-profile.enhanced .navigation:not(.is-open) { display: none; }
+  #nydaymuse-profile.enhanced .menu-toggle { display: grid; }
+  #nydaymuse-profile .hero { padding: 45px 0 38px; }
+  #nydaymuse-profile .hero-grid { grid-template-columns: 1fr; gap: 38px; }
+  #nydaymuse-profile .hero-copy { max-width: 550px; }
+  #nydaymuse-profile h1 { font-size: clamp(41px, 8.5vw, 61px); letter-spacing: -2.5px; }
+  #nydaymuse-profile h1 em { letter-spacing: -2.5px; }
+  #nydaymuse-profile .hero-copy > p:not(.eyebrow) { font-size: 15px; }
+  #nydaymuse-profile .desk { width: 100%; max-width: 530px; margin-inline: auto; padding: 27px; }
+  #nydaymuse-profile .intro-strip { flex-direction: column; align-items: flex-start; gap: 15px; padding-block: 22px; }
+  #nydaymuse-profile .intro-strip > p { max-width: none; }
+  #nydaymuse-profile .audiences { gap: 10px 24px; }
+  #nydaymuse-profile .section { padding: 55px 0; scroll-margin-top: 96px; }
+  #nydaymuse-profile .section-heading { flex-direction: column; align-items: flex-start; gap: 16px; }
+  #nydaymuse-profile h2 { font-size: 32px; letter-spacing: -1.3px; }
+  #nydaymuse-profile .section-heading > p { max-width: 430px; }
+  #nydaymuse-profile .catalog-controls { align-items: stretch; flex-direction: column; }
+  #nydaymuse-profile .search-box input { width: 100%; }
+  #nydaymuse-profile .catalog-grid { gap: 16px; }
+  #nydaymuse-profile .product-art { padding: 23px; height: 140px; }
+  #nydaymuse-profile .product-body { padding: 21px; }
+  #nydaymuse-profile .philosophy-grid, #nydaymuse-profile .faq-layout { grid-template-columns: 1fr; gap: 35px; }
+  #nydaymuse-profile .closing { padding-bottom: 45px; }
+  #nydaymuse-profile .closing-inner { flex-direction: column; align-items: flex-start; gap: 25px; padding: 30px; }
+  #nydaymuse-profile .closing h2 { font-size: 30px; }
+  #nydaymuse-profile .footer-top { align-items: flex-start; flex-direction: column; }
+  #nydaymuse-profile .footer-bottom { align-items: flex-start; flex-direction: column; gap: 10px; }
+}
+@media (max-width: 480px) {
+  #nydaymuse-profile .eyebrow { font-size: 9px; letter-spacing: 1.5px; }
+  #nydaymuse-profile h1 { font-size: clamp(36px, 10.5vw, 48px); letter-spacing: -1.8px; }
+  #nydaymuse-profile h1 em { letter-spacing: -1.8px; }
+  #nydaymuse-profile .catalog-grid { grid-template-columns: 1fr; }
+  #nydaymuse-profile .product-art { height: 142px; }
+  #nydaymuse-profile .product-body { padding: 23px; }
+  #nydaymuse-profile .filter { padding: 8px 11px; font-size: 11px; }
+  #nydaymuse-profile .desk { padding: 22px; }
+  #nydaymuse-profile .desk-card { padding: 17px; }
+  #nydaymuse-profile .desk-card strong { font-size: 20px; }
+  #nydaymuse-profile .desk-label { font-size: 9px; }
+  #nydaymuse-profile .header-buttons { gap: 6px; }
+  #nydaymuse-profile .icon-button { width: 36px; height: 36px; padding: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  #nydaymuse-profile *, #nydaymuse-profile *::before, #nydaymuse-profile *::after { transition: none !important; animation: none !important; }
+}
+@media print {
+  #nydaymuse-profile .header { position: static; }
+  #nydaymuse-profile .catalog-controls, #nydaymuse-profile .header-buttons { display: none !important; }
+  #nydaymuse-profile .product-card { break-inside: avoid; }
+}
