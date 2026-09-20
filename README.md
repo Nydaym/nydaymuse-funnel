@@ -1,6 +1,6 @@
 # nydaymuse-funnel
 
-Static Nydaymuse site for freelance and everyday productivity tools: one homepage, 13 guides or product pages, and a brand information page, with downloads and purchases on Gumroad.
+Static Nydaymuse site for freelance and everyday productivity tools: one homepage, 14 guides or product pages, and a brand information page, with downloads and purchases on Gumroad.
 
 No build step, npm install, or third-party runtime dependencies. Works directly from `file://` and on any static host, including GitHub Pages, Netlify, and Cloudflare Pages. Keep the `assets` folder alongside the HTML files. Gumroad downloads, checkout, directory links, and external badges require an internet connection.
 
@@ -8,7 +8,7 @@ The homepage includes category filters for free tools, an interactive hourly-rat
 
 ## Files
 
-The site has 15 public HTML pages:
+The site has 16 public HTML pages:
 
 - `index.html` — homepage, free tool filters, pricing demo, paid tools, and guide links.
 - `about.html` — brand, guide attribution, formats, and download information.
@@ -18,6 +18,7 @@ The site has 15 public HTML pages:
 - `overdue-invoice-emails.html` — late-payment email templates and Nudge.
 - `freelance-invoice-spreadsheet.html` — invoice tracking, aging, and Ops.
 - `drift-scope-desk.html` — Drift scope-creep and change-order desk.
+- `change-order-desk.html` — Change formal change-order desk (hours, price, sign-off, PDF).
 - `freelance-testimonial-request-desk.html` — Praise testimonial and review requests.
 - `job-search-desk.html` — Hunt job applications and interview preparation.
 - `photographer-shoot-desk.html` — Shot photography planning.
@@ -30,7 +31,7 @@ Shared assets and support files:
 
 - `assets/site.css` — homepage layout, visual system, and responsive styles.
 - `assets/site.js` — mobile navigation, tool filters, and the live estimate demo.
-- `assets/guides.css` — shared styles for the 13 guide and product pages.
+- `assets/guides.css` — shared styles for the 14 guide and product pages.
 - `assets/favicon.svg` — shared flower brand icon.
 - `scripts/preview.mjs` — local preview server using only Node.js built-ins.
 - `scripts/sync-search.mjs` — refresh static structured data, social metadata, and the canonical sitemap from visible page content.
@@ -42,9 +43,13 @@ Shared assets and support files:
 ## Product links
 
 - Quote (free): https://nydaymuse.gumroad.com/l/qdccy
+- Hook (free): https://nydaymuse.gumroad.com/l/hookdesk
 - Close $12: https://nydaymuse.gumroad.com/l/ptljg
+- Scope $12: https://nydaymuse.gumroad.com/l/wnlnmh
 - Kickoff $12: https://nydaymuse.gumroad.com/l/fuflsz
 - Ops $12: https://nydaymuse.gumroad.com/l/ggnfxs
+- Change $15: https://nydaymuse.gumroad.com/l/changedesk
+- Client Workflow Bundle $49: https://nydaymuse.gumroad.com/l/clientworkflow
 - Nudge (free): https://nydaymuse.gumroad.com/l/ebexb
 - Slip (free): https://nydaymuse.gumroad.com/l/tubrnw
 - Praise (free): https://nydaymuse.gumroad.com/l/praisedesk
@@ -120,7 +125,7 @@ On this project URL, the effective robots file is **https://nydaym.github.io/rob
 
 ## Search and GEO maintenance
 
-All public answers, FAQs, publisher links, dates, and JSON-LD are in the delivered HTML. No client-side rendering is needed to read them. The 13 guide/product pages link to the brand information page and use stable section anchors. The sitemap contains each canonical page once, with the homepage at `/` rather than a second `/index.html` entry.
+All public answers, FAQs, publisher links, dates, and JSON-LD are in the delivered HTML. No client-side rendering is needed to read them. The 14 guide/product pages link to the brand information page and use stable section anchors. The sitemap contains each canonical page once, with the homepage at `/` rather than a second `/index.html` entry.
 
 After editing a page:
 
