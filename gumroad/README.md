@@ -27,7 +27,7 @@ Source files:
 - `catalog-meta.json`: categories, art direction, and short descriptions for known tools.
 - `catalog-snapshot.json`: public catalogue snapshot used for static fallback rendering. It contains no credentials, customer data, or prices.
 
-The initial snapshot contains the 34 products visible on the public profile on 2026-09-20. Authenticated product-dashboard counts may include products not eligible for the public catalogue. The hosted page uses Gumroad's injected `gumroad-data` as the authority, including newly added and removed products. Unknown tools remain visible under “More tools.” It shows 12 matches at a time, reveals already-loaded matches first, and requests another page only when needed.
+The initial snapshot contains the 35 published products on the public profile on 2026-09-20 (unpublished Cue, Bound, and Pitch are omitted). Authenticated product-dashboard counts may include products not eligible for the public catalogue. The hosted page uses Gumroad's injected `gumroad-data` as the authority, including newly added and removed products. Unknown tools remain visible under “More tools.” It shows 12 matches at a time, reveals already-loaded matches first, and requests another page only when needed.
 
 ## Preview and publish
 

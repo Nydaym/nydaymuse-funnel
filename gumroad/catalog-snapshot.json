@@ -1,81 +1,33 @@
 {
   "products": [
     {
-      "name": "Drift — Free Scope Creep & Change-Order Desk (Baselines + CO Emails)",
-      "url": "https://nydaymuse.gumroad.com/l/driftdesk",
-      "description": "Drift is a free, offline Scope Creep &amp; Change-Order Desk for freelancers who keep saying “sure” to small asks — then watch the margin disappear. FREE · BUY ONCE · NO SUPPORT · SAMPLE DATA · LOC...",
-      "native_type": "digital"
-    },
-    {
-      "name": "Praise — Free Testimonial & Review Request Desk (Wins + Ask Emails)",
-      "url": "https://nydaymuse.gumroad.com/l/praisedesk",
-      "description": "Praise is a free, offline Testimonial &amp; Review Request Desk for freelancers who just delivered — and need social proof before the win goes cold. FREE · BUY ONCE · NO SUPPORT · SAMPLE DATA · LOC...",
-      "native_type": "digital"
-    },
-    {
-      "name": "Nest — Free Pregnancy & Baby Notion Tracker (Prenatal + Newborn Logs)",
-      "url": "https://nydaymuse.gumroad.com/l/nestdesk",
-      "description": "Nest is a free pregnancy + baby pack: Notion CSVs for longer-term archive plus Nest Night Desk — an offline HTML companion for one-tap feed / sleep / diaper logs at 3am. English. SAMPLE data. Local...",
-      "native_type": "digital"
-    },
-    {
-      "name": "Aim — Creator AI Prompt Pack (Hooks, Titles, Scripts)",
-      "url": "https://nydaymuse.gumroad.com/l/aimprompts",
-      "description": "Aim is an $12 creator AI prompt pack for YouTube &amp; Shorts — hooks, titles, scripts, SEO, repurpose chains, and community replies you can paste into ChatGPT or Claude. $12 · BUY ONCE · NO SUPPOR...",
-      "native_type": "digital"
-    },
-    {
-      "name": "Clip — Free YouTube & Shorts Desk (Ideas + Hooks + Publish Checklist)",
-      "url": "https://nydaymuse.gumroad.com/l/clipdesk",
-      "description": "Clip is a free, offline YouTube &amp; Shorts desk for creators who need to turn ideas into published videos — and for shop visitors who want something instantly usable before buying Aim or Grid. FR...",
-      "native_type": "digital"
-    },
-    {
-      "name": "Pod — Free Podcast Episode Desk (Guests + Show Notes + Publish Checklist)",
-      "url": "https://nydaymuse.gumroad.com/l/poddesk",
-      "description": "Pod is a free, offline Podcast Episode Desk for hosts who need guest outreach, show notes, and a publish checklist — without another production SaaS. FREE · BUY ONCE · NO SUPPORT · SAMPLE DATA What...",
-      "native_type": "digital"
-    },
-    {
-      "name": "Shot — Free Photographer Shoot Desk (Call Sheet + Gallery Tracker)",
-      "url": "https://nydaymuse.gumroad.com/l/shotdesk",
-      "description": "Shot is a free, offline Photographer Shoot Desk for wedding, portrait, brand, and event shooters who need a calm client + delivery workflow — without another CRM. FREE · BUY ONCE · NO SUPPORT · SAM...",
-      "native_type": "digital"
-    },
-    {
-      "name": "Hunt — Free Job Search Desk (Applications + Interview Stories)",
-      "url": "https://nydaymuse.gumroad.com/l/huntdesk",
-      "description": "Hunt is a free, offline Job Search Desk for candidates who need to track applications, rehearse STAR stories, and send calm follow-ups — without another SaaS login. FREE · BUY ONCE · NO SUPPORT · S...",
+      "name": "Client Workflow Bundle — Freelancer From Lead to Paid (Hook→Ops→Praise)",
+      "url": "https://nydaymuse.gumroad.com/l/clientworkflow",
+      "description": "10-stage freelancer path: Hook→Quote→Close→Scope→Kickoff→Drift→Slip→Nudge/Ops→Praise. Buy once.",
       "native_type": "digital"
     },
     {
       "name": "Hook — Free Freelance Client Acquisition Desk (Pipeline + Outreach + Quote)",
       "url": "https://nydaymuse.gumroad.com/l/hookdesk",
-      "description": "Hook is a free, offline Client Acquisition Desk for freelancers and solopreneurs who need to get clients — and for shop visitors who want something instantly usable before buying the full nydaymuse...",
-      "native_type": "digital"
-    },
-    {
-      "name": "Aging Lite — Overdue Invoice Aging Buckets (Free Trial of Ops)",
-      "url": "https://nydaymuse.gumroad.com/l/aginglite",
-      "description": "FREE · Buy once · English · No support · SAMPLE data Free trial of Ops ($12 workbook). One offline HTML tool: paste or type a few invoices, see days late and 0–30 / 31–60 / 61+ aging buckets. Data ...",
-      "native_type": "digital"
-    },
-    {
-      "name": "Kickoff Lite — Welcome Email + Kickoff Checklist (Free Trial)",
-      "url": "https://nydaymuse.gumroad.com/l/kickofflite",
-      "description": "FREE · Buy once · English · No support · SAMPLE data Free trial of Kickoff ($12 Notion pack). One offline HTML page: welcome email swipe with fill-in [BRACKETS] + a kickoff checklist (before call, ...",
-      "native_type": "digital"
-    },
-    {
-      "name": "Close Lite — 2 Free AI Prompts (Pricing Audit + Follow-up Day 1/3/7)",
-      "url": "https://nydaymuse.gumroad.com/l/closelite",
-      "description": "FREE · Buy once · English · No support · SAMPLE data Free trial of Close ($12). Two copy-paste prompts for ChatGPT or Claude — Pricing audit and Follow-up day 1/3/7. Fill [BRACKETS], paste, edit, s...",
+      "description": "Free offline desk: pipeline, outreach swipe, discovery notes, mini quote, follow-ups, one-pager. Notion CSVs included.",
       "native_type": "digital"
     },
     {
       "name": "Quote — Free Offline Rate Calculator + Proposal Lite (HTML · Print PDF)",
       "url": "https://nydaymuse.gumroad.com/l/qdccy",
-      "description": "FREE · English · No support Price the job, then print a one-page proposal — two offline HTML files, no account, no SaaS. Data stays in your browser. What's inside quote-rate-calculator.html — hourl...",
+      "description": "Free offline rate calculator + printable one-page proposal. Two HTML files. No SaaS. Print/PDF.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Close — Freelancer Proposal & Pricing AI Prompts (Expanded)",
+      "url": "https://nydaymuse.gumroad.com/l/ptljg",
+      "description": "$12 · Buy once · English · No support Want the full client path? Client Workflow Bundle ($49) — Hook→Quote→Close→Scope→Kickoff→Ops→Praise. Free trial first: Close Lite — 2 prompts (pricing audit +...",
+      "native_type": "digital"
+    },
+    {
+      "name": "Scope — Offline SOW & Proposal Pack (HTML + Bound/Pitch PDFs)",
+      "url": "https://nydaymuse.gumroad.com/l/wnlnmh",
+      "description": "Quote free → Scope $12: HTML SOW/proposal filler + Bound &amp; Pitch PDF styles. Replaces buying Bound/Pitch separately.",
       "native_type": "digital"
     },
     {
@@ -85,21 +37,45 @@
       "native_type": "digital"
     },
     {
-      "name": "Close — Freelancer AI Proposal & Pricing Prompt Pack (8 ChatGPT/Claude Prompts)",
-      "url": "https://nydaymuse.gumroad.com/l/ptljg",
-      "description": "$12 · Buy once · English · No support Free trial first: Close Lite — 2 prompts (pricing audit + follow-up). This page is the full 8-prompt pack. Stop staring at a blank proposal. Close gives you 8 ...",
+      "name": "Change — Formal Change-Order Desk (Hours, Price, Sign-off, PDF)",
+      "url": "https://nydaymuse.gumroad.com/l/changedesk",
+      "description": "Paid upgrade from free Drift: formal change orders with hours, price, dates, sign-off, email, and print/PDF. Not legal advice.",
       "native_type": "digital"
     },
     {
-      "name": "Client Meeting Notes + Decision Log — Notion Template (Actions & Owners)",
-      "url": "https://nydaymuse.gumroad.com/l/dfqimr",
-      "description": "$12 · Buy once · English · No support Turn every client call into decisions and owned actions. Notion-ready Markdown + CSVs for Meetings, Decisions, and Actions — import without logging into Notion...",
+      "name": "Drift — Free Scope Creep & Change-Order Desk (Baselines + CO Emails)",
+      "url": "https://nydaymuse.gumroad.com/l/driftdesk",
+      "description": "Free offline scope-creep desk: project baselines, creep log, change-order emails, bill-vs-absorb checklist. Upsell to Scope.",
       "native_type": "digital"
     },
     {
-      "name": "Invoice Chase Board — Notion Template (Due, Status, Next Nudge, Promised Pay)",
+      "name": "Slip — One-Page Freelance Invoice (Excel + Offline HTML Lite)",
+      "url": "https://nydaymuse.gumroad.com/l/tubrnw",
+      "description": "Send a one-page invoice. Fill yellow, print or PDF. Free. Not a tracker.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Nudge — Free Late-Payment Email Templates (PDF)",
+      "url": "https://nydaymuse.gumroad.com/l/ebexb",
+      "description": "Five short emails to chase an unpaid freelance invoice. Free PDF. Copy, swap the brackets, send.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Freelance Invoice Tracker Spreadsheet — Collected vs Overdue Ops Workbook",
+      "url": "https://nydaymuse.gumroad.com/l/ggnfxs",
+      "description": "One workbook for invoices, expenses, rates, clients, and time. Buy once.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Praise — Free Testimonial & Review Request Desk (Wins + Ask Emails)",
+      "url": "https://nydaymuse.gumroad.com/l/praisedesk",
+      "description": "Free offline testimonial desk: wins tracker, ask emails, draft-for-them, permission checklist. Upsell to Close.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Ops for Notion — Invoice Chase Board",
       "url": "https://nydaymuse.gumroad.com/l/xvbpjp",
-      "description": "$12 · Buy once · English · No support Stop losing track of unpaid invoices. This Notion-ready board tracks invoice number, client, due date, status, next nudge, and promised pay — delivered as Mark...",
+      "description": "Same cash-flow problem as Ops spreadsheet, in Notion. Cross-link Ops /l/ggnfxs. Buy once.",
       "native_type": "digital"
     },
     {
@@ -109,39 +85,39 @@
       "native_type": "digital"
     },
     {
-      "name": "Freelance Invoice Tracker Spreadsheet — Collected vs Overdue Ops Workbook",
-      "url": "https://nydaymuse.gumroad.com/l/ggnfxs",
-      "description": "Free trial first: Aging Lite — overdue aging buckets in one HTML file. This page is the full $12 workbook.One workbook for invoices, expenses, rates, clients, and time.Buy once. No monthly fee. Wor...",
+      "name": "Client Meeting Notes + Decision Log — Notion Template (Actions & Owners)",
+      "url": "https://nydaymuse.gumroad.com/l/dfqimr",
+      "description": "$12 · Buy once · English · No support Turn every client call into decisions and owned actions. Notion-ready Markdown + CSVs for Meetings, Decisions, and Actions — import without logging into Notion...",
       "native_type": "digital"
     },
     {
-      "name": "Scope — Offline SOW & Proposal Filler (HTML)",
-      "url": "https://nydaymuse.gumroad.com/l/wnlnmh",
-      "description": "Open one HTML file in any browser. Fill client, project, deliverables, not-included, timeline, price, and payment terms. Print or Save as PDF. Data stays local. Single-file offline HTML — no instal...",
+      "name": "Aging Lite — Overdue Invoice Aging Buckets (Free Trial of Ops)",
+      "url": "https://nydaymuse.gumroad.com/l/aginglite",
+      "description": "Free trial of Ops: offline HTML overdue aging (0–30 / 31–60 / 61+).",
       "native_type": "digital"
     },
     {
-      "name": "Bound — Scope of Work Outline (PDF)",
-      "url": "https://nydaymuse.gumroad.com/l/kdypo",
-      "description": "Fill-in scope of work outline before you start: in scope, out of scope, deliverables, revision rounds, timeline, acceptance, change-request line. Parties, project name, in scope, out of scope, deli...",
+      "name": "Kickoff Lite — Welcome Email + Kickoff Checklist (Free Trial)",
+      "url": "https://nydaymuse.gumroad.com/l/kickofflite",
+      "description": "Free trial of Kickoff: welcome email swipe + kickoff checklist (offline HTML).",
+      "native_type": "digital"
+    },
+    {
+      "name": "Close Lite — 2 Free AI Prompts (Pricing Audit + Follow-up Day 1/3/7)",
+      "url": "https://nydaymuse.gumroad.com/l/closelite",
+      "description": "Free trial of Close: 2 prompts. Full Close now includes expanded Cue prompts.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Hint — Hourly Floor in One Sheet (Excel + Sheets)",
+      "url": "https://nydaymuse.gumroad.com/l/cvqzet",
+      "description": "Three inputs, one hourly floor. Free. A floor, not a quote.",
       "native_type": "digital"
     },
     {
       "name": "Rates — 3-Tier Printable Rate Card (PDF)",
       "url": "https://nydaymuse.gumroad.com/l/wofgya",
-      "description": "Printable three-tier packages + à la carte blanks + retainer line. Fill [Service] [Price]. Hand to clients or send as PDF. Complements Ops workbook — Floor sheet (math) — this is the client-facing ...",
-      "native_type": "digital"
-    },
-    {
-      "name": "Pitch — New Client Proposal Template (PDF)",
-      "url": "https://nydaymuse.gumroad.com/l/yhxcxy",
-      "description": "A fill-in proposal you send after a discovery call. [brackets]. Includes a NOT included section. Complements Cue (prompts) and Brief (kickoff checklist) — this is the actual proposal layout. Cover ...",
-      "native_type": "digital"
-    },
-    {
-      "name": "Cue — 24 Freelance Prompts for Proposals, Invoices, and Follow-ups (PDF)",
-      "url": "https://nydaymuse.gumroad.com/l/rpazqm",
-      "description": "Send cleaner proposals, chase invoices without the 2am rage draft, and close awkward follow-ups — 24 copy-paste prompts for ChatGPT or Claude. Fill [brackets], paste, edit, send. Not a course. You ...",
+      "description": "Printable three-tier packages + à la carte blanks + retainer line. Fill [Service] [Price]. Hand to clients or send as PDF. Complements Ops workbook — Floor sheet (math) — this is the client-facing...",
       "native_type": "digital"
     },
     {
@@ -151,59 +127,88 @@
       "native_type": "digital"
     },
     {
-      "name": "Week — Printable Weekly Planner (PDF)",
-      "url": "https://nydaymuse.gumroad.com/l/rnmefm",
-      "description": "See the week on one page. One planner page: the big three, time blocks Monday–Sunday (morning / afternoon), a small don’t box, leftover notes. - Undated. Write the week yourself. Reprint next week ...",
-      "native_type": "digital"
-    },
-    {
       "name": "Brief — New Client Kickoff Checklist (PDF)",
       "url": "https://nydaymuse.gumroad.com/l/uraaz",
-      "description": "One printable checklist before you start work: access, scope, dates, invoice terms. Eight boxes: signed scope, deposit, access, files, deadline, revision rounds, invoice date, where to send invoice...",
+      "description": "One printable checklist before you start: access, scope, dates, invoice terms. Not a contract.",
       "native_type": "digital"
     },
     {
-      "name": "Subs — See the Monthly Burn. Recurring Bills (Excel + Sheets)",
-      "url": "https://nydaymuse.gumroad.com/l/zopnl",
-      "description": "See the monthly burn. Netflix, phone, rent, SaaS, all recurring. Monthly total, next due.Yearly plans show as monthly equivalent. Next due in 7 days turns red.Dashboard: monthly burn, yearly, due i...",
+      "name": "Aim — Creator AI Prompt Pack (Hooks, Titles, Scripts)",
+      "url": "https://nydaymuse.gumroad.com/l/aimprompts",
+      "description": "8 ChatGPT &amp; Claude prompts for creator hooks, titles, scripts, SEO, and repurposing. PDF + prompts.txt. Buy once.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Clip — Free YouTube & Shorts Desk (Ideas + Hooks + Publish Checklist)",
+      "url": "https://nydaymuse.gumroad.com/l/clipdesk",
+      "description": "Free offline YouTube &amp; Shorts desk: video pipeline, hooks bank, titles workshop, publish checklist. HTML + Notion CSVs.",
       "native_type": "digital"
     },
     {
       "name": "Grid — See This Week's Posts. Content Calendar (Excel + Sheets)",
       "url": "https://nydaymuse.gumroad.com/l/dmyqaf",
-      "description": "See this week's posts. Overdue drafts turn red.Plan by date, platform, and status. This week and overdue unposted turn red.Dashboard counts this week, overdue unposted, and posts by platform. A col...",
+      "description": "Plan posts by date, platform, status. Overdue unposted turn red. Chart by platform. Does not auto-post.",
       "native_type": "digital"
     },
     {
-      "name": "Streak — See the Chain. Habit Tracker (Excel + Sheets)",
-      "url": "https://nydaymuse.gumroad.com/l/eqqfxb",
-      "description": "See the chain.Up to 8 habits. Mark Y per day this month. Streak count and monthly percent fill in.Dashboard: days done, percent complete, current streak, a bar chart of this month. Data bars on per...",
+      "name": "Shot — Free Photographer Shoot Desk (Call Sheet + Gallery Tracker)",
+      "url": "https://nydaymuse.gumroad.com/l/shotdesk",
+      "description": "Free photographer desk: shoots, shot list, gallery tracker, client emails, call sheet.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Pod — Free Podcast Episode Desk (Guests + Show Notes + Publish Checklist)",
+      "url": "https://nydaymuse.gumroad.com/l/poddesk",
+      "description": "Free podcast desk: episodes, guest outreach, show notes, publish checklist.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Beadify trial",
+      "url": "https://nydaymuse.gumroad.com/l/zmujk",
+      "description": "Beadify Free Windows App | 5 Total Conversions | AI Processing Disabled | Custom Import Disabled | Watermarked Exports",
+      "native_type": "digital"
+    },
+    {
+      "name": "Beadify Pro",
+      "url": "https://nydaymuse.gumroad.com/l/ruydb",
+      "description": "Beadify Pro Windows App | Unlimited Conversions | AI Anti-aliasing Removal | AI Color Pollution Fix | Custom Color Import | Watermark-free Exports | Lifetime Updates",
+      "native_type": "digital"
+    },
+    {
+      "name": "Hunt — Free Job Search Desk (Applications + Interview Stories)",
+      "url": "https://nydaymuse.gumroad.com/l/huntdesk",
+      "description": "Free job-search desk: applications, STAR stories, follow-up emails, weekly checklist. Offline HTML + Notion CSVs.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Nest — Free Pregnancy & Baby Notion Tracker (Prenatal + Newborn Logs)",
+      "url": "https://nydaymuse.gumroad.com/l/nestdesk",
+      "description": "Free pregnancy + baby Notion pack PLUS offline Nest Night desk for one-tap feed/sleep/diaper logs. Local only. Not medical advice.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Week — Printable Weekly Planner (PDF)",
+      "url": "https://nydaymuse.gumroad.com/l/rnmefm",
+      "description": "See the week on one page. One planner page: the big three, time blocks Monday–Sunday (morning / afternoon), a small don’t box, leftover notes. - Undated. Write the week yourself. Reprint next week...",
       "native_type": "digital"
     },
     {
       "name": "Keep — See What's Left This Month. Budget (Excel + Sheets)",
       "url": "https://nydaymuse.gumroad.com/l/pekabe",
-      "description": "See what's left this month.Log income, bills, and envelope spend. Leftover is income - bills - spend.Category totals and leftover are formulas — not a pivot table you refresh.Groceries, Rent, Trans...",
+      "description": "Income, bills, envelope spend. Leftover is a formula. Category chart. SAMPLE data. Excel + Google Sheets.",
       "native_type": "digital"
     },
     {
-      "name": "Hint — Hourly Floor in One Sheet (Excel + Sheets)",
-      "url": "https://nydaymuse.gumroad.com/l/cvqzet",
-      "description": "Your hourly floor in one sheet — with a SAMPLE breakdown chart and data bars. Type annual overhead, the take-home you want, and honest billable hours. Hint is (overhead + take-home) ÷ hours — the l...",
+      "name": "Streak — See the Chain. Habit Tracker (Excel + Sheets)",
+      "url": "https://nydaymuse.gumroad.com/l/eqqfxb",
+      "description": "Up to 8 habits. Mark Y. Streak and monthly % plus a bar chart. No reminders. SAMPLE. Excel + Google Sheets.",
       "native_type": "digital"
     },
     {
-      "name": "Slip — One-Page Freelance Invoice (Excel + Offline HTML Lite)",
-      "url": "https://nydaymuse.gumroad.com/l/tubrnw",
-      "description": "Send a one-page freelance invoice. Free. Excel/Sheets or offline HTML lite — Print → Save as PDF. Yellow/amber cells are yours. Totals calculate. Delete SAMPLE before a real client. - New: slip-off...",
-      "native_type": "digital"
-    },
-    {
-      "name": "Nudge — Free Late-Payment Email Templates (PDF)",
-      "url": "https://nydaymuse.gumroad.com/l/ebexb",
-      "description": "Want the spreadsheet that shows collected vs overdue (and paints late invoices clearly)? Upgrade to Ops $12 once: https://nydaymuse.gumroad.com/l/ggnfxs?utm_source=gumroad&amp;utm_medium=freebie&am...",
+      "name": "Subs — See the Monthly Burn. Recurring Bills (Excel + Sheets)",
+      "url": "https://nydaymuse.gumroad.com/l/zopnl",
+      "description": "Netflix, phone, rent, SaaS. Monthly burn, next due, category chart. No bank login.",
       "native_type": "digital"
     }
-  ],
-  "products_total": 34
+  ]
 }
