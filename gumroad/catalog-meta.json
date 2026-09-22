@@ -247,7 +247,7 @@
     "freelance",
     "Notion + Excel pipeline",
     "art-sage",
-    "Run Lead \u2192 Paid in Notion or Excel: clients, pipeline deals, projects, and invoices in one dual-format pack."
+    "Run Lead → Paid in Notion or Excel: clients, pipeline deals, projects, and invoices in one dual-format pack."
   ],
   "beaconpack": [
     "Beacon",
@@ -261,7 +261,7 @@
     "freelance",
     "Notion + Excel profitability",
     "art-lilac",
-    "Fee vs hours vs expenses \u2192 effective hourly and project margin in Notion or Excel."
+    "Fee vs hours vs expenses → effective hourly and project margin in Notion or Excel."
   ],
   "harborpack": [
     "Harbor",
@@ -303,13 +303,34 @@
     "freelance",
     "Notion + Excel asset register",
     "art-sand",
-    "Client asset & login register with password-manager pointers \u2014 no clear SAMPLE passwords."
+    "Client asset & login register with password-manager pointers — no clear SAMPLE passwords."
   ],
   "compasspack": [
     "Compass",
     "freelance",
     "Notion + Excel lead source ROI",
     "art-lilac",
-    "See which lead channel pays \u2014 cost, hours, and won revenue in Notion or Excel."
+    "See which lead channel pays — cost, hours, and won revenue in Notion or Excel."
+  ],
+  "pierpack": [
+    "Pier",
+    "freelance",
+    "Notion + Excel deposit & milestone schedule",
+    "art-coral",
+    "Deposit % + milestone invoice triggers with acceptance rules in Notion or Excel."
+  ],
+  "roundpack": [
+    "Round",
+    "freelance",
+    "Notion + Excel revision round tracker",
+    "art-slate",
+    "Count included revision rounds, feedback items, and approvals in Notion or Excel."
+  ],
+  "tillpack": [
+    "Till",
+    "freelance",
+    "Notion + Excel receipts & balance",
+    "art-moss",
+    "Log each payment as a receipt so invoice balances (partials included) stay honest in Notion or Excel."
   ]
 }

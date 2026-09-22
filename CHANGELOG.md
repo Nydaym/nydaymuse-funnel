@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-22 — Pier, Round, Till dual-format SKUs
+
+- Shipped **Pier** ($12): Notion CSVs + Excel workbook for deposit & milestone payment triggers (Projects, Milestones, Deposits, Payment_Triggers / Triggers, Week_Review).
+- Shipped **Round** ($12): Notion CSVs + Excel workbook for counted revision rounds (Projects, Rounds, Feedback_Items/Feedback, Approvals, Week_Review).
+- Shipped **Till** ($12): Notion CSVs + Excel workbook for receipts → invoice balance (Invoices, Receipts, Balances, Aging_Lite/Aging, Month_Close).
+- Soft-linked related live products; guides + catalog-meta/snapshot + sync-search updated.
+- Gumroad: https://nydaymuse.gumroad.com/l/pierpack · https://nydaymuse.gumroad.com/l/roundpack · https://nydaymuse.gumroad.com/l/tillpack
+- Funnel guides: `deposit-milestone-schedule.html`, `revision-round-tracker.html`, `receipts-balance-pack.html`.
+
 ## 2026-09-22 — Relay, Vault, Compass dual-format SKUs
 
 - Shipped **Relay** ($12): Notion CSVs + Excel workbook for end-of-project handoff (Projects, Handoff_Checklist, Access_List, Wins).

@@ -31,6 +31,9 @@ const productSlugs = {
   'handoff-offboarding-pack.html': 'relaypack',
   'asset-login-register.html': 'vaultpack',
   'lead-source-roi-pack.html': 'compasspack',
+  'deposit-milestone-schedule.html': 'pierpack',
+  'revision-round-tracker.html': 'roundpack',
+  'receipts-balance-pack.html': 'tillpack',
 };
 const catalog = JSON.parse(await readFile(resolve(root, 'gumroad/catalog-snapshot.json'), 'utf8')).products;
 function plain(value) {
