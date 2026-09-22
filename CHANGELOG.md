@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-22 — Lane dual-format pipeline SKU
+
+- Shipped **Lane** ($12): Notion CSVs + Excel workbook for the same Lead → Paid freelancer client pipeline (Clients, Pipeline, Projects, Invoices).
+- Gumroad: https://nydaymuse.gumroad.com/l/lanepack
+- Funnel guide: `freelancer-client-pipeline.html`; catalog-meta + catalog-snapshot + sync-search slug `lanepack`; Featured packs grid + guides directory.
+- Soft-linked from Client CRM, Ops, Kickoff, and Invoice Chase Gumroad descriptions.
+
+
 ## 2026-09-20 — Search and GEO content improvements
 
 - Added direct answers, publisher attribution, precise visible update dates, section anchors, and visible FAQs across the 13 guides and product pages. Added worked pricing and partial-payment examples and a proposal review checklist to the core freelance guides.

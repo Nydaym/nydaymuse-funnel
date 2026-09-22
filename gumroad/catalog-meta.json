@@ -241,5 +241,12 @@
     "Recurring bill spreadsheet",
     "art-blue",
     "See the monthly cost of recurring bills and subscriptions, including yearly plans and upcoming due dates."
+  ],
+  "lanepack": [
+    "Lane",
+    "freelance",
+    "Notion + Excel pipeline",
+    "art-sage",
+    "Run Lead → Paid in Notion or Excel: clients, pipeline deals, projects, and invoices in one dual-format pack."
   ]
 }

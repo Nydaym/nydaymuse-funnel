@@ -21,6 +21,7 @@ const productSlugs = {
   'youtube-ai-prompts.html': 'aimprompts',
   'youtube-shorts-desk.html': 'clipdesk',
   'change-order-desk.html': 'changedesk',
+  'freelancer-client-pipeline.html': 'lanepack',
 };
 const catalog = JSON.parse(await readFile(resolve(root, 'gumroad/catalog-snapshot.json'), 'utf8')).products;
 function plain(value) {
