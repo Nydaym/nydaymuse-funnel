@@ -28,6 +28,9 @@ const productSlugs = {
   'proposal-tracker-pack.html': 'quillpack',
   'scope-change-log.html': 'cleatpack',
   'tax-set-aside-pack.html': 'ledgerettepack',
+  'handoff-offboarding-pack.html': 'relaypack',
+  'asset-login-register.html': 'vaultpack',
+  'lead-source-roi-pack.html': 'compasspack',
 };
 const catalog = JSON.parse(await readFile(resolve(root, 'gumroad/catalog-snapshot.json'), 'utf8')).products;
 function plain(value) {

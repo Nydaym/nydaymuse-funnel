@@ -1,6 +1,24 @@
 {
   "products": [
     {
+      "name": "Compass \u2014 Lead Source ROI Pack (Notion + Excel \u00b7 Channel Payback)",
+      "url": "https://nydaymuse.gumroad.com/l/compasspack",
+      "description": "Which lead channel pays \u2014 cost, hours, won revenue. Notion or Excel. Buy once.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Vault \u2014 Asset & Login Register (Notion + Excel \u00b7 Pointers Only)",
+      "url": "https://nydaymuse.gumroad.com/l/vaultpack",
+      "description": "Client assets + login pointers (no clear passwords). Notion or Excel. Buy once.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Relay \u2014 Handoff / Offboarding Pack (Notion + Excel \u00b7 Exit Checklist)",
+      "url": "https://nydaymuse.gumroad.com/l/relaypack",
+      "description": "Handoff checklist, access revoke, and wins. Notion or Excel. Buy once.",
+      "native_type": "digital"
+    },
+    {
       "name": "Ledgerette \u2014 Tax Set-Aside Pack (Notion + Excel \u00b7 Income + % Aside)",
       "url": "https://nydaymuse.gumroad.com/l/ledgerettepack",
       "description": "Income log, tax set-aside percentage, quarterly checklist. Notion or Excel. Buy once.",

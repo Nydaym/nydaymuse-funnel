@@ -290,5 +290,26 @@
     "Notion + Excel tax set-aside",
     "art-lilac",
     "Log income, set aside a percentage, and review quarterly in Notion or Excel."
+  ],
+  "relaypack": [
+    "Relay",
+    "freelance",
+    "Notion + Excel offboarding",
+    "art-sage",
+    "End-of-project checklist, access revoke, and testimonial triggers in Notion or Excel."
+  ],
+  "vaultpack": [
+    "Vault",
+    "freelance",
+    "Notion + Excel asset register",
+    "art-sand",
+    "Client asset & login register with password-manager pointers \u2014 no clear SAMPLE passwords."
+  ],
+  "compasspack": [
+    "Compass",
+    "freelance",
+    "Notion + Excel lead source ROI",
+    "art-lilac",
+    "See which lead channel pays \u2014 cost, hours, and won revenue in Notion or Excel."
   ]
 }

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-22 — Relay, Vault, Compass dual-format SKUs
+
+- Shipped **Relay** ($12): Notion CSVs + Excel workbook for end-of-project handoff (Projects, Handoff_Checklist, Access_List, Wins).
+- Shipped **Vault** ($12): Notion CSVs + Excel workbook for client assets & login pointers (Clients, Assets, Access_Register, Audit) — placeholders only, no clear SAMPLE passwords.
+- Shipped **Compass** ($12): Notion CSVs + Excel workbook for lead source ROI (Leads, Sources, Deals, Revenue_By_Source, ROI_Rollup, Monthly).
+- Soft-linked related live products; guides + catalog-meta/snapshot + sync-search updated.
+
 ## 2026-09-22 — Quill, Cleat, Ledgerette dual-format SKUs
 
 - Shipped **Quill** ($12): Notion CSVs + Excel workbook for proposal win/loss with reasons (Clients, Proposals, Outcomes, Win_Loss, Weekly_Review). Not a Pitch/PDF product.
