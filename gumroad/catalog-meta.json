@@ -332,5 +332,26 @@
     "Notion + Excel receipts & balance",
     "art-moss",
     "Log each payment as a receipt so invoice balances (partials included) stay honest in Notion or Excel."
+  ],
+  "sealpack": [
+    "Seal",
+    "freelance",
+    "Notion + Excel contract status desk",
+    "art-peach",
+    "Agreement sent → signed status desk (status only) in Notion or Excel."
+  ],
+  "holdpack": [
+    "Hold",
+    "freelance",
+    "Notion + Excel client blockers desk",
+    "art-blue",
+    "Waiting-on-client blockers, owners, and nudges in Notion or Excel."
+  ],
+  "helmpack": [
+    "Helm",
+    "freelance",
+    "Notion + Excel discovery call intake",
+    "art-sage",
+    "Discovery call fit score + next step in Notion or Excel."
   ]
 }

@@ -34,6 +34,9 @@ const productSlugs = {
   'deposit-milestone-schedule.html': 'pierpack',
   'revision-round-tracker.html': 'roundpack',
   'receipts-balance-pack.html': 'tillpack',
+  'contract-status-desk.html': 'sealpack',
+  'client-blockers-desk.html': 'holdpack',
+  'discovery-call-intake.html': 'helmpack',
 };
 const catalog = JSON.parse(await readFile(resolve(root, 'gumroad/catalog-snapshot.json'), 'utf8')).products;
 function plain(value) {

@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-09-22 — Seal, Hold, Helm dual-format SKUs
+
+- Shipped **Seal** ($12): Notion CSVs + Excel workbook for contract status (Clients, Agreements, Signatures, Dates, Week_Review). Status desk only — not a contract generator / not Cue·Bound·Pitch.
+- Shipped **Hold** ($12): Notion CSVs + Excel workbook for waiting-on-client blockers (Projects, Blockers, Nudges, Owners, Week_Review).
+- Shipped **Helm** ($12): Notion CSVs + Excel workbook for discovery-call intake (Leads, Calls, Fit_Scores, Next_Steps, Week_Review).
+- Soft-linked related live products; guides + catalog-meta/snapshot + sync-search updated.
+- Gumroad create hit 10/day cap — product IDs reused from zero-sale unpublished Clock / Roster / Floor drafts (not revivals).
+- Gumroad: https://nydaymuse.gumroad.com/l/sealpack · https://nydaymuse.gumroad.com/l/holdpack · https://nydaymuse.gumroad.com/l/helmpack
+- Funnel guides: `contract-status-desk.html`, `client-blockers-desk.html`, `discovery-call-intake.html`.
+
 ## 2026-09-22 — Pier, Round, Till dual-format SKUs
 
 - Shipped **Pier** ($12): Notion CSVs + Excel workbook for deposit & milestone payment triggers (Projects, Milestones, Deposits, Payment_Triggers / Triggers, Week_Review).

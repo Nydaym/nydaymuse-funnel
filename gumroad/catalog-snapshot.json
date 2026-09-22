@@ -1,6 +1,24 @@
 {
   "products": [
     {
+      "name": "Seal — Contract Status Desk (Notion + Excel · Sent → Signed)",
+      "url": "https://nydaymuse.gumroad.com/l/sealpack",
+      "description": "Contract status desk — agreement sent → signed — in Notion or Excel. Buy once.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Hold — Client Blockers Desk (Notion + Excel · Waiting-on-Client)",
+      "url": "https://nydaymuse.gumroad.com/l/holdpack",
+      "description": "Client blockers desk — waiting-on-client inputs + nudges — in Notion or Excel. Buy once.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Helm — Discovery Call Intake (Notion + Excel · Fit + Next Step)",
+      "url": "https://nydaymuse.gumroad.com/l/helmpack",
+      "description": "Discovery call intake — fit score + next step — in Notion or Excel. Buy once.",
+      "native_type": "digital"
+    },
+    {
       "name": "Pier — Deposit & Milestone Schedule (Notion + Excel · Payment Triggers)",
       "url": "https://nydaymuse.gumroad.com/l/pierpack",
       "description": "Deposit + milestone payment schedule in Notion or Excel. Buy once.",
