@@ -1,6 +1,24 @@
 {
   "products": [
     {
+      "name": "Ledgerette \u2014 Tax Set-Aside Pack (Notion + Excel \u00b7 Income + % Aside)",
+      "url": "https://nydaymuse.gumroad.com/l/ledgerettepack",
+      "description": "Income log, tax set-aside percentage, quarterly checklist. Notion or Excel. Buy once.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Cleat \u2014 Scope Change Log (Notion + Excel \u00b7 Baselines + Fee Impact)",
+      "url": "https://nydaymuse.gumroad.com/l/cleatpack",
+      "description": "Log scope extras, approvals, hours, and fee impact. Notion or Excel. Buy once.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Quill \u2014 Proposal Tracker (Notion + Excel \u00b7 Won/Lost Reasons)",
+      "url": "https://nydaymuse.gumroad.com/l/quillpack",
+      "description": "Track proposals out, won/lost reasons, and weekly review. Notion or Excel. Buy once.",
+      "native_type": "digital"
+    },
+    {
       "name": "Harbor \u2014 Retainer OS (Notion + Excel \u00b7 Hours Bank + Invoice Rhythm)",
       "url": "https://nydaymuse.gumroad.com/l/harborpack",
       "description": "Retainer hours bank, rollover, deliverables, invoice rhythm. Notion or Excel. Buy once.",

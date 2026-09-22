@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-22 — Quill, Cleat, Ledgerette dual-format SKUs
+
+- Shipped **Quill** ($12): Notion CSVs + Excel workbook for proposal win/loss with reasons (Clients, Proposals, Outcomes, Win_Loss, Weekly_Review). Not a Pitch/PDF product.
+- Shipped **Cleat** ($12): Notion CSVs + Excel workbook for scope change log lite (Baselines, Change_Items/Change_Log, Approvals, Impact). Complements Drift/Change; not Bound.
+- Shipped **Ledgerette** ($12): Notion CSVs + Excel workbook for tax set-aside (Income, Set_Aside, Expenses_Lite, Quarterly). Not full accounting / not tax advice.
+- Gumroad: https://nydaymuse.gumroad.com/l/quillpack · https://nydaymuse.gumroad.com/l/cleatpack · https://nydaymuse.gumroad.com/l/ledgerettepack
+- Funnel guides: `proposal-tracker-pack.html`, `scope-change-log.html`, `tax-set-aside-pack.html`; catalog-meta + catalog-snapshot + sync-search slugs; Featured packs grid + guides directory.
+- Soft-linked from related live products (Lane/Close/Quote/Beacon/Change/Drift/Scope/Ops/Outlay/Margin/Floor).
+
 ## 2026-09-22 — Beacon, Margin, Harbor dual-format SKUs
 
 - Shipped **Beacon** ($12): Notion CSVs + Excel workbook for Day 0/3/7/14 follow-up cadence (Leads, Cadence_Log, Templates_Index).

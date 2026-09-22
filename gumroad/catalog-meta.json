@@ -269,5 +269,26 @@
     "Notion + Excel retainer OS",
     "art-blue",
     "Monthly retainers with hours bank, rollover rules, deliverables, and invoice rhythm in Notion or Excel."
+  ],
+  "quillpack": [
+    "Quill",
+    "freelance",
+    "Notion + Excel proposal tracker",
+    "art-sage",
+    "Track proposals out, won/lost reasons, and weekly review in Notion or Excel."
+  ],
+  "cleatpack": [
+    "Cleat",
+    "freelance",
+    "Notion + Excel scope log",
+    "art-sand",
+    "Log scope extras, approvals, hours, and fee impact in Notion or Excel."
+  ],
+  "ledgerettepack": [
+    "Ledgerette",
+    "freelance",
+    "Notion + Excel tax set-aside",
+    "art-lilac",
+    "Log income, set aside a percentage, and review quarterly in Notion or Excel."
   ]
 }

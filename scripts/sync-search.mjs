@@ -25,6 +25,9 @@ const productSlugs = {
   'follow-up-cadence-desk.html': 'beaconpack',
   'project-profitability-pack.html': 'marginpack',
   'retainer-os.html': 'harborpack',
+  'proposal-tracker-pack.html': 'quillpack',
+  'scope-change-log.html': 'cleatpack',
+  'tax-set-aside-pack.html': 'ledgerettepack',
 };
 const catalog = JSON.parse(await readFile(resolve(root, 'gumroad/catalog-snapshot.json'), 'utf8')).products;
 function plain(value) {
