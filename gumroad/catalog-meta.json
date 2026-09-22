@@ -247,6 +247,27 @@
     "freelance",
     "Notion + Excel pipeline",
     "art-sage",
-    "Run Lead → Paid in Notion or Excel: clients, pipeline deals, projects, and invoices in one dual-format pack."
+    "Run Lead \u2192 Paid in Notion or Excel: clients, pipeline deals, projects, and invoices in one dual-format pack."
+  ],
+  "beaconpack": [
+    "Beacon",
+    "freelance",
+    "Notion + Excel cadence",
+    "art-sage",
+    "Never lose a lead to later: Day 0/3/7/14 cadence in Notion or Excel with touch log + templates."
+  ],
+  "marginpack": [
+    "Margin",
+    "freelance",
+    "Notion + Excel profitability",
+    "art-lilac",
+    "Fee vs hours vs expenses \u2192 effective hourly and project margin in Notion or Excel."
+  ],
+  "harborpack": [
+    "Harbor",
+    "freelance",
+    "Notion + Excel retainer OS",
+    "art-blue",
+    "Monthly retainers with hours bank, rollover rules, deliverables, and invoice rhythm in Notion or Excel."
   ]
 }

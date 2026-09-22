@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-22 — Beacon, Margin, Harbor dual-format SKUs
+
+- Shipped **Beacon** ($12): Notion CSVs + Excel workbook for Day 0/3/7/14 follow-up cadence (Leads, Cadence_Log, Templates_Index).
+- Shipped **Margin** ($12): Notion CSVs + Excel workbook for fee vs hours vs expenses → effective hourly + margin (Projects, Time_Log, Expenses, Rate_Card, Margin_Rollup).
+- Shipped **Harbor** ($12): Notion CSVs + Excel workbook for retainer hours bank, rollover, deliverables, invoice rhythm (Retainers, Hours_Bank, Deliverables, Invoices, Month_Close).
+- Gumroad: https://nydaymuse.gumroad.com/l/beaconpack · https://nydaymuse.gumroad.com/l/marginpack · https://nydaymuse.gumroad.com/l/harborpack
+- Funnel guides: `follow-up-cadence-desk.html`, `project-profitability-pack.html`, `retainer-os.html`; catalog-meta + catalog-snapshot + sync-search slugs; Featured packs grid + guides directory.
+- Soft-linked from related live products (Roster/Hook/CRM/Lane/Ops/Clock/Outlay/Floor/Slip/Kickoff).
+
 ## 2026-09-22 — Lane dual-format pipeline SKU
 
 - Shipped **Lane** ($12): Notion CSVs + Excel workbook for the same Lead → Paid freelancer client pipeline (Clients, Pipeline, Projects, Invoices).

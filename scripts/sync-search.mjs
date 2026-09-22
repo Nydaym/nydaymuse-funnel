@@ -22,6 +22,9 @@ const productSlugs = {
   'youtube-shorts-desk.html': 'clipdesk',
   'change-order-desk.html': 'changedesk',
   'freelancer-client-pipeline.html': 'lanepack',
+  'follow-up-cadence-desk.html': 'beaconpack',
+  'project-profitability-pack.html': 'marginpack',
+  'retainer-os.html': 'harborpack',
 };
 const catalog = JSON.parse(await readFile(resolve(root, 'gumroad/catalog-snapshot.json'), 'utf8')).products;
 function plain(value) {
