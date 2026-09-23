@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-09-23 — Buoy, Tally dual-format SKUs (Pulse packed)
+
+- Shipped **Buoy** ($12): Notion CSVs + Excel workbook for referral ask → warm intro → outcome (Clients, Asks, Referrals, Outcomes, Month_Review).
+- Shipped **Tally** ($12): Notion CSVs + Excel workbook for installment / multi-part payment plans (Invoices, Installments, Schedule, Status, Month_Close).
+- **Pulse** packed locally (`/workspace/pulse-pack/`) awaiting Gumroad daily create-cap reset — guide HTML stub `weekly-client-status-digest.html` present; catalog-meta/snapshot/sync-search not wired until live.
+- Soft-linked related live products; guides + catalog-meta/snapshot + sync-search updated for Buoy/Tally.
+- Gumroad create hit 10/day cap — product IDs reused from zero-sale unpublished Outlay / Overdue drafts (not revivals; not Cue/Bound/Pitch).
+- Gumroad: https://nydaymuse.gumroad.com/l/buoypack · https://nydaymuse.gumroad.com/l/tallypack
+- Funnel guides: `referral-ask-tracker.html`, `installment-schedule-log.html` (+ Pulse stub).
+
 ## 2026-09-22 — Seal, Hold, Helm dual-format SKUs
 
 - Shipped **Seal** ($12): Notion CSVs + Excel workbook for contract status (Clients, Agreements, Signatures, Dates, Week_Review). Status desk only — not a contract generator / not Cue·Bound·Pitch.

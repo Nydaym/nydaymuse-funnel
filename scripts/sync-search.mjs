@@ -37,6 +37,8 @@ const productSlugs = {
   'contract-status-desk.html': 'sealpack',
   'client-blockers-desk.html': 'holdpack',
   'discovery-call-intake.html': 'helmpack',
+  'referral-ask-tracker.html': 'buoypack',
+  'installment-schedule-log.html': 'tallypack',
 };
 const catalog = JSON.parse(await readFile(resolve(root, 'gumroad/catalog-snapshot.json'), 'utf8')).products;
 function plain(value) {
