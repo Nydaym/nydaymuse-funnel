@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-23 — Homepage Nest CTA + FAQ refresh (weekly research)
+
+- Promoted free **Nest** into the homepage niche desk grid (equal weight with Hunt / Shot / Pod / Clip); removed from the buried "Also on the shelf" line.
+- Refreshed FAQ + JSON-LD for dual Notion+Excel packs and Nest; bumped `dateModified` / hero Updated to 2026-09-23.
+- Meta description now mentions Nest + dual packs. No new SKU.
+
 ## 2026-09-23 — Buoy, Tally dual-format SKUs (Pulse packed)
 
 - Shipped **Buoy** ($12): Notion CSVs + Excel workbook for referral ask → warm intro → outcome (Clients, Asks, Referrals, Outcomes, Month_Review).
