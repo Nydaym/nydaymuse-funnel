@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-24 — Weekly product improve: hero → Drift
+
+- Rotated homepage hero preview + closing CTA from Quote to Drift (free scope desk).
+- No new SKU; Quote stays in the free tools grid and guides.
+- Stage link → `drift-scope-desk.html`; closing CTA → Gumroad `/l/driftdesk`.
+
+
 ## 2026-09-24 — Pulse dual-format SKU live
 
 - Shipped **Pulse** ($12): Notion CSVs + Excel workbook for weekly client status digests (Clients, Digests, Topics, Sent_Log / Sent, Week_Review).
