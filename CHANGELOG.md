@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-24 — Pulse dual-format SKU live
+
+- Shipped **Pulse** ($12): Notion CSVs + Excel workbook for weekly client status digests (Clients, Digests, Topics, Sent_Log / Sent, Week_Review).
+- Wired funnel guide `weekly-client-status-digest.html` (was stub) + catalog-meta/snapshot + sync-search slug `pulsepack`.
+- Soft-linked Hold / Harbor / Lane / Beacon / Praise ↔ Pulse.
+- Gumroad: https://nydaymuse.gumroad.com/l/pulsepack
+
 ## 2026-09-23 — Homepage Nest CTA + FAQ refresh (weekly research)
 
 - Promoted free **Nest** into the homepage niche desk grid (equal weight with Hunt / Shot / Pod / Clip); removed from the buried "Also on the shelf" line.
