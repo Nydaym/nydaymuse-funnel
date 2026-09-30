@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-30 — Nest landing SEO/CTA refresh (weekly research)
+
+- Fixed outdated "Navy and red" copy on `pregnancy-baby-notion-tracker.html` (warm-paper brand).
+- Sharpened Free $0 vs paid Notion pregnancy planners / SaaS baby apps in meta, body, soft CTAs, and a new FAQ.
+- Bumped `dateModified` / Updated to 2026-09-30; CTA utm_campaign=`nest_seo_0930`.
+- No new SKU; homepage Nest grid from 2026-09-23 left as-is.
+
 ## 2026-09-24 — Weekly product improve: hero → Drift
 
 - Rotated homepage hero preview + closing CTA from Quote to Drift (free scope desk).
