@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-01 — Weekly product improve: hero → Nest
+
+- Rotated homepage hero preview + closing CTA from Drift to Nest (free pregnancy & baby pack).
+- No new SKU; Drift stays in the free tools grid, workflow, and FAQ.
+- Stage link → `pregnancy-baby-notion-tracker.html`; closing CTA → Gumroad `/l/nestdesk`.
+
+
 ## 2026-10-01 — Moor / Spar / Keel dual packs
 
 - Added guides: `capacity-booking-board.html` (Moor), `upsell-expansion-tracker.html` (Spar), `client-health-score-desk.html` (Keel).
