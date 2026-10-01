@@ -1,6 +1,24 @@
 {
   "products": [
     {
+      "name": "Moor — Capacity & Booking Board (Notion + Excel · Weeks Booked vs Open)",
+      "url": "https://nydaymuse.gumroad.com/l/moorpack",
+      "description": "Capacity & booking board — weeks booked vs open — in Notion or Excel. Buy once.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Spar — Upsell & Expansion Tracker (Notion + Excel · Grow Existing Clients)",
+      "url": "https://nydaymuse.gumroad.com/l/sparpack",
+      "description": "Upsell & expansion tracker — grow existing clients — in Notion or Excel. Buy once.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Keel — Client Health Score Desk (Notion + Excel · Retention Risk)",
+      "url": "https://nydaymuse.gumroad.com/l/keelpack",
+      "description": "Client health score desk — retention risk signals — in Notion or Excel. Buy once.",
+      "native_type": "digital"
+    },
+    {
       "name": "Seal — Contract Status Desk (Notion + Excel · Sent → Signed)",
       "url": "https://nydaymuse.gumroad.com/l/sealpack",
       "description": "Contract status desk — agreement sent → signed — in Notion or Excel. Buy once.",

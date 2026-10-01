@@ -40,6 +40,9 @@ const productSlugs = {
   'referral-ask-tracker.html': 'buoypack',
   'installment-schedule-log.html': 'tallypack',
   'weekly-client-status-digest.html': 'pulsepack',
+  'capacity-booking-board.html': 'moorpack',
+  'upsell-expansion-tracker.html': 'sparpack',
+  'client-health-score-desk.html': 'keelpack',
 };
 const catalog = JSON.parse(await readFile(resolve(root, 'gumroad/catalog-snapshot.json'), 'utf8')).products;
 function plain(value) {

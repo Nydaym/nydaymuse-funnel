@@ -374,5 +374,26 @@
     "Notion + Excel weekly client status digest",
     "art-sage",
     "Weekly Done/Next/Blocked/Ask status digest per active client in Notion or Excel."
+  ],
+  "moorpack": [
+    "Moor",
+    "freelance",
+    "Notion + Excel capacity booking board",
+    "art-coral",
+    "Weeks booked vs open — bookings, soft holds, bookable hours in Notion or Excel."
+  ],
+  "sparpack": [
+    "Spar",
+    "freelance",
+    "Notion + Excel upsell expansion tracker",
+    "art-moss",
+    "Upsell & expansion tracker — opportunity → ask → outcome on existing clients."
+  ],
+  "keelpack": [
+    "Keel",
+    "freelance",
+    "Notion + Excel client health score desk",
+    "art-lilac",
+    "Client health scores from lag, unpaid, and blocker signals — with next actions."
   ]
 }

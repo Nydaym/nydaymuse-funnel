@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-01 — Moor / Spar / Keel dual packs
+
+- Added guides: `capacity-booking-board.html` (Moor), `upsell-expansion-tracker.html` (Spar), `client-health-score-desk.html` (Keel).
+- Catalog meta/snapshot + `sync-search.mjs` slugs; homepage shelf + guides directory (34).
+- Gumroad: https://nydaymuse.gumroad.com/l/moorpack · /l/sparpack · /l/keelpack ($12 each).
+
+
 ## 2026-09-30 — Nest landing SEO/CTA refresh (weekly research)
 
 - Fixed outdated "Navy and red" copy on `pregnancy-baby-notion-tracker.html` (warm-paper brand).
