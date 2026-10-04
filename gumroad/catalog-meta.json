@@ -395,5 +395,19 @@
     "Notion + Excel client health score desk",
     "art-lilac",
     "Client health scores from lag, unpaid, and blocker signals — with next actions."
+  ],
+  "proofcard": [
+    "Proof Card",
+    "freelance",
+    "Case-study evidence card",
+    "art-sage",
+    "A focused starting point for organizing the evidence behind one client-project claim."
+  ],
+  "proofstudio": [
+    "Proof Studio",
+    "freelance",
+    "Client case-study studio",
+    "art-peach",
+    "Develop a clearer client case study while keeping claims, evidence and review context together."
   ]
 }

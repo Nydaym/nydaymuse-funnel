@@ -341,6 +341,18 @@
       "url": "https://nydaymuse.gumroad.com/l/pulsepack",
       "description": "Weekly client status digest — Done/Next/Blocked/Ask — in Notion or Excel. Buy once.",
       "native_type": "digital"
+    },
+    {
+      "name": "Proof — Case Study Evidence Card",
+      "url": "https://nydaymuse.gumroad.com/l/proofcard",
+      "description": "A focused starting point for organizing the evidence behind one client-project claim.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Proof — Client Case Study Studio",
+      "url": "https://nydaymuse.gumroad.com/l/proofstudio",
+      "description": "Develop a clearer client case study while keeping claims, evidence and review context together.",
+      "native_type": "digital"
     }
   ]
 }
