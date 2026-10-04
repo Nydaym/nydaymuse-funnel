@@ -215,3 +215,30 @@ footer a:hover { color: var(--red); }
   .final { color: var(--navy); background: var(--sage); }
   .final h2, .final p, .fine { color: var(--navy); }
 }
+
+
+/* Drift worked example: readable source content, not a simulated screenshot. */
+.drift-page .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 42px; align-items: start; }
+.drift-page .hero h1 { font-size: clamp(2.5rem, 4.5vw, 3.8rem); }
+.drift-page .hero-note, .drift-page .page-credit, .drift-page .fine,
+.drift-page .eyebrow, .drift-page .section-kicker, .drift-page .card-num { font-size: .875rem; }
+.drift-page .navlinks a { font-size: .9375rem; }
+.drift-example { margin: 0; padding: 1.75rem; background: #fff; border: 1px solid #d7ddd0; border-radius: 18px; box-shadow: 0 18px 42px #17243b0a; }
+.drift-example figcaption .section-kicker { display: block; color: #37694f; margin-bottom: .65rem; font-size: .75rem; }
+.drift-example h2 { font-size: 1.65rem; margin: 0 0 .65rem; line-height: 1.2; }
+.drift-example figcaption p, .drift-example .example-note { font-size: .875rem; color: var(--muted); line-height: 1.65; }
+.example-facts { margin: 1.25rem 0; }
+.example-facts > div { padding: .85rem 0; border-top: 1px solid var(--border); }
+.example-facts dt { color: var(--muted); font-size: .8125rem; margin-bottom: .2rem; }
+.example-facts dd { margin: 0; font-size: 1rem; line-height: 1.55; color: #17243b; }
+.example-facts dd strong { color: #37694f; }
+.example-email { padding: 1.1rem; background: #e9eee6; border-left: 3px solid #37694f; border-radius: 0 8px 8px 0; }
+.example-email h3 { font-size: .9375rem; margin: 0 0 .6rem; }
+.example-email p { font-size: .9375rem; line-height: 1.75; margin: 0; }
+.drift-example .example-note { margin: 1rem 0 0; }
+@media (max-width: 780px) {
+  .drift-page .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .drift-example { padding: 1.25rem; }
+}
+
+.drift-page { --coral: #e96d5d; }

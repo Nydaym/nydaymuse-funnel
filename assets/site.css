@@ -356,3 +356,43 @@ h2 { font-size: clamp(28px, 3vw, 39px); letter-spacing: -1.7px; line-height: 1.1
 }
 
 .hero-updated { margin-top: 12px; color: var(--muted); font-size: 11px; }
+
+
+/* Readable storefront hierarchy; weekly picks stay separate from the brand promise. */
+.hero-description { font-size: 18px; max-width: 470px; }
+.hero h1 { max-width: 620px; }
+.primary-nav > a, .button, .text-link, .card-link, .filter { font-size: 14px; }
+.eyebrow, .hero-notes, .hero-updated, .stage-caption, .stage-note,
+.demo-heading p, .demo-fields label, .demo-footnote, .paid-note small,
+.card-format, .card-subtitle, .free-badge, .tools-footnote,
+.pack-subtitle, .pack-price span, .pack-features li { font-size: 13px; }
+.card-description, .section-heading > p, .workflow-copy > p,
+.workflow-list p, .pack-card > p:not(.pack-subtitle):not(.pack-price),
+.bundle-soft-cta { font-size: 15px; }
+.preview-stage { background: #e9eee6; padding: 28px 24px 30px; }
+.stage-caption { letter-spacing: .07em; }
+.preview-window { transform: none; }
+.demo-fields { gap: 14px; }
+.quote-total { flex-wrap: wrap; gap: 12px; }
+.quote-total span, .quote-total strong { font-size: 13px; }
+.stage-note { margin-top: 20px; }
+.pack-choice-intro { max-width: 720px; margin: 0 0 24px; color: var(--muted); }
+.more-packs { border: 1px solid var(--line); border-radius: 12px; margin-top: 24px; background: #fff; }
+.more-packs > summary { cursor: pointer; padding: 20px 24px; font-size: 16px; font-weight: 650; }
+.more-packs[open] > summary { border-bottom: 1px solid var(--line); }
+.more-packs > .packs-grid { padding: 24px; }
+.more-packs > summary:focus-visible { outline: 3px solid #37694f; outline-offset: 3px; }
+@media (max-width: 600px) {
+  .hero-description { font-size: 17px; }
+  .hero h1 { font-size: clamp(40px, 10vw, 58px); letter-spacing: -2px; }
+  .preview-stage { padding: 22px 16px; }
+  .stage-caption { font-size: 12px; }
+  .more-packs > .packs-grid { padding: 16px; grid-template-columns: minmax(0, 1fr); }
+  .packs-grid { grid-template-columns: minmax(0, 1fr); }
+}
+.preview-window { padding-bottom: 20px; }
+.paid-note { position: static; margin: 0 16px; padding: 12px; transform: none; }
+.stage-note + .stage-note { margin-top: 8px; }
+.window-bar span, .mini-badge { font-size: 12px; }
+.preview-stage .demo-heading { flex-wrap: wrap; }
+.catalog-directory .bundle-soft-cta { margin: 0; padding: 20px 24px; text-align: left; line-height: 1.9; }
