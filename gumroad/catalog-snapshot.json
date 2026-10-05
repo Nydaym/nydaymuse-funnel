@@ -353,6 +353,18 @@
       "url": "https://nydaymuse.gumroad.com/l/proofstudio",
       "description": "Develop a clearer client case study while keeping claims, evidence and review context together.",
       "native_type": "digital"
+    },
+    {
+      "name": "Crew · Single-assignment Review Card",
+      "url": "https://nydaymuse.gumroad.com/l/crewcard",
+      "description": "Bring one subcontracted assignment’s brief, submitted version, checks and review notes together.",
+      "native_type": "digital"
+    },
+    {
+      "name": "Crew · Subcontractor Delivery Desk",
+      "url": "https://nydaymuse.gumroad.com/l/crewdesk",
+      "description": "Keep fixed-fee work packages, version-bound review records and invoice-related amounts together before manual invoice review.",
+      "native_type": "digital"
     }
   ]
 }

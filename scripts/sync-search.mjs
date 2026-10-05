@@ -7,6 +7,8 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const base = 'https://nydaym.github.io/nydaymuse-funnel/';
 const check = process.argv.includes('--check');
 const productSlugs = {
+  'subcontractor-review-card.html': 'crewcard',
+  'subcontractor-delivery-desk.html': 'crewdesk',
   'case-study-evidence-card.html': 'proofcard',
   'client-case-study-studio.html': 'proofstudio',
   'freelance-rate-calculator.html': 'qdccy',

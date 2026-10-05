@@ -409,5 +409,19 @@
     "Client case-study studio",
     "art-peach",
     "Develop a clearer client case study while keeping claims, evidence and review context together."
+  ],
+  "crewcard": [
+    "Crew Card",
+    "freelance",
+    "Single-assignment review card",
+    "art-sage",
+    "Bring one subcontracted assignment’s brief, submitted version, checks and review notes together."
+  ],
+  "crewdesk": [
+    "Crew Desk",
+    "freelance",
+    "Subcontractor delivery desk",
+    "art-peach",
+    "Keep fixed-fee work packages, version-bound review records and invoice-related amounts together before manual invoice review."
   ]
 }
