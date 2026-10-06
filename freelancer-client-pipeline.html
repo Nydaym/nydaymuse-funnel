@@ -63,7 +63,7 @@
       "publisher": {
         "@id": "https://nydaym.github.io/nydaymuse-funnel/#organization"
       },
-      "dateModified": "2026-09-22",
+      "dateModified": "2026-10-06",
       "mainEntity": [
         {
           "@type": "Question",
@@ -78,7 +78,7 @@
           "name": "Is Lane a live Notion duplicate link?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. You import CSVs (or rebuild from the outline). That keeps the pack portable, buy-once, and free-plan friendly."
+            "text": "No. Import the CSVs, then set property types and add the formulas and filtered views in the guide. Relations and rollups are optional manual setup; matching text IDs do not create relations automatically."
           }
         },
         {
@@ -142,7 +142,7 @@
       "publisher": {
         "@id": "https://nydaym.github.io/nydaymuse-funnel/#organization"
       },
-      "dateModified": "2026-09-22",
+      "dateModified": "2026-10-06",
       "inLanguage": "en",
       "about": {
         "@id": "https://nydaymuse.gumroad.com/l/lanepack#product"
@@ -169,26 +169,29 @@
     <div class="wrap">
       <p class="breadcrumb"><a href="index.html">Home</a> / Freelancer client pipeline</p>
       <h1 id="page-title">Freelancer client pipeline — Notion or Excel, lead to paid</h1>
-      <p class="page-credit">By <a href="about.html">Nydaymuse</a> · Updated <time datetime="2026-09-22">September 22, 2026</time></p>
+      <p class="page-credit">By <a href="about.html">Nydaymuse</a> · Updated <time datetime="2026-10-06">October 6, 2026</time></p>
       <p class="meta">Clients · deals · projects · invoices · Lane $12 dual pack</p>
 
       <section class="answer-summary" id="quick-answer" aria-labelledby="quick-answer-heading">
         <h2 id="quick-answer-heading">What belongs in a freelancer client pipeline?</h2>
-        <p>Four linked lists: who the client is, which deal stage they sit in (Lead → Paid), which project is live, and which invoices are open. You only need one home base — Notion <em>or</em> a spreadsheet — as long as every open deal has a next action and a date.</p>
+        <p>Four related lists: who the client is, which deal stage they sit in (Lead → Paid), which project is live, and which invoices are open. You only need one home base — Notion <em>or</em> a spreadsheet — as long as every open deal has a next action and a date.</p>
       </section>
 
       <nav class="page-contents" aria-label="On this page"><strong>On this page</strong><ul><li><a href="#lane-dual-format-12">Lane — dual Notion + Excel pack ($12)</a></li><li><a href="#why-dual-format">Why dual format beats format lock-in</a></li><li><a href="#stages-that-match-real-work">Stages that match real freelance work</a></li><li><a href="#friday-15-minute-review">Friday 15-minute review</a></li><li><a href="#faq">Frequently asked questions</a></li></ul></nav>
 
       <p>Most freelancers do not need Salesforce. They need a calm place to answer: who needs a nudge, what is still unpaid, and which projects are actually in flight. Spreadsheet people and Notion people both buy the same idea — a Lead → Paid pipeline — then abandon tools that force the wrong work style.</p>
-      <p><a href="https://nydaymuse.gumroad.com/l/lanepack?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=lane">Lane</a> is Nydaymuse’s $12 dual-format client pipeline: the same Clients, Pipeline, Projects, and Invoices structure as CSV imports for Notion <em>and</em> as an Excel / Sheets workbook. Pick one. Do not sync both unless you enjoy double entry.</p>
+      <p><a href="https://nydaymuse.gumroad.com/l/lanepack?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=lane">Lane</a> is Nydaymuse’s $12 dual-format client pipeline: the same Clients, Pipeline, Projects, and Invoices structure as CSV imports for Notion <em>and</em> as an XLSX workbook. Pick one. Do not sync both unless you enjoy double entry.</p>
 
       <div class="soft-cta">
         <h2 id="lane-dual-format-12">Lane — dual Notion + Excel pack ($12)</h2>
-        <p>One zip. Notion CSVs + import README, or open <code>Lane-Client-Pipeline.xlsx</code> (Dashboard, Clients, Pipeline, Projects, Invoices, Weekly Review). SAMPLE data included. Buy once. No support.</p>
+        <p>One zip. Notion CSVs + manual import/formula/view setup guide, or open <code>Lane-Client-Pipeline.xlsx</code> (Dashboard, Clients, Pipeline, Projects, Invoices, Weekly Review). SAMPLE data included. Replace sample inputs while preserving Pipeline column I and Invoices column J formulas. Buy once. No support.</p>
         <div class="btn-row">
           <a class="btn" href="https://nydaymuse.gumroad.com/l/lanepack?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=lane">Get Lane — $12</a>
         </div>
       </div>
+
+      <p>49 prepared records per data sheet (rows 2–50, including SAMPLE rows). Before adding more, extend row formulas, table/filter ranges, dropdown and number-validation ranges, and the corresponding Dashboard summary ranges using the README. Keep all summary ranges aligned.</p>
+      <p>Recalculation tested in LibreOfficeDev 26.8 (development build). Native Excel, Google Sheets and live Notion import were not tested; check formulas, dates and filters in your chosen app. Enable Automatic calculation and run a full recalculation on opening/importing and after edits; verify date-dependent results before relying on them.</p>
 
       <h2 id="why-dual-format">Why dual format beats format lock-in</h2>
       <p>Bestsellers on Gumroad Discover lean either Notion-only CRM templates or Excel-only “freelancer business trackers.” Buyers bounce when the listing forces a tool they do not open on Monday. A dual pack keeps the job fixed (pipeline + cash clarity) and lets the buyer choose Notion databases or a workbook.</p>
@@ -213,15 +216,17 @@
         </tbody>
       </table>
       </div>
+      <p>Open and weighted open pipeline use Lead, Quote, Proposal, Negotiation, Contracted and Deliver. Paid is reported separately; Lost, blank and unrecognized stages are excluded from both open totals.</p>
+      <p>Outstanding invoices are Sent or Overdue. Days overdue are calculated only for those statuses: due today = 0, yesterday = 1. Paid, Draft and Void return 0. Missing or invalid due dates and unrecognized statuses show a message; invoice status is updated manually.</p>
       <p>Every open deal needs a <strong>next action</strong> and a <strong>due date</strong>. Without those two fields, a Kanban board is decoration.</p>
 
       <h2 id="friday-15-minute-review">Friday 15-minute review</h2>
       <ol>
         <li>Move Pipeline cards that changed stage.</li>
         <li>Fill next action + due date for every open deal.</li>
-        <li>Check invoices still marked Sent past their due date.</li>
+        <li>Check Sent / Overdue invoices past their due date, and resolve missing dates or status messages.</li>
         <li>Update project % complete and hours logged.</li>
-        <li>Flag Active / Retainer clients with no contact in 14+ days.</li>
+        <li>Flag Active / Retainer clients with last contact strictly more than 14 days ago; review missing contact dates separately.</li>
       </ol>
       <p>For reminder wording, see <a href="overdue-invoice-emails.html">late payment email templates</a>. For a one-page invoice layout, free <a href="https://nydaymuse.gumroad.com/l/tubrnw?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=lane">Slip</a> works offline.</p>
 
@@ -233,7 +238,7 @@
         </details>
         <details>
           <summary>Is Lane a live Notion duplicate link?</summary>
-          <p>No. You import CSVs (or rebuild from the outline). That keeps the pack portable, buy-once, and free-plan friendly.</p>
+          <p>No. Import the CSVs, then set property types and add the formulas and filtered views in the guide. Relations and rollups are optional manual setup; matching text IDs do not create relations automatically.</p>
         </details>
         <details>
           <summary>How is Lane different from Ops or Client CRM?</summary>
