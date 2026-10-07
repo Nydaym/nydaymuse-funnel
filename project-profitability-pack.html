@@ -63,7 +63,7 @@
       "publisher": {
         "@id": "https://nydaym.github.io/nydaymuse-funnel/#organization"
       },
-      "dateModified": "2026-10-05",
+      "dateModified": "2026-10-07",
       "mainEntity": [
         {
           "@type": "Question",
@@ -78,7 +78,7 @@
           "name": "Is Margin a live Notion duplicate link?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. You import CSVs (or rebuild from the outline)."
+            "text": "No. Import the four CSVs and set their property types. Keep totals updated manually or configure the documented relations, rollups and formulas, linking each log row to its project. Matching text IDs do not create relations. The page outline does not build a working database or dashboard."
           }
         },
         {
@@ -142,7 +142,7 @@
       "publisher": {
         "@id": "https://nydaym.github.io/nydaymuse-funnel/#organization"
       },
-      "dateModified": "2026-10-05",
+      "dateModified": "2026-10-07",
       "inLanguage": "en",
       "about": {
         "@id": "https://nydaymuse.gumroad.com/l/marginpack#product"
@@ -169,21 +169,23 @@
     <div class="wrap">
       <p class="breadcrumb"><a href="index.html">Home</a> / Project profitability — Notion or Excel, fee vs hours</p>
       <h1 id="page-title">Project profitability — Notion or Excel, fee vs hours</h1>
-      <p class="page-credit">By <a href="about.html">Nydaymuse</a> · Updated <time datetime="2026-10-05">October 5, 2026</time></p>
+      <p class="page-credit">By <a href="about.html">Nydaymuse</a> · Updated <time datetime="2026-10-07">October 7, 2026</time></p>
       <p class="meta">Projects · time · expenses · Margin $12 dual pack</p>
 
       <section class="answer-summary" id="quick-answer" aria-labelledby="quick-answer-heading">
         <h2 id="quick-answer-heading">What belongs in a project profitability pack?</h2>
-        <p>Four linked lists: project fee, hours logged, expenses, and a simple margin / effective hourly rollup. You only need one home base — Notion or a spreadsheet — as long as every live project has hours and spend attached.</p>
+        <p>Related records for project fees, hours logged and expenses, plus a simple margin / effective hourly summary. Use the workbook or configure the Notion CSVs manually; matching project IDs in a CSV do not create live Notion relations.</p>
       </section>
+
+      <p><strong>LibreOffice input limitation:</strong> Use actual numbers in fee, hours, expense and budget fields, and actual dates in date fields. TRUE/FALSE values or logical formula results can import as 1/0 in LibreOffice without an input-check warning. These logical values are unsupported; inspect imported numeric/date columns even when the checks say OK. Real numeric zero and one remain supported where the field permits them.</p>
 
       <nav class="page-contents" aria-label="On this page"><strong>On this page</strong><ul><li><a href="#why-margin">Why effective hourly beats vibes</a></li><li><a href="#definitions">Simple definitions that stick</a></li><li><a href="#friday-review">Friday margin review</a></li><li><a href="#margin-dual-format-12">Margin — dual Notion + Excel pack ($12)</a></li><li><a href="#faq">Frequently asked questions</a></li></ul></nav>
 
       <p>A project can feel busy and still pay poorly. Freelancers who only track invoices miss the hours and the small expenses that erase the fee. Spreadsheet people and Notion people buy the same idea — fee vs hours vs expenses — then bounce when the tool forces the wrong format.</p>
-      <p><a href="https://nydaymuse.gumroad.com/l/marginpack?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=margin">Margin</a> is Nydaymuse’s $12 dual-format profitability pack: Projects, Time_Log, Expenses, and Rate_Card as Notion CSVs <em>and</em> as an Excel / Sheets workbook with a Margin_Rollup. Pick one.</p>
+      <p><a href="https://nydaymuse.gumroad.com/l/marginpack?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=margin">Margin</a> is Nydaymuse’s $12 dual-format profitability pack: Projects, Time_Log, Expenses, and Rate_Card as Notion CSVs <em>and</em> as an XLSX workbook with a Margin_Rollup. Pick one; the formats do not sync.</p>
 
       <h2 id="why-margin">Why effective hourly beats vibes</h2>
-      <p>Tracking effective hourly and project margin helps you compare the quoted fee with recorded time and expenses. Margin keeps those records together in Notion databases or an Excel workbook.</p>
+      <p>Tracking effective hourly and project margin helps you compare the quoted fee with recorded time and expenses. Margin keeps those records in an XLSX workbook or CSVs for manual Notion setup.</p>
       <p>Margin is not a full accounting suite. Use its Time_Log and Expenses sheets to record project hours and spend, and pair it with <a href="freelance-invoice-spreadsheet.html">Ops</a> for invoice aging.</p>
 
       <h2 id="definitions">Simple definitions that stick</h2>
@@ -196,17 +198,20 @@
           <tr><td>Effective hourly</td><td>(fee − expenses) ÷ hours logged</td></tr>
           <tr><td>Simple margin $</td><td>fee − expenses</td></tr>
           <tr><td>Margin %</td><td>margin $ ÷ fee</td></tr>
-          <tr><td>At risk</td><td>hours over budget or thin margin %</td></tr>
+          <tr><td>At risk</td><td>manually assigned status after reviewing hours, budget and margin</td></tr>
         </tbody>
       </table>
       </div>
-      <p>Labor opportunity cost is yours to add (compare effective hourly to your minimum hourly rate in Rate_Card). The pack keeps SAMPLE math honest and visible.</p>
+      <p>Enter the fee basis manually: a fixed fee or an hourly billed total calculated separately. Rate_Card is a reference list; it does not calculate fees or deduct labor cost. All logged hours and expense amounts count, including non-billable time and reimbursable expenses. Any reimbursement revenue in the fee basis must be entered manually and consistently.</p>
+
+      <p>Effective hourly is blank at zero total hours; margin percentage is blank at zero fee. Enter a numeric zero when it is intended; a missing fee is an input error. Simple margin excludes your own labor cost, taxes and cash collections. All monetary values are USD, without currency conversion.</p>
+      <p>Dashboard totals include all statuses, including Pipeline and Lost, and all dates. Dates are recordkeeping fields, not reporting-period filters. Blended effective hourly divides total simple margin by total hours; it does not average project rates.</p>
 
       <h2 id="friday-review">Friday margin review</h2>
       <ol>
         <li>Log time for every live project.</li>
         <li>Capture expenses the week they hit.</li>
-        <li>Open Margin_Rollup — flag At risk.</li>
+        <li>Recalculate, resolve input-check warnings, and review Margin_Rollup. Set At risk status manually where needed.</li>
         <li>Update Rate_Card if your floor moved.</li>
         <li>Decide: raise fee, cut scope, or decline lookalike work.</li>
       </ol>
@@ -214,11 +219,14 @@
 
       <div class="soft-cta">
         <h2 id="margin-dual-format-12">Margin — dual Notion + Excel pack ($12)</h2>
-        <p>One zip. Notion CSVs + import README, or open Margin-Project-Profitability.xlsx (Dashboard, Projects, Time_Log, Expenses, Rate_Card, Margin_Rollup). SAMPLE data included. Buy once. No support.</p>
+        <p>One zip. Notion CSVs + manual import/property/formula setup guide, or open Margin-Project-Profitability.xlsx (Dashboard, Projects, Time_Log, Expenses, Rate_Card, Margin_Rollup). SAMPLE data included. Clear only sample input values, preserve formula cells, and replace related projects and logs together. Buy once. No support.</p>
         <div class="btn-row">
           <a class="btn" href="https://nydaymuse.gumroad.com/l/marginpack?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=margin">Get Margin — $12</a>
         </div>
       </div>
+
+      <p>Prepared capacity: 50 projects (rows 2–51) and 500 entries per log (rows 2–501 in Time_Log and Expenses), including SAMPLE rows. Before exceeding these limits, manually extend formulas, calculation ranges, table/filter ranges, validation and formatting together using the README, then test the added rows. Rows do not expand automatically; manual extension was not validated.</p>
+      <p>Recalculation tested in LibreOffice Dev 26.8 (development build). Native Excel, Google Sheets and live Notion import were not tested. Enable automatic calculation, run a full recalculation after opening/importing and after edits, and check formulas, dates, filters and sample totals in your chosen app. The sample should show $18,700 fees, 60 hours, $340 expenses, $18,360 simple margin and $306.00 blended effective hourly.</p>
 
       <section class="guide-faq" id="faq" aria-labelledby="faq-heading">
         <h2 id="faq-heading">Frequently asked questions</h2>
@@ -228,7 +236,7 @@
         </details>
         <details>
           <summary>Is Margin a live Notion duplicate link?</summary>
-          <p>No. You import CSVs (or rebuild from the outline).</p>
+          <p>No. Import the four CSVs and set their property types. Keep totals updated manually or configure the documented relations, rollups and formulas, linking each log row to its project. Matching text IDs do not create relations. The page outline does not build a working database or dashboard.</p>
         </details>
         <details>
           <summary>How is Margin different from Ops?</summary>
