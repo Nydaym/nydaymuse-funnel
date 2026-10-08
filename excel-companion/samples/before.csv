@@ -1,0 +1,7 @@
+deal_id,deal_name,stage,est_value_usd
+001,Sample A,Qualified,800
+002,Sample B,Proposal,1200
+003,Sample C,New,300
+004,Sample D,New,500
+004,Sample duplicate,New,500
+,Sample missing,New,90
