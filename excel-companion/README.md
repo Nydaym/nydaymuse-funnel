@@ -1,6 +1,6 @@
 # Nydaymuse Sheet Check / 表格检查
 
-Preview release: core and parser checks have passed; hosted browser acceptance testing is still in progress. This preview is not yet linked from the public catalogue.
+Release 1.0.0 (2026-10-08). Browser-only CSV/XLSX table review with the bounded behavior and limitations below.
 
 A free, open-source, browser-only Excel/CSV companion for Nydaymuse workflows. No app server, account, API key, spreadsheet upload, analytics or runtime CDN.
 
@@ -86,3 +86,9 @@ Copy this whole directory into `excel-companion/` in a GitHub Pages repository. 
 The MIT license in this directory applies only to original Sheet Check code, documentation and fictional samples here. It does **not** relicense the enclosing catalogue, paid products, customer data or other directories. SheetJS Community Edition 0.20.3 is separately Apache-2.0 licensed; see `vendor/SHEETJS-LICENSE.txt` and `THIRD_PARTY_NOTICES.md`.
 
 This companion does not include paid workbook contents, paid formulas, customer spreadsheets or private business data.
+
+## Release verification / 发布验证
+
+Passed for this release: 20 core checks and 10 independent worker/parser checks; hosted browser demo, actual synthetic CSV import, invalid-header blocking, reset/repeated runs, English language switch, and actual XLSX/CSV report downloads reopened for inspection. The surrounding catalogue passed 9 regression tests and 42-page metadata checks.
+
+Not verified: XLSX input through the actual browser file chooser (the synthetic file was inaccessible there), mobile layout, cancellation/race timing, Microsoft Excel desktop, Google Sheets or Notion import. XLSX parsing was checked with synthetic worker fixtures. These checks are not a guarantee of compatibility with every workbook or of financial/business-rule correctness.
