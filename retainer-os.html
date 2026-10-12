@@ -63,7 +63,7 @@
       "publisher": {
         "@id": "https://nydaym.github.io/nydaymuse-funnel/#organization"
       },
-      "dateModified": "2026-09-22",
+      "dateModified": "2026-10-12",
       "mainEntity": [
         {
           "@type": "Question",
@@ -142,7 +142,7 @@
       "publisher": {
         "@id": "https://nydaym.github.io/nydaymuse-funnel/#organization"
       },
-      "dateModified": "2026-09-22",
+      "dateModified": "2026-10-12",
       "inLanguage": "en",
       "about": {
         "@id": "https://nydaymuse.gumroad.com/l/harborpack#product"
@@ -169,7 +169,7 @@
     <div class="wrap">
       <p class="breadcrumb"><a href="index.html">Home</a> / Retainer OS — Notion or Excel, hours bank + invoice rhythm</p>
       <h1 id="page-title">Retainer OS — Notion or Excel, hours bank + invoice rhythm</h1>
-      <p class="page-credit">By <a href="about.html">Nydaymuse</a> · Updated <time datetime="2026-09-22">September 22, 2026</time></p>
+      <p class="page-credit">By <a href="about.html">Nydaymuse</a> · Updated <time datetime="2026-10-12">October 12, 2026</time></p>
       <p class="meta">Retainers · hours bank · invoices · Harbor $12 dual pack</p>
 
       <section class="answer-summary" id="quick-answer" aria-labelledby="quick-answer-heading">
@@ -199,12 +199,12 @@
         </tbody>
       </table>
       </div>
-      <p>Write the rule once per retainer. Apply it on Month_Close before drafting next invoices.</p>
+      <p>Write the rule once per retainer. Use rolled-in hours before current-month included hours. Unused rolled-in hours expire at month-end; only unused current-month included hours can roll again, up to the cap. Apply this on Month_Close before drafting next invoices.</p>
 
       <h2 id="month-close">Month-close checklist</h2>
       <ol>
         <li>Reconcile hours_used vs deliverable hours.</li>
-        <li>Apply rollover rule + cap; note expired hours.</li>
+        <li>Apply rollover rule + cap; note expired hours. Manually copy the same retainer’s final rollover_out into the immediately next month’s rolled_in once only.</li>
         <li>Draft next-month invoices on each invoice_day.</li>
         <li>Chase anything still Sent past due.</li>
         <li>Pause retainers that should not silently continue.</li>
@@ -213,11 +213,19 @@
 
       <div class="soft-cta">
         <h2 id="harbor-dual-format-12">Harbor — dual Notion + Excel pack ($12)</h2>
-        <p>One zip. Notion CSVs + import README, or open Harbor-Retainer-OS.xlsx (Dashboard, Retainers, Hours_Bank, Deliverables, Invoices, Month_Close). SAMPLE data included. Buy once. No support.</p>
+        <p>One zip. Notion CSVs + import README, or open Harbor-Retainer-OS.xlsx (Dashboard, Retainers, Hours_Bank, Deliverables, Invoices, Month_Close). Replace SAMPLE input values while preserving formulas. Buy once. No support.</p>
         <div class="btn-row">
           <a class="btn" href="https://nydaymuse.gumroad.com/l/harborpack?utm_source=funnel&amp;utm_medium=seo&amp;utm_campaign=harbor">Get Harbor — $12</a>
         </div>
       </div>
+
+      <section aria-labelledby="reliability-heading">
+        <h2 id="reliability-heading">Rollover checks and manual setup</h2>
+        <p>Example: 0 included + 6 rolled-in − 0 used leaves 6 available within the month, but 0 rollover out. With 2 included + 6 rolled-in − 0 used, only 2 may roll if the cap allows it. The 6 old hours expire rather than being carried again.</p>
+        <p>The workbook flags missing or invalid hours-bank inputs with CHECK. Resolve these before using Dashboard hours totals. Retainer lookup/check rows are 2–45; bank formulas and Dashboard bank totals cover rows 2–47. Extend all related formulas, lookup and summary ranges, filters and validation together for more rows.</p>
+        <p>Month-to-month transfer remains manual. Invoice status and aging are manual too: open invoices includes Draft + Sent + Overdue, while Collected includes Paid. The checks do not validate invoice amounts/dates, duplicate month rows or actual previous-month transfers.</p>
+        <p>Forced native recalculation was tested in LibreOfficeDev 26.8.0.0.alpha0, a development build. Excel desktop, Google Sheets and actual Notion UI/import were not tested. Enable automatic calculation, fully recalculate after opening/importing and editing, and verify a changed input updates the total. Notion CSV calculated columns are sample values: configure properties and live formulas manually with the import guide.</p>
+      </section>
 
       <section class="guide-faq" id="faq" aria-labelledby="faq-heading">
         <h2 id="faq-heading">Frequently asked questions</h2>
