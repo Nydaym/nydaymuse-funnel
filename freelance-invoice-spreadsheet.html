@@ -63,7 +63,7 @@
       "publisher": {
         "@id": "https://nydaym.github.io/nydaymuse-funnel/#organization"
       },
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-10-13",
       "mainEntity": [
         {
           "@type": "Question",
@@ -142,7 +142,7 @@
       "publisher": {
         "@id": "https://nydaym.github.io/nydaymuse-funnel/#organization"
       },
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-10-13",
       "inLanguage": "en",
       "about": {
         "@id": "https://nydaymuse.gumroad.com/l/ggnfxs#product"
@@ -170,7 +170,7 @@
     <div class="wrap">
       <p class="breadcrumb"><a href="index.html">Home</a> / Invoice spreadsheet</p>
       <h1 id="page-title">Freelance invoice tracker &amp; aging spreadsheet</h1>
-      <p class="page-credit">By <a href="about.html">Nydaymuse</a> · Updated <time datetime="2026-09-20">September 20, 2026</time></p>
+      <p class="page-credit">By <a href="about.html">Nydaymuse</a> · Updated <time datetime="2026-10-13">October 13, 2026</time></p>
       <p class="meta">Columns that matter · aging buckets · cash clarity</p>
 
       <section class="answer-summary" id="build-an-invoice-tracker" aria-labelledby="invoice-answer-heading">
@@ -247,6 +247,13 @@
       <h2 id="when-a-ready-workbook-is-worth-12">When a ready workbook is worth $12</h2>
       <p>Build your own if you enjoy sheet design and will maintain it. Buy a workbook if you have already lost a weekend to formatting and still do not trust the totals. Ops is a one-time download — freelance money &amp; client workbook — aimed at solo operators who want aging and client context without SaaS lock-in. Same $12 SKU: the ZIP now also includes an overdue lite HTML tool with CSV import and Print for quick chase lists.</p>
 
+
+      <section aria-labelledby="ops-date-update-heading">
+        <h2 id="ops-date-update-heading">Ops date-validation update: October 13, 2026</h2>
+        <p>The current Ops ZIP flags missing or invalid dates as <strong>Check date</strong>. An affected unpaid invoice keeps its outstanding balance but does not enter overdue or aging totals until its date is corrected. In the workbook, enter a real spreadsheet date in <strong>Overdue!U8</strong> for a fixed As-of date, or select Use today in W8. A visible date warning means overdue totals are incomplete.</p>
+        <p>The included HTML companion rejects impossible calendar dates on CSV import rather than silently shifting them into another month. Its CSV imports client, amount, due and optional invoice number; set Paid manually. Use the workbook for Amount paid and partial-payment balances.</p>
+        <p>Read <strong>README.md</strong> first for formula-preserving sample clearing, the prepared 70 invoice rows, date checks and original-PDF limitations. Workbook formulas were checked by native LibreOffice recalculation. HTML date and aging logic was tested under Node with a lightweight DOM stub. Native Excel, Google Sheets, real-browser interaction, Save/Load and end-to-end printing were not tested for this release. Validate a copy before using real records.</p>
+      </section>
 
       <div class="soft-cta">
         <h2 id="ops-freelance-money-and-client-workbook">Ops — freelance money &amp; client workbook</h2>
