@@ -1,37 +1,26 @@
 # nydaymuse-funnel
 
-Static Nydaymuse site for freelance and everyday productivity tools: one homepage, 14 guides or product pages, and a brand information page, with downloads and purchases on Gumroad.
+Static Nydaymuse site for freelance and everyday productivity tools: a homepage, guides and product pages, and a brand information page, with downloads and purchases on Gumroad.
 
-No build step, npm install, or third-party runtime dependencies. Works directly from `file://` and on any static host, including GitHub Pages, Netlify, and Cloudflare Pages. Keep the `assets` folder alongside the HTML files. Gumroad downloads, checkout, directory links, and external badges require an internet connection.
+The catalogue pages need no build step, npm install, or third-party runtime dependencies. They work directly from `file://` and on static hosts, including GitHub Pages, Netlify, and Cloudflare Pages. Keep the `assets` folder alongside the HTML files. Gumroad downloads, checkout, directory links, and external badges require an internet connection.
 
 The homepage includes category filters for free tools, an interactive hourly-rate × hours demo, a mobile navigation menu, and FAQs. The demo shows a base estimate; the downloadable Quote tool includes the full calculator and printable proposal. Guide pages share readable layouts, responsive tables, keyboard skip links, and print styles.
 
 ## Files
 
-The site has 16 public HTML pages:
+Public pages and directories:
 
-- `index.html` — homepage, free tool filters, pricing demo, paid tools, and guide links.
+- `index.html` — homepage, free tool filters, pricing demo, paid tools, and the [complete guide directory](https://nydaym.github.io/nydaymuse-funnel/#guides).
 - `about.html` — brand, guide attribution, formats, and download information.
-- `freelance-proposal-ai-prompts.html` — proposal templates and AI prompts for Close.
-- `client-onboarding-notion.html` — Notion client onboarding and Kickoff.
-- `freelance-rate-calculator.html` — the free Quote calculator and proposal guide.
-- `overdue-invoice-emails.html` — late-payment email templates and Nudge.
-- `freelance-invoice-spreadsheet.html` — invoice tracking, aging, and Ops.
-- `drift-scope-desk.html` — Drift scope-creep and change-order desk.
-- `change-order-desk.html` — Change formal change-order desk (hours, price, sign-off, PDF).
-- `freelance-testimonial-request-desk.html` — Praise testimonial and review requests.
-- `job-search-desk.html` — Hunt job applications and interview preparation.
-- `photographer-shoot-desk.html` — Shot photography planning.
-- `podcast-episode-desk.html` — Pod episode planning and publishing.
-- `pregnancy-baby-notion-tracker.html` — Nest family tracking and offline logging.
-- `youtube-ai-prompts.html` — Aim creator prompts.
-- `youtube-shorts-desk.html` — Clip video planning and publishing.
+- Other root-level `*.html` files — product and workflow guides. See [`sitemap.xml`](sitemap.xml) for their current canonical URLs, together with the homepage and brand page.
+- [`excel-companion/`](excel-companion/README.md) — Sheet Check, the free browser-only CSV/XLSX review app; [open the hosted app](https://nydaym.github.io/nydaymuse-funnel/excel-companion/). Its README covers local serving, tests, dependencies, licensing, and limits. This subdirectory app is outside the root-page sitemap generator.
+- [`gumroad/`](gumroad/README.md) — separate Gumroad profile upload sources, catalogue snapshot, and catalogue tests; excluded from the default GitHub Pages build.
 
 Shared assets and support files:
 
 - `assets/site.css` — homepage layout, visual system, and responsive styles.
 - `assets/site.js` — mobile navigation, tool filters, and the live estimate demo.
-- `assets/guides.css` — shared styles for the 14 guide and product pages.
+- `assets/guides.css` — shared styles for guide and product pages.
 - `assets/favicon.svg` — shared flower brand icon.
 - `scripts/preview.mjs` — local preview server using only Node.js built-ins.
 - `scripts/sync-search.mjs` — refresh static structured data, social metadata, and the canonical sitemap from visible page content.
@@ -61,13 +50,13 @@ Shared assets and support files:
 
 The separate custom Gumroad profile is in [`gumroad/`](gumroad/README.md). Build its single-file upload with `node scripts/build-gumroad.mjs`; preview and publish it with the Gumroad CLI. This does not replace the static site's `index.html`.
 
-Open any HTML file in a browser, or run the included preview server with Node.js from the repository root:
+Open a root-level catalogue HTML file in a browser, or run the included preview server with Node.js from the repository root:
 
 ```bash
 node scripts/preview.mjs
 ```
 
-Visit **http://127.0.0.1:4173/**. Stop the server with `Ctrl+C`. The server binds to your local machine; the optional `PORT` environment variable changes its port. No package installation is needed.
+Visit **http://127.0.0.1:4173/**. Stop the server with `Ctrl+C`. The server binds to your local machine; the optional `PORT` environment variable changes its port. No package installation is needed. For Sheet Check, use **http://127.0.0.1:4173/excel-companion/**; direct `file://` opening is unsupported because it uses Web Workers. Its spreadsheet parser is vendored locally.
 
 ## Deploy to GitHub Pages
 
@@ -125,7 +114,7 @@ On this project URL, the effective robots file is **https://nydaym.github.io/rob
 
 ## Search and GEO maintenance
 
-All public answers, FAQs, publisher links, dates, and JSON-LD are in the delivered HTML. No client-side rendering is needed to read them. The 14 guide/product pages link to the brand information page and use stable section anchors. The sitemap contains each canonical page once, with the homepage at `/` rather than a second `/index.html` entry.
+All public answers, FAQs, publisher links, dates, and JSON-LD are in the delivered HTML. No client-side rendering is needed to read them. The guide/product pages link to the brand information page and use stable section anchors. The root-page sitemap contains each canonical catalogue page once, with the homepage at `/` rather than a second `/index.html` entry.
 
 After editing a page:
 
